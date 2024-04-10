@@ -1,0 +1,2 @@
+ErrorDocument 403 /~sugimura/error/403forbidden.htm
+ErrorDocument 404 /~sugimura/error/404notfound.htm

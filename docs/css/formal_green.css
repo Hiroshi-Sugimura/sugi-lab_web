@@ -1,0 +1,392 @@
+/*********************************************************************
+	Hiroshi SUGIMURA Style Seet type formal_pink
+
+main	#FFFFFF
+text	#000000
+textsub	#205f01
+
+link	#880000
+
+col1	#4bb01a
+col2	#205f01
+col3	#DC143C
+
+
+*********************************************************************/
+
+/* 回り込みの解除 */
+.clear { clear: both; }
+
+/* 改行しない */
+.inline { display: inline; }
+
+/* 右寄せ */
+.right { text-align: right; }
+
+/* 取り消し線 */
+.del { text-decoration: line-through; }
+
+/* フロート */
+.f_left { float: left }
+
+/* 影付き文字 */
+.shadow {
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* レイアウト */
+.layout {
+	width: 95%;
+	display: -webkit-box;
+	display: -moz-box;
+}
+
+.leftboxTop {
+	margin: 1em;
+	width: 40%;
+	padding: 1em;
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+}
+
+.leftbox {
+	margin: 1em;
+	width: 20%;
+	padding: 1em;
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+}
+
+.rightbox {
+	margin: 1em;
+	/* width: 55%; */
+	padding: 1em;
+	-webkit-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
+}
+
+/* top絵 */
+.topimg {
+	text-align: center;
+	width:   350px;
+	padding: 5px;
+}
+
+/* 写真 */
+.pict {
+	display: block; /* ブロックレベル表示に */
+	-moz-box-shadow: 0 4px 10px #333; /* 影を落とす */
+	-webkit-box-shadow: 0 4px 10px #333;
+	box-shadow: 0 4px 10px #333;
+	-webkit-transform: rotate(5deg); /* 回転 */
+	-moz-transform: rotate(5deg);
+	-ms-transform: rotate(52deg);
+	transform: rotate(5deg);
+	border: 2px dotted #205f01; /*ボーダーの太さ・種類（ドット線）・色*/
+	opacity: 0.9;
+}
+
+section {
+    /* padding: 20px; */
+	margin-bottom:  1em;
+	padding: 1em;
+
+	/* 影付け */
+    border: 1px solid #f0f0f0;
+    -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow:0 3px 5px rgba(0, 0, 0, 0.3);
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#777777, direction=0, strength=3, enabled=true);
+
+    /* IE以外なら丸角も */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/*********************************************************************
+ 個別設定
+*********************************************************************/
+
+html {
+	height: 100%;
+	width: 100%;
+    height: auto !important;
+	min-height: 100%;
+}
+
+/* 本体メイン */
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	color: #000000;
+	background-color: #ffffff;
+	font-size: medium;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 150px;
+	position: relative;
+}
+
+/* アンカー */
+a {
+	color: #205f01;
+	text-decoration: none;
+	/* border: solid 1px #ff0000; */
+}
+
+/* マウスが上にきたとき */
+a:hover {
+	border-bottom:1px solid #205f01;
+	color: #205f01;
+}
+
+/* 一度訪れたことがあるとき */
+a:visited {
+	color: #880000;
+}
+
+/* クリックしたとき */
+a:active {
+	color: #111111;
+}
+
+
+/* タイトル */
+h1 {
+	color: #DC143C;
+	font-size: 200%;
+	/* background-color: #4bb01a; */
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	/* border-top: 2px solid #205f01; */
+	/* border-bottom: 2px solid #205f01; */
+	font-weight: bold;
+	padding-left: 1em;
+}
+
+/* パート */
+h2 {
+	color: #205f01;
+	font-size: 130%;
+	border-left: solid 1em #205f01;
+	border-bottom: solid 2px #205f01;
+	padding-left: 0.5em;
+	margin-top: 1em;
+	margin-left: 1em;
+}
+
+/* チャプター */
+h3 {
+	background-color: #ffffff;
+	color: #205f01;
+	font-size: 120%;
+	border-left: solid 0.5em #205f01;
+	border-bottom: 2px dashed;
+	padding-right: 1em;
+	padding-left: 0.5em;
+	margin-left: 2em;
+}
+
+/* セクション */
+h4 {
+	color: #205f01;
+	background-color: #ffffff;
+	font-sieze: 110%;
+	border-left: solid 0.1em #205f01;
+	border-bottom: 2px dashed;
+	padding-right: 1em;
+	padding-left: 0.5em;
+	margin-left: 3em;
+}
+
+/* サブセクション */
+h5 {
+	color: #205f01;
+	background-color: #ffffff;
+	font-sieze: 110%;
+	border-left: solid 0.1em #205f01;
+	border-bottom: 2px dashed;
+	padding-right: 1em;
+	padding-left: 0.5em;
+	margin-left: 4em;
+}
+
+/* ラインリスト */
+/* ヘッダーのラインリスト */
+header ul {
+	margin:0px;
+	color: #ffffff;
+	background-color: #4bb01a;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-top: 2px solid #205f01;
+	border-bottom: 2px solid #205f01;
+	font-weight: bold;
+}
+
+li {
+}
+
+/* パラグラフ(段落) */
+p, ul, dl {
+	margin-left: 3em;
+	font-size: 100%;
+}
+
+
+p {
+	padding-left: 3em;
+	font-size: 100%;
+}
+
+div.right {
+	text-align: right;
+}
+
+div.small {
+	font-size: 70%;
+}
+
+
+dt {
+	border-bottom: solid 1px #cccccc;
+	margin-top: 1em;
+}
+
+dd {
+	border: inherit;
+	padding-left: 1em;
+	font-size: 90%;
+}
+
+
+/* 取り消し線 */
+font.del {
+	text-decoration: line-through;
+}
+
+/* アドレスを改行しないで */
+address {
+	/* display: inline; */
+}
+
+/* 整形済み文章 */
+pre {
+	margin-left: 5em;
+	margin-right: 5em;
+	margin-bottom: 5pt;
+	margin-top: 5pt;
+	color: #880000;
+	background: #ffffff;
+	padding:1em;
+	border: 3px dashed #205f01;
+	white-space: pre;
+	font-sieze: 90%;
+}
+
+b {
+	color: #ff0000;
+}
+
+table {
+	border-collapse: collapse;					/* 隣接セルの間をあけずに配置 */
+	background-color: #ffdddd;
+	border-top-color: #4bb01a;
+	border-left-color: #4bb01a;
+	border-right-color: #cc4444;
+	border-bottom-color: #cc4444;
+	margin-left: 5em;
+}
+
+table.data {
+	border-collapse: collapse;					/* 隣接セルの間をあけずに配置 */
+	background-color: #ffdddd;
+	border-top-color: #4bb01a;
+	border-left-color: #4bb01a;
+	border-right-color: #cc4444;
+	border-bottom-color: #cc4444;
+	margin-left: 5em;
+}
+
+table td {
+	background-color: #ffffff;
+	border-top-color: #cc4444;
+	border-left-color: #cc4444;
+	border-right-color: #4bb01a;
+	border-bottom-color: #4bb01a;
+}
+
+table.data td {										/* vl = visible line */
+	background-color: #ffffff;
+	border-top: 0px solid #cc4444;
+	border-left: 0px solid #cc4444;
+	border-right: 1px solid #4bb01a;
+	border-bottom: 1px solid #4bb01a;
+	text-align: right
+}
+
+header {
+	padding-top: 20px;
+	padding-left: 50px;
+	/* padding-bottom: 10px; */
+	background-color: #4bb01a;
+	font-size: 120%;
+	border-bottom: 2px solid #205f01;
+}
+
+#nav {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	background-color: #4bb01a;
+}
+
+#nav ol {
+	display: inline;
+	margin: 0px;
+	margin-top: 20px;
+	padding: 0px;
+}
+
+#nav li {
+	display: inline;
+	font-weight: bold;
+	border-left: solid 1em #205f01;
+	margin-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+footer {
+	margin: 0px;
+	border-top: 2px solid #205f01;
+	padding-top: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 50px;
+	background-color: #4bb01a;
+	font-size: 120%;
+    position: absolute;
+    bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+
+
+/*********************************************************************
+	EOF
+*********************************************************************/
+

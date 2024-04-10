@@ -1,0 +1,3 @@
+/* 画面解像度，横幅でPCかモバイルかを決定する */
+@import url(formal_pink.css) screen and (min-width: 769px); /* 769以上 */
+@import url(formal_pink_mobile.css) screen and (max-width: 768px); /* 768以下 */

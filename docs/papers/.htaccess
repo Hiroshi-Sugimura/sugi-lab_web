@@ -1,0 +1,7 @@
+order allow,deny
+allow from 202.250. 172.*
+deny from all
+Authname "For Members"
+Authtype Basic
+AuthUserFile ~\public_html\papers\.htpasswd
+require valid-user

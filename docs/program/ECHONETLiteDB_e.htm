@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ELDB: H.SUGIMURA's Web page</title>
+	<link rel="stylesheet" href="../css/style.css" type="text/css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/footerFixed.js"></script>
+  </head>
+
+  <body>
+	<header>
+	  <!-- トップメニュー -->
+	  <div id="nav">
+		<center>
+		  <ol>
+			<li><a href="../index.html">TOP</a></li>
+			<li><a href="../profile.htm">Profile</a></li>
+			<li><a href="../smarthouse.htm">Smart house</a></li>
+			<li><a href="../timeseries.htm">Datamining</a></li>
+			<li><a href="../forms.htm">Forms</a></li>
+			<li><a href="../papers.htm">Papers</a></li>
+			<li><a href="../access.htm">Access</a></li>
+			<li><a href="../links.htm">Links</a></li>
+		  </ol>
+		</center>
+	  </div>
+	</header>
+
+	<!-- コンテンツ -->
+	<div id="contents">
+
+	  <h1 class="shadow">ECHONET Lite Database</h1>
+
+	  <div class="layoutIndex">
+
+		<div class="leftboxIndex">
+          <section>
+			<h2>目次</h2>
+			<ol>
+			  <a href="#use"><li>使い方</li></a>
+			  <a href="#tables"><li>Tables</li></a>
+			  <a href="#menseki"><li>免責</li></a>
+			</ol>
+		  </section>
+		</div>
+
+		<div class="rightboxIndex">
+		  <a name="use"><h2>使い方</h2></a>
+
+		  <section>
+			ECHONET Liteの仕様書の内容をデーターベース化してソフトウェアで使いやすく作っています．<br>
+			フリーで公開しているので，ご自由にお使いください．<br>
+			SQLite3の使い方について説明する気はありません．<br>
+			使える人は何も考えずにdbファイルを使ってください．<br>
+			ダウンロードはこちらから．<br>
+			<a href="ECHONETLite.db">ECHONET Lite Database</a><br>
+		  </section>
+
+
+		  <a name="tables"><h2>ECHONET Lite用データベース</h2></a>
+
+		  <h3>DBStatus</h3>
+
+		  <section>
+			このデータベースがどのECHONET Liteバージョンに対応しているかを示します．
+			<table border=1>
+			  <tr><td>DB</td><td>version</td></tr>
+			  <tr><td>ESV</td><td>1.10</td></tr>
+			  <tr><td>Objects</td><td>Appendix B</td></tr>
+			</table>
+
+		  </section>
+
+		  <h3>ESV</h3>
+
+		  <section>
+			ESVの値と意味を対応付けます．<br>
+			ESVの値は文字列で入っています．
+			<br>
+			<table border=1 width="300px">
+			  <tr><td>id</td><td>ESV</td><td>Symbol</td><td>ELServiceContentJ</td><td>ELServiceContentE</td></tr>
+			  <tr><td>1</td><td>50</td><td>SetI_SNA</td><td>プロパティ値書き込み不可応答</td><td>Property value write request "response not possible"</td></tr>
+			  <tr><td>1</td><td>51</td><td>SetC_SNA</td><td>プロパティ値書き込み不可応答</td><td>Property value write request "response not possible"</td></tr>
+			</table>
+		  </section>
+
+		  <h3>Object</h3>
+
+		  <section>
+			クラスコードと文字列を対応付けます．<br>
+			各コードはすべて文字列で入っています．<br>
+			<br>
+			<table border=1  width="300px">
+			  <tr><td>id</td><td>ClassGroupCode</td><td>ClassCode</td><td>Class</td><td>GroupNameJ</td><td>ClassNameJ</td><td>GroupNameE</td><td>ClassNameE</td></tr>
+			  <tr><td>1</td><td>00</td><td>01</td><td>0001</td><td>センサ関連機器</td><td>ガス漏れセンサ</td><td>Sensor-related Device</td><td>gas leak sensor</td></tr>
+			  <tr><td>2</td><td>00</td><td>02</td><td>0002</td><td>センサ関連機器</td><td>防犯センサ</td><td>Sensor-related Device</td><td>crime prevention sensor</td></tr>
+			</table>
+		  </section>
+
+		  <br>
+
+
+		  <a name="menseki"><h2>免責</h2></a>
+
+		  <section>
+			このデータベースを使うことによって生じたトラブルがあっても，何にも責任を取りません．<br>
+			自己責任で使ってください．<br>
+		  </section>
+
+		  <a name="credit"><h2>クレジット</h2></a>
+
+		  <section>
+			このデータベースを作るにあたって下記の人間がかかわりました．<br>
+			神奈川工科大学　杉村博<br>
+			神奈川工科大学　三浦翔<br>
+			神奈川工科大学　スマートハウス研究センターのみなさま<br>
+			<br>
+			<br>
+			データ作成協力　株式会社ソニーコンピュータサイエンス研究所<br>
+		  </section>
+
+		</div>
+	  </div>   <!-- layout -->
+	</div>
+
+	<!-- foote -->
+	<footer id="footer">
+	  <center>
+		<address class="inline"><img src="img/LVDC.png" class="pict" /></address><br>
+		Copyright &copy; 2013 Hiroshi SUGIMURA, All Rights Reserved.
+	  </center>
+	</footer>
+
+  </body>
+</html>
+

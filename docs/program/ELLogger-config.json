@@ -1,0 +1,43 @@
+{
+	"network": {
+		"IPv4": "ex. 192.168.2.249",
+		"IPv4": "",
+		"IPv6": "ex. en0"
+		"IPv6": ""
+	},
+	"sqlserver": {
+		"sqlSyncInterval": "600000",
+		"sshhost": "sshhost.net",
+		"sshport": 22,
+		"sshuser": "sshuser",
+		"sshpassphrase": "sshpass",
+		"sshpublickey": "/.ssh/secret.key",
+        "sqlhost": "127.0.0.1",
+		"sqlport": 3306,
+        "sqluser": "dbuser",
+        "sqlpassword": "dbpass",
+        "database": "databasename"
+	},
+	"sqlserver": {},
+    "observationInterval" : 600000,
+    "observationDevs" : [
+        {
+            "name": "air_creaner",
+            "ip": "192.168.0.100",
+            "obj": "013501",
+            "epc": ["F0","C0","A0","80","F1","81","F2","82","F3","84","86","88","89","8A","8B","8C","9D","9E","9F"]
+        },
+        {
+            "name": "aircon",
+            "ip": "192.168.0.101",
+            "obj": "013001",
+            "epc": ["B0","A0","80","81","92","82","B3","A3","92","B4","94","84","85","96","B9","BA","BC","BB","FC","FD","BE","9E","8F","FF"]
+        },
+        {
+            "name": "lighting",
+            "ip": "192.168.0.102",
+            "obj": "029001",
+            "epc": ["B0","80","B1","B2","B3","B5","B6","B7","B8","B9","89","BA","BB","BC"]
+        }
+    ]
+}

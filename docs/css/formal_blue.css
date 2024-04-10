@@ -1,0 +1,268 @@
+/*********************************************************************
+	Hiroshi SUGIMURA Style Seet type formal_blue
+*********************************************************************/
+/* 回り込みの解除 */
+.clear { clear: both; }
+
+/* 改行しない */
+.inline { display: inline; }
+
+/* 右寄せ */
+.right { text-align: right; }
+
+/* 取り消し線 */
+.del { text-decoration: line-through; }
+
+.f_left { float: left }
+
+
+/*********************************************************************
+ 個別設定
+*********************************************************************/
+
+
+/* 本体メイン */
+body {
+	margin: 0px;
+	color: #000000;
+	background-color: #ffffff;
+	font-size: medium;
+}
+
+/* アンカー */
+a {
+	color: #1111ee;
+	text-decoration: none;
+	/* border: solid 1px #ff0000; */
+}
+
+/* マウスが上にきたとき */
+a:hover {
+	border-top:1px solid #ee1111;
+	border-bottom:1px solid #ee1111;
+	color: #ee1111;
+}
+
+/* 一度訪れたことがあるとき */
+a:visited {
+	color: #000088;
+}
+
+/* クリックしたとき */
+a:active {
+	color: #ee1111;
+}
+
+
+/* タイトル */
+h1 {
+	color: #ffffff;
+	font-size: 400%;
+	background-color: #8888cc;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-top: 2px solid #4444bb;
+	border-bottom: 2px solid #4444bb;
+	font-weight: bold;
+	padding-left: 1em;
+}
+
+/* パート */
+h2 {
+	color: #4444cc;
+	font-size: 130%;
+	border-left: solid 1em #4444cc;
+	border-bottom: solid 2px #4444cc;
+	padding-left: 0.5em;
+	margin-top: 3em;
+	margin-left: 1em;
+}
+
+/* チャプター */
+h3 {
+	background-color: #ffffff;
+	color: #8888cc;
+	font-size: 120%;
+	border-left: solid 0.5em #8888cc;
+	border-bottom: 2px dashed;
+	padding-right: 1em;
+	padding-left: 0.5em;
+	margin-left: 2em;
+}
+
+/* セクション */
+h4 {
+	color: #8888cc;
+	background-color: #ffffff;
+	font-sieze: 110%;
+	border-left: solid 0.1em #8888cc;
+	border-bottom: 2px dashed;
+	padding-right: 1em;
+	padding-left: 0.5em;
+	margin-left: 3em;
+}
+
+/* サブセクション */
+
+/* ラインリスト */
+body.top ul {
+	margin:0px;
+	color: #ffffff;
+	background-color: #8888cc;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-top: 2px solid #4444bb;
+	border-bottom: 2px solid #4444bb;
+	font-weight: bold;
+}
+
+
+li {
+	/* display: inline; */
+	/* border: solid 1px #ff0000; */
+}
+
+
+/* パラグラフ(段落) */
+p, ul, dl {
+	margin-left: 3em;
+	font-size: 100%;
+}
+
+
+p {
+	padding-left: 3em;
+	font-size: 100%;
+}
+
+div.right {
+	text-align: right;
+}
+
+div.small {
+	font-size: 70%;
+}
+
+
+dt {
+	border-bottom: solid 1px #cccccc;
+	margin-top: 1em;
+}
+
+dd {
+	border: inherit;
+	padding-left: 1em;
+	font-size: 90%;
+}
+
+
+/* 取り消し線 */
+font.del {
+	text-decoration: line-through;
+}
+
+/* アドレスを改行しないで */
+address {
+	/* display: inline; */
+}
+
+/* 整形済み文章 */
+body pre {
+	margin-left: 5em;
+	margin-right: 5em;
+	margin-bottom: 5pt;
+	margin-top: 5pt;
+	color: #000088;
+	background: #ffffff;
+	padding:1em;
+	border: 3px dashed #4444bb;
+	white-space: pre;
+	font-sieze: 90%;
+}
+
+b {
+	color: #ff0000;
+}
+
+table {
+	border-collapse: collapse;					/* 隣接セルの間をあけずに配置 */
+	background-color: #ddddff;
+	border-top-color: #8888cc;
+	border-left-color: #8888cc;
+	border-right-color: #4444cc;
+	border-bottom-color: #4444cc;
+	margin-left: 5em;
+}
+
+table.data {
+	border-collapse: collapse;					/* 隣接セルの間をあけずに配置 */
+	background-color: #ddddff;
+	border-top-color: #8888cc;
+	border-left-color: #8888cc;
+	border-right-color: #4444cc;
+	border-bottom-color: #4444cc;
+	margin-left: 5em;
+}
+
+table td {
+	background-color: #ffffff;
+	border-top-color: #4444cc;
+	border-left-color: #4444cc;
+	border-right-color: #8888cc;
+	border-bottom-color: #8888cc;
+}
+
+table.data td {										/* vl = visible line */
+	background-color: #ffffff;
+	border-top: 0px solid #4444cc;
+	border-left: 0px solid #4444cc;
+	border-right: 1px solid #8888cc;
+	border-bottom: 1px solid #8888cc;
+	text-align: right
+}
+
+
+#diary_twitter {
+	float: right; margin-right: 5em;
+}
+
+
+
+header {
+	padding-top: 20px;
+	padding-left: 50px;
+	/* padding-bottom: 10px; */
+	background-color: #1111ee;
+	font-size: 120%;
+}
+
+nav {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	background-color: #8888cc;
+}
+
+nav ol {
+	margin: 0px;
+	margin-top: 20px;
+	padding: 0px;
+}
+
+nav li {
+	display: inline;
+	font-weight: bold;
+	border-left: solid 1em #1111ee;
+	margin-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+
+/*********************************************************************
+	EOF
+*********************************************************************/
+

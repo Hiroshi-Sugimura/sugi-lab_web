@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+	<meta charset="UTF-8" />
+	<title>ECHONET Lite入門 ―スマートハウスの通信技術を学ぼう！―</title>
+	<link rel="stylesheet" href="../css/formal_pink.css" type="text/css">
+	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  </head>
+
+
+  <body>
+	<header>
+	  <!-- トップメニュー -->
+	  <div id="nav">
+		<ol>
+		  <li><a href="../index.html">TOP</a></li>
+		  <li><a href="../profile.htm">Profile</a></li>
+		  <li><a href="../smarthouse.htm">Smart house</a></li>
+		  <li><a href="../timeseries.htm">Datamining</a></li>
+		  <li><a href="../forms.htm">Forms</a></li>
+		  <li><a href="../papers.xml">Papers</a></li>
+		  <li><a href="../access.htm">Access</a></li>
+		  <li><a href="../links.htm">Links</a></li>
+		</ol>
+	  </div>
+	</header>
+
+	<!-- コンテンツ -->
+	<div class="clear"></div>
+
+	<h1 class="shadow">ECHONET Lite入門  ―スマートハウスの通信技術を学ぼう！―</h1>
+
+	<div class="layout">
+
+	  <div class="leftbox">
+		<h2>目次</h2>
+		<ol>
+		  <a href="#c1">第1章　日本におけるスマートハウスの現状</a><br>
+		  <br>
+		  <a href="#c2">第2章　スマートハウス・HEMSの標準通信インターフェース「ECHONET Lite」</a><br>
+		  <br>
+		  <a href="#c3">第3章　ECHONET Lite技術の開発支援を行うHEMS認証支援センター</a><br>
+		  <br>
+		  <a href="#c4">第4章　実践編1　様々な機器をECHONET Lite化しよう！</a><br>
+		  <br>
+		  <a href="#c5">第5章　実践編2　ECHONET Lite機器連携のサービスをつくろう！</a><br>
+		  <br>
+		  <a href="#c6">第6章　これからのスマートハウス</a><br>
+		  <br>
+		  <a href="#ap">ECHONET Lite Database</a><br>
+		</ol>
+	  </div>
+
+	  <div class="rightbox">
+
+		<section>
+		  <a name="c1"><h2>第1章　日本におけるスマートハウスの現状</h2></a>
+		  <dl>
+			<dt>1. スマートハウスって何？</dt>
+			<dt>2. 急速に普及が進むHEMS</dt>
+			<dt>3. スマートハウスの核となるデバイス「スマートメーター」</dt>
+			<dt>4. これから標準仕様となるZEH（ゼッチ）とは？</dt>
+		  </dl>
+		</section>
+
+		<section>
+		  <a name="c2"><h2>第2章　スマートハウス・HEMSの標準通信インターフェース「ECHONET Lite」</h2></a>
+		  <dl>
+			<dt>1. ECHONET Liteって何？</dt>
+			<dd>規格書のダウンロード（ECHONETコンソーシアム）は<a href="http://www.echonet.gr.jp/">こちらへ</a></dd>
+			<dt>2. ECHONET Lite規格の概要</dt>
+			<dt>3. ECHONET Liteの認証制度</dt>
+			<dt>4. 公式ドキュメント</dt>
+			<dt>5. 規格書の読み方</dt>
+		  </dl>
+		</section>
+
+		<section>
+		  <a name="c3"><h2>第3章　ECHONET Lite技術の開発支援を行うHEMS認証支援センター</h2></a>
+		  <dl>
+			<dt>1. HEMS認証支援センターの設立</dt>
+			<dd>
+			  HEMS認証試験支援センターのWebサイトは<a href="http://sh-center.org/">こちら</a>へ<br>
+			</dd>
+			<dt>2. 開発・認証支援環境と相互接続性検証環境を提供</dt><br>
+			<dt>3. ECHONET Lite機器開発・アプリケーション開発の支援</dt><br>
+		  </dl>
+		</section>
+
+		<section>
+		  <a name="c4"><h2>第4章　実践編1　様々な機器をECHONET Lite化しよう！</h2></a>
+		  <dl>
+			<dt>1. ECHONET Liteフレーム</dt>
+			<dd>HEMS認証試験支援センターのWebサイトは<a href="http://sh-center.org/">こちら</a>へ</dd>
+			<dt>2. 具体的なシーケンス</dt>
+			<dt>3. SSNGを用いたECHONET Lite通信テスト</dt>
+			<dd>SSNGのダウンロードは<a href="https://smarthouse-center.org/sdk/download/">こちら</a>へ</dd>
+
+			<dt>4. Wiresharkによるモニタリング</dt>
+			<dd>Wiresharkダウンロードは<a href="https://www.wireshark.org/">こちら</a>へ</dd>
+
+			<dt>5. Rubyによる簡易コントローラ</dt>
+			<dd>Rubyダウンロードは<a href="https://www.ruby-lang.org/ja/">こちら</a>へ</dd>
+			<dd>Rubyスクリプトのダウンロードは<a href="4-5.zip">こちら</a>へ</dd>
+
+			<dt>6. OpenECHO for Processingで照明エミュレータ</dt>
+			<dd>ProcessingのWebサイトは<a href="https://www.processing.org/">こちら</a>へ</dd>
+			<dd>OpenECHO for Processingのダウンロードは<a href="http://sh-center.org/">認証センターのWebサイトから</a></dd>
+			<dd>OpenECHOのソースコードは<a href="https://github.com/SonyCSL/OpenECHO">GitHubから</a></dd>
+			<dd>OpenECHOを利用した照明エミュレータLight Emulatorは<a href="http://sh-center.org/">認証支援センターのWebサイトから</a></dd>
+
+			<dt>7. ArduinoでLED照明</dt>
+			<dd>Arduino IDEのダウンロードは<a href="http://arduino.cc/">こちら</a>へ</dd>
+			<dd>簡単なLED照明とフルカラーLED照明のサンプルプログラムは<a href="4-7.zip">こちら</a>へ</dd>
+			<dd>Arduino用ECHONET Liteライブラリ，ECHONETLiteVer1.0.zipは<a href="ECHONETLiteVer1.0.zip">こちら</a>へ</dd>
+			<dd>（ライブラリはフルカラーLED照明サンプルで使用します）</dd>
+		  </dl>
+		</section>
+
+		<section>
+		  <a name="c5"><h2>第5章　実践編2　ECHONET Lite機器連携のサービスをつくろう！</h2></a>
+		  <dl>
+			<dt>1. Webブラウザで簡単コントロール</dt>
+			<dd>Node.jsのダウンロードは<a href="http://nodejs.jp">こちら</a>へ</dd>
+			<dd>SQLite3のDLLは<a href="http://www.sqlite.org/">こちら</a>へ</dd>
+			<dd>今回のサンプルプログラムは<a href="5-1.zip">こちら</a>へ</dd>
+			<dd>最新のECHONET Liteライブラリの使い方は<a href="http://qiita.com/Sugimura-Laboratory/items/28bce5212c3cff30a42b">こちら</a>も参考にしてください．</dd>
+
+			<dt>2. サービス動作用のサーバー構築</dt>
+			<dd>Kadecotのダウンロードは<a href="https://play.google.com/store/apps/details?id=com.sonycsl.Kadecot&hl=ja">こちら</a>へ</dd>
+			<dd>Kadeckly / KAIT-4S －Canvas－ は<a href="http://app.kadecot.net/Apps/Kadeckly/">URL</a>へ</dd>
+			<dd>MoekadenRoom は<a href="http://kadecot.net/blog/1479/">こちら</a>へ</dd>
+			<dd>Kadecotの持つWebAPI利用サンプルは<a href="5-2.zip">こちら</a>へ．<br></dd>
+
+			<dt>3. 音声認識ECHONET Liteコントローラ</dt>
+			<dd>Rubyダウンロードは<a href="https://www.ruby-lang.org/ja/">こちら</a>へ</dd>
+			<dd>大語彙連続音声認識エンジン Julius　は<a href="http://julius.osdn.jp">こちら</a>へ</dd>
+			<dd>Sound of Textは<a href="http://soundoftext.com/">こちら</a>へ</dd>
+			<dd>media.ioは<a href="http://media.io/">こちら</a>へ</dd>
+			<dd>今回のサンプルプログラムは<a href="5-3.zip">こちら</a>へ</dd>
+
+			<dt>4. iPhoneで動くECHONET Liteサービス</dt>
+			<dd>今回のサンプルプログラムは<a href="5-4.zip">こちら</a>へ</dd>
+
+			<dt>5. SSNG for iOS</dt>
+			<dd>「SSNG for iOS Ver. 1.1」のダウンロードは<a href="
+> https://itunes.apple.com/jp/app/ssng-for-iphone/id1076467789?mt=8">こちら</a>へ</dd>
+		  </dl>
+		</section>
+
+
+		<section>
+		  <a name="c6"><h2>第6章　これからのスマートハウス</h2></a>
+		  <dl>
+			<dt>1. ECHONET Lite機器の普及状況</dt>
+			<dt>2. 海外でのECHONET Lite動向</dt>
+			<dt>3. 面白いサービスをつくろう！スマートハウスハッカソンの事例</dt>
+			<dt>4. スマートハウスの新しいサービス</dt>
+		  </dl>
+		</section>
+
+		<section>
+		  <a name="ap"><h2>おまけ</h2></a>
+
+		  <h3>ECHONET Lite用データベース</h3>
+		  <p>
+			ECHONET Liteの仕様書の内容をデーターベース化してソフトウェアで使いやすく作っています．
+			フリーで公開しているので，ご自由にお使いください．SQLite3で作っています．<br>
+			仕様は下記ページをご覧ください．<br>
+			<br>
+
+			<a href="../program/ECHONETLite.db">ECHONET Lite Database</a><br>
+			<a href="../program/ECHONETLiteDB.htm">解説</a>
+		  </p>
+
+		  <h3>ECHONET Lite開発情報</h3>
+		  <p>
+			Qiitaが参考になります．<br>
+			<a href="http://qiita.com/tags/ECHONET">Qiita tags:ECHONET</a>
+		  </p>
+		</section>
+
+	  </div><!-- rightbox -->
+
+
+	</div><!-- layout -->
+
+	<!-- foote -->
+	<footer id="footer">
+	  <center>
+		<address class="inline"><img src="../img/LVDC.png" class="pict" /></address><br>
+		Copyright &copy; 2013 Hiroshi SUGIMURA, All Rights Reserved.
+	  </center>
+	</footer>
+
+
+  </body>
+</html>
+
