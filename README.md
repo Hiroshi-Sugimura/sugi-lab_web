@@ -25,6 +25,12 @@
 1. DNSサーバを修正
 	- 参考: https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 
+	- 方法1: CNAMEとする、ピリオド忘れないように
+
+> CNAME レコード例
+> www CNAME hiroshi-sugimura.github.io.
+
+	- 方法2: A, AAAAレコードを書く
 
 > A レコード
 > 185.199.108.153
