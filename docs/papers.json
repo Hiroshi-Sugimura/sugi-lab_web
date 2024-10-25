@@ -1,14 +1,31 @@
 [
   {
-    "type": "inproceedings",
+    "type": "review",
     "study": "",
-    "date": "2024.09.04",
-    "authors": "朝倉大智、片山駿平、杉村博、一色正男、渡部智樹",
-    "title": "IoT デバイスへのアクセス権限を任意に設定可能とする「ITAP システム」の提案",
-    "booktitle": "CDS研究会",
+    "年度": "2024",
+    "date": "2025.01.04",
+    "authors": "Tanomi Watanabe, Taiki Matsunaga, Futa Takahashi, Teruki Kawamura, Yoshihiro Machida, Kenichi Shirakawa, Masao Isshiki and Hiroshi Sugimura",
+    "title": "Development of IoT Miniature House for STEM Education",
+    "booktitle": "The 23th Annual Hawaii International Conference on Education",
     "volumes": "",
     "number": "",
     "pages": "",
+    "year": "2025",
+    "place": "Hawaii, U.S.A.",
+    "publisher": "HIC",
+    "paperurl": ""
+  },
+  {
+    "type": "inproceedings",
+    "study": "",
+    "年度": "2024",
+    "date": "2024.09.19",
+    "authors": "朝倉大智、片山駿平、杉村博、一色正男、渡部智樹",
+    "title": "IoT デバイスへのアクセス権限を任意に設定可能とする「ITAP システム」の提案",
+    "booktitle": "]研究報告コンシューマ・デバイス＆システム(CDS)",
+    "volumes": "41",
+    "number": "",
+    "pages": "1--8",
     "year": "2024",
     "place": "愛媛",
     "publisher": "情報処理学会",
@@ -17,13 +34,14 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2024",
     "date": "2024.09.04",
     "authors": "新垣 えり、三栖 貴行、杉村 博、一色 正男、渡部 智樹",
     "title": "照明光色の変化による心拍変動解析",
     "booktitle": "映情学技報",
     "volumes": "48",
     "number": "",
-    "pages": "",
+    "pages": "1--5",
     "year": "2024",
     "place": "広島",
     "publisher": "電子情報通信学会",
@@ -32,6 +50,7 @@
   {
     "type": "inproceedings",
     "study": "科研費",
+    "年度": "2023",
     "date": "2024.03.06",
     "authors": "岡 直人、岩田 耀璃、古澤 瑠果、杉村 博",
     "title": "IoTデバイスを用いた肥満度改善支援",
@@ -47,6 +66,7 @@
   {
     "type": "inproceedings",
     "study": "科研費",
+    "年度": "2023",
     "date": "2024.03.06",
     "authors": "青木 泰樺、川井 祐人、杉村 博",
     "title": "室内空気環境の快適度管理サポートシステム",
@@ -62,6 +82,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2023",
     "date": "2024.03.06",
     "authors": "橋場 元紀、杉村 博",
     "title": "画像認識を用いた調理台への野菜過剰除去率低減支援サイト投影システム",
@@ -77,6 +98,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2023",
     "date": "2024.03.10",
     "authors": "渡邉田実, 松永大輝, 杉村博, 関家一雄, 一色正男",
     "title": "教育用IoTミニュチュアハウスの検討と製作",
@@ -92,6 +114,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2023",
     "date": "2024.03.10",
     "authors": "西村　広光, 高尾　秀伸, 小机　わかえ, 工藤　嗣友, 大庭　武泰, 脇田　敏裕, 吉野　和芳,杉村　博, 鈴木　孝幸, 塩川　茂樹, 春日　秀雄, 井上　英樹, 澤井　淳, 田代　誠，前田　篤彦，中尾　教子",
     "title": "高度オンライン授業環境を活用した先進 ICT 教育と数理・データサイエンス・AI 教育の実践",
@@ -107,6 +130,7 @@
   {
     "type": "review",
     "study": "科研費",
+    "年度": "2023",
     "date": "2023.10.10",
     "authors": "Hirohsi Sugimura, Tomoki Watanabe and Masao Isshiki",
     "title": "Development of an Open Smart Home Controller",
@@ -122,6 +146,7 @@
   {
     "type": "review",
     "study": "科研費",
+    "年度": "2023",
     "date": "2023.10.10",
     "authors": "Hiroshi Sugimura and Masao Isshiki",
     "title": "Fast Getting Properties Over ECHONET Lite",
@@ -137,6 +162,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2023",
     "date": "2023.07.08",
     "authors": "Hiroshi Sugimura, Tetsuo Tanaka, Kazunori Matsumoto",
     "title": "Patterns and Issues for Educational Use of GAI",
@@ -152,6 +178,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2022",
     "date": "2023.03.15",
     "authors": "大関 克歩, 古堀 廉大, 杉村 博",
     "title": "肘角度と球質を基にしたスライダー分析",
@@ -167,6 +194,7 @@
   {
     "type": "inproceedings",
     "study": "科研費",
+    "年度": "2022",
     "date": "2023.03.15",
     "authors": "栗栖 優里奈, 望月 海久斗, 杉村 博",
     "title": "HEMS-Logger：簡便な導入を目的とした電力みえる化ツール",
@@ -182,6 +210,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2022",
     "date": "2023.03.15",
     "authors": "佐藤 蒼空, 石田 桃ノ介, 杉村 博",
     "title": "山間部における自立監視システムの開発",
@@ -197,6 +226,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2022",
     "date": "2023.03.10",
     "authors": "藤田 裕之, 一色 正男, 笹川 雄司, 杉村 博, 渡部 智樹, 有滝 貴広, 平原 茂利夫",
     "title": "社会人向けIoT 教育の教材作成とIoT マスター制度の紹介",
@@ -212,6 +242,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2022",
     "date": "2023.03.08",
     "authors": "何 其歓, 杉村 博, 田中 哲雄, 松本 一教",
     "title": "スロートレーニング支援システムの提案",
@@ -227,6 +258,7 @@
   {
     "type": "review",
     "study": "教育",
+    "年度": "2022",
     "date": "2023.01.04",
     "authors": "Yumika Sugahara, Mayuka Kikuchi, Takahiro Aritaki, Hiroto Nishi, Kazuo Ooka, Kazuma Onishi, Hiroyuki Fujita, Hiroshi Sugimura and Masao Isshiki",
     "title": "Report on the IoT reskilling course development and practice",
@@ -242,6 +274,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2021",
     "date": "2022.03.10",
     "authors": "西村 広光, 高尾 秀伸, 小机 わかえ, 工藤 嗣友, 大庭 武泰, 脇田 敏裕,  吉野 和芳, 杉村 博, 鈴木 孝幸, 塩川 茂樹, 春日 秀雄, 井上 英雄, 澤井 淳, 田代 誠",
     "title": "MDASHリテラシー教育プログラムの構築と検討",
@@ -257,6 +290,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2021",
     "date": "2022.03.10",
     "authors": "宮_ 裕哉, 杉村 博",
     "title": "スリルを利用するリモート授業での集中力支援システム",
@@ -272,6 +306,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2021",
     "date": "2022.03.03",
     "authors": "宮_ 裕哉, 杉村 博",
     "title": "オンライン受講者向け集中力持続支援システム",
@@ -287,6 +322,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2021",
     "date": "2022.03.03",
     "authors": "福沢 豊璽, 杉村 博, 一色 正男",
     "title": "ウェアラブルデバイスを利用した生活習慣病の予防システムの提案",
@@ -302,6 +338,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2021",
     "date": "2022.03.07",
     "authors": "Shigru Owada, Hiroshi Sugimura, Masao Isshiki",
     "title": "Toddler's Hand Motion Acquisition with Hand-Made Data Glove",
@@ -317,6 +354,7 @@
   {
     "type": "review",
     "study": "科研費",
+    "年度": "2021",
     "date": "2022.03.07",
     "authors": "Takahiro Sakai, Hiroshi Sugimura, Masao Isshiki",
     "title": "Research on Behavior Estimation Method using HEMS Environment",
@@ -332,6 +370,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2021",
     "date": "2022.03.07",
     "authors": "Sora Sato, Yui Mutou, Hiroshi Sugimura, Shigeru Owada",
     "title": "Extraction Rules for Optimal Bath Temperature  Considering Contexts",
@@ -347,6 +386,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2021",
     "date": "2022.03.07",
     "authors": "Momonosuke Ishida, Yurina Kurisu, Hiroshi Sugimura",
     "title": "Prioritized Notifications for Multiple People",
@@ -362,6 +402,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2021",
     "date": "2022.02.01",
     "authors": "Naoki Kawasaki, Yuuki Machida, Takayuki Misu, Keiichi Abe, Hiroshi Sugimura, Makiko Okumura",
     "title": "A Study on the Increase of Perceivable Information in the Saccade with High Speed Line Display",
@@ -377,6 +418,7 @@
   {
     "type": "review",
     "study": "教育",
+    "年度": "2021",
     "date": "2022.01.04",
     "authors": "Yusuke Uda, Yoichi Yamazaki, Hiroshi Sugimura, Masao Isshiki",
     "title": "Education based on STEAM'S through Development of Role-playing Robots",
@@ -392,6 +434,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2021",
     "date": "2022.01.04",
     "authors": "Takahiro Sakai, Hiroshi Sugimura, Masao Isshiki",
     "title": "Proposal of Home-life Assessment List (HAL) for Reviewing the Lifestyle of Residents",
@@ -407,6 +450,7 @@
   {
     "type": "review",
     "study": "教育",
+    "年度": "2021",
     "date": "2022.01.04",
     "authors": "Hiroshi Sugimura, Miyuto Ogawa",
     "title": "A Support System for a Remote Lesson using Abstract Students' Facial Expressions and Concentration",
@@ -422,6 +466,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2021",
     "date": "2021.10.12",
     "authors": "Takahiro Sakai, Ryuta Imanishi, Shouma Yasuda, Hiroshi Sugimura, Masao Isshiki",
     "title": "Research on the Visualization of Living Conditions from the Power Consumption Data using the ECHONET Lite Standard",
@@ -437,6 +482,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2021",
     "date": "2021.09.02",
     "authors": "杉村博, 酒井貴洋, 一色正男, 松本一教",
     "title": "類似生活者を発見するトランザクションデータベース距離",
@@ -452,6 +498,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2020",
     "date": "2021.03.18",
     "authors": "長松朋紀, 小野竜誠, 杉村博",
     "title": "家電連携で来客通知するIoTドアホン",
@@ -467,6 +514,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2020",
     "date": "2021.03.18",
     "authors": "鬢櫛理子, 濱野あゆみ, 佐野芳樹, 杉村博, 一色正男",
     "title": "ネットワーク家電製品を活用した生活情報見える化システム",
@@ -482,6 +530,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2020",
     "date": "2021.03.18",
     "authors": "森戸大地, 大塚太一, 伊藤公大, 杉村博,",
     "title": "スイングセンサーを用いた野球の打率向上の研究",
@@ -497,6 +546,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2020",
     "date": "2021.03.18",
     "authors": "小川実結人, 杉村博",
     "title": "生徒の表情と集中力を抽象化し確認可能な遠隔授業支援システム",
@@ -512,6 +562,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2020",
     "date": "2021.03.11",
     "authors": "佐野芳樹, 酒井貴洋, 久江健太,鬢櫛理子,杉村博,藤田裕之,一色正男",
     "title": "生活習慣の見直しを支援する日常教育サービスの研究",
@@ -527,6 +578,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2020",
     "date": "2021.03.11",
     "authors": "宇田悠佑, 山崎洋一, 杉村博, 一色正男",
     "title": "STEAM'Sを活用したロールプレイング型ロボット教育コンテンツの開発",
@@ -542,6 +594,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2020",
     "date": "2021.03.11",
     "authors": "小川 実結人, 杉村 博",
     "title": "遠隔授業支援のための生徒の表情と集中力の抽象化",
@@ -557,6 +610,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2020",
     "date": "2021.03.09",
     "authors": "Yoshiki Sano, Takahiro Sakai, Yusuke Uda, Hiroshi Sugimura and Masao Isshiki",
     "title": "Home-life Assessment List \"HAL\" for Promotes the Review of Lifestyle Habits",
@@ -572,6 +626,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2020",
     "date": "2021.03.09",
     "authors": "Shigeru Owada, Karura Inagaki and Hiroshi Sugimura",
     "title": "Reflecting personal preference obtained from clothing photos into full-color LED lighting",
@@ -587,6 +642,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2020",
     "date": "2021.01.25",
     "authors": "宇田悠佑, 市川雅也, 近藤将一, 渡部智樹, 一色正男, 杉村博",
     "title": "IoTを利用した行動変容による生活改善システム(HEMS時計)の研究",
@@ -602,6 +658,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2020",
     "date": "2021.01.25",
     "authors": "大和田茂, 杉村博",
     "title": "PicoGW: 商用利用に適したオープンソースの汎用デバイスゲートウェイ",
@@ -617,6 +674,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2020",
     "date": "2021.01.25",
     "authors": "佐野芳樹, 酒井貴洋, 杉村博, 一色正男",
     "title": "住宅内情報のログデータを活用した健康管理支援システムの研究",
@@ -632,6 +690,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2020",
     "date": "2020.12.09",
     "authors": "Naoki Kawasaki, Yuuki Machida, Takayuki Misu, Keiichi Abe, Hiroshi Sugimura, Makiko Okumura",
     "title": "A Study on the Increase of Perceivable Information in the Saccade with High Speed Line Display",
@@ -647,6 +706,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2020",
     "date": "2020.10.13",
     "authors": "Moe Hamamoto, Takashi Murakami, Hiroshi Sugimura and Masao Isshiki",
     "title": "Proposal of a Method to Solve the Group Temporal Key Mismatch Between IoT Devices",
@@ -662,6 +722,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2020",
     "date": "2020.10.13",
     "authors": "Yoshiki Sano, Takahiro Sakai, Moe Hamamoto, Hiroshi Sugimura and Masao Isshiki",
     "title": "Research on the Less Stress Acquisition Method for the Activity Information of Actual Residents Using the International Standard ECHONET Lite",
@@ -677,6 +738,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2020",
     "date": "2020.10.13",
     "authors": "Yuuki Machida, Naoki Kawasaki, Takayuki Misu,Keiichi Abe, Hiroshi Sugimura and Makiko Okumura",
     "title": "Verification of Visibility Improvement by Perceptual Sensitivity Correction in Line Display",
@@ -692,6 +754,7 @@
   {
     "type": "misc",
     "study": "特許",
+    "年度": "2020",
     "date": "2020.07.27",
     "authors": "杉村 博, 一色 正男, 松本 一教",
     "title": "情報処理装置、情報処理システムおよびプログラム",
@@ -707,6 +770,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2019",
     "date": "2020.03.11",
     "authors": "藤田 裕之, 杉村 博, 一色 正男",
     "title": "通信技術初学者向けのIP通信の基礎とECHONET Lite通信の基本の教材開発",
@@ -722,6 +786,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2020.03.10",
     "authors": "Yuuki Nakagawa, Nagisa Kokubu, Ryusei Ono, Hiroshi Sugimura and Shigeru Owada",
     "title": "3D Documentation of Nursery Activity using Photographs with Location and Sound Information",
@@ -737,6 +802,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2020.03.10",
     "authors": "Keita Sano, Takashi Murakami, Hiroshi Sugimura, Takayuki Misu, Masao Isshiki and Yoshiki Sano",
     "title": "Interior Lighting Utilizing \"Clump of Illumination\" for Promoting User Health",
@@ -752,6 +818,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2020.03.05",
     "authors": "寺埼 越, 宮井智也, 宇田悠佑, 酒井貴洋, 佐野芳樹, 杉村 博, 一色正男",
     "title": "HAL：生活の見直しを支える生活評価表",
@@ -767,6 +834,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2020.03.05",
     "authors": "宇田悠佑, 金子佐代, 渡部智樹, 杉村 博, 一色正男",
     "title": "HEMSを利用した行動変容による生活改善手法（HEMS時計）の提案",
@@ -782,6 +850,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2020.03.05",
     "authors": "高野清貴, 杉村 博",
     "title": "仮想空間を用いたスマートハウスコントローラ",
@@ -797,6 +866,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2020.03.05",
     "authors": "酒井貴洋, 佐野芳樹, 増田 陸, 松方直樹, 村上隆史, 杉村 博, 一色正男",
     "title": "国際標準規格ECHONET Lite（ISO/IEO14543-4-3）に基づくIoTスマートハウス機器情報取得システムの改善方法の提案",
@@ -812,6 +882,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2020.03.05",
     "authors": "増田 陸, 佐野芳樹, 松方直樹, 酒井貴洋, 濱本望絵, 杉村 博, 一色正男",
     "title": "IoTスマートハウス機器（家電機器とスマートメーター等）による生活者行動推定技術の開発",
@@ -827,6 +898,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2020.03.05",
     "authors": "楊 青, 藤田裕之, 関家一雄, 杉村 博, 一色正男",
     "title": "卒FITに適したシミュレーションシステムの開発",
@@ -842,6 +914,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2020.03.05",
     "authors": "相原和維, 佐野芳樹, 杉村 博, 一色正男",
     "title": "HEMS用水使用量計測技術(MAc方式)の開発",
@@ -857,6 +930,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2019",
     "date": "2020.02.01",
     "authors": "濱本 望絵, 土屋 薫子, 石川 博一, 村上 隆史, 杉村 博, 森 信一郎, 一色 正男",
     "title": "無線LAN中継機のグループ鍵更新問題に関する解決手法の提案",
@@ -872,6 +946,7 @@
   {
     "type": "review",
     "study": "教育",
+    "年度": "2019",
     "date": "2020.01.04",
     "authors": "Hiroshi Sugimura, Koh Keishin, Hiroyuki Fujita and Masao Isshiki",
     "title": "Programming Education of IoT Based on ECHONET Lite for Overseas Students",
@@ -887,6 +962,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2020.01.05",
     "authors": "Sayo Kaneko, Hiroyuki Fujita, Hiroshi Sugimura, Takayuki Misu and Masao Issiki",
     "title": "STUDY OF THE BEST ILLUMINANCE VALUES FOR ELEMENTARY SCHOOL AND UNIVERSITY STUDENT’S STUDY ACTIVITIES",
@@ -902,6 +978,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2020.01.05",
     "authors": "Yoshiki Sano, Hiroshi Sugimura and Masao Isshiki",
     "title": "Study of \"elder daily education service\" for improving elder QOL based on behavior of elderly",
@@ -917,6 +994,7 @@
   {
     "type": "misc",
     "study": "特許",
+    "年度": "2019",
     "date": "2019.12.27",
     "authors": "一色 正男, 杉村 博",
     "title": "情報処理システム、生活評価方法およびプログラム",
@@ -932,6 +1010,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2019.12.12",
     "authors": "Masao Isshiki, Yuuji Sasagawa, Hiroyuki Fujita, Hiroshi Sugimura, and Takashi Murakami",
     "title": " IoT-Smart house to create happiness of people \"based with ISO/IEC 14543-4-3(ECHONET Lite)\"",
@@ -947,6 +1026,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2019.10.01",
     "authors": "Naoki Kawasaki, Kyohei Wakabayashi, Makiko Okumura, Takayuki Misu, Keiichi Abe,Hiroshi Sugimura",
     "title": "Development of High Speed Flashing Line Display Using Eyeball Movement",
@@ -962,6 +1042,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2019.10.01",
     "authors": "Moe Hamamoto, Takashi Murakami, Hiroshi Sugimura, Masao Isshiki",
     "title": "Investigation of Home Routers with Connectivity Issues and Proposal for Improving Interconnectivity",
@@ -977,6 +1058,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2019.10.01",
     "authors": "Hiroyuki Fujita, Hiroshi Sugimura, Moe Hamamoto, Masao Isshiki",
     "title": "Improvement of the Device Descriptions of ECHONET Lite by Adding Version Specific Information",
@@ -992,6 +1074,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2019.10.01",
     "authors": "Yoshiki Sano, Riku Masuda, Naoki Matsukata, Sakai Takahiro, Moe Hamamoto, Hiroshi Sugimura, Masao Isshiki",
     "title": "Proposal to Make IoT (ECHONE Lite) Devices \"Human Behavior Sensors for Life Action Recognition",
@@ -1007,6 +1090,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2019.08.22",
     "authors": "川崎 直紀, 若林 恭平, 三栖 貴行, 安部 惠一, 杉村 博, 奥村 万規子",
     "title": "眼球運動を利用した高速ラインディスプレイの開発と点滅周期の最適化",
@@ -1022,6 +1106,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2019.08.06",
     "authors": "Moe Hamamoto, Takashi Murakami, Hiroshi Sugimura and Masao Isshiki",
     "title": "Resolving IGMP Difference among Routers and Devices for Improving Interconnectivity in Home Networks",
@@ -1037,6 +1122,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2019.06.26",
     "authors": "佐野 芳樹, 松方 直樹, 酒井 貴洋, 増田 陸, 濱本 望絵, 杉村 博, 一色 正男",
     "title": "スマートメーターとHEMSを利用した実住宅での生活行動推定利用統",
@@ -1052,6 +1138,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2019",
     "date": "2019.07.22",
     "authors": "Hiroshi Sugimura",
     "title": "Programming Education for Creating IoT Device with ECHONET Lite",
@@ -1067,6 +1154,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2019",
     "date": "2019.07.16",
     "authors": "Takashi Murakami, Hiroshi Sugimura, Masao Isshiki",
     "title": "COMPARISON OF IOT DEVICES ARCHITECTURE IN HOME NETWORK",
@@ -1082,6 +1170,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2019",
     "date": "2019.06.20",
     "authors": "杉村 博",
     "title": "除雪で苦労した今年の山研開所作業 ミニ水力発電小委員会委員",
@@ -1097,6 +1186,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2019",
     "date": "2019.05.23",
     "authors": "佐野 芳樹, 濱本 望絵, 杉村 博, 一色 正男",
     "title": "IoT(HEMS)利用の高齢者高度見守りシステム",
@@ -1112,6 +1202,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2019",
     "date": "2019.05.01",
     "authors": "Takumi Shida, Hiroshi Sugimura, Moe Hamamoto, Masao Isshiki",
     "title": "Development of Interface for Assisting Energy-Saving Utilizing Information from Network Home Appliances",
@@ -1127,6 +1218,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2018",
     "date": "2019.03.14",
     "authors": "志田 匠, 杉村 博, 一色 正男",
     "title": "電力見える化での機器操作情報活用による節電支援の研究",
@@ -1142,6 +1234,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2018",
     "date": "2019.03.14",
     "authors": "矢澤 将虎, 大沼 龍之介, 杉村 博, 一色 正男",
     "title": "人工知能を用いた大規模HEMSデータからの知識発見",
@@ -1157,6 +1250,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2018",
     "date": "2019.03.14",
     "authors": "高野 清貴, 杉村 博, 一色 正男",
     "title": "ECHONET Liteによるレンジフードファン制御",
@@ -1172,6 +1266,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2018",
     "date": "2019.03.12",
     "authors": "Shigeru Owada, Etu Terasaki, Hiroshi Sugimura",
     "title": "HoikuCam: Voice Recognizing Camera for In Situ Recording of Child Development",
@@ -1187,6 +1282,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2018",
     "date": "2019.03.05",
     "authors": "志田 匠, 杉村 博",
     "title": "スマートハウスリモコン開発用動画教材の開発と実践",
@@ -1202,6 +1298,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2018",
     "date": "2019.03.05",
     "authors": "藤田 裕之, 熊倉 悠介, 杉村 博, 一色 正男",
     "title": "Node-REDを用いたIoT（HEMS）学習教材の開発とその実践",
@@ -1217,6 +1314,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2018",
     "date": "2019.01.31",
     "authors": "濱本 望絵, 杉本 芳剛, 鷲津 宗孝, 石川 博一, 村上 隆史, 杉村 博, 森 信一郎, 一色 正男",
     "title": "ECHONET Lite搭載機器の相互接続性を阻害する家庭用ルータの実装状況調査，および相互接続性向上のための手法の提案",
@@ -1232,6 +1330,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2018",
     "date": "2019.01.24",
     "authors": "濱本 望絵, 土屋 薫子, 石川 博一, 村上 隆史, 杉村 博, 森 信一郎, 一色 正男",
     "title": "無線LAN中継機のグループ鍵更新問題に関する解決手法の提案",
@@ -1247,6 +1346,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2018",
     "date": "2019.01.24",
     "authors": "神林 優河, 佐野 芳樹, 小川 塁, 高村 走, 杉村 博, 濱本 望絵, 一色 正男",
     "title": "国際標準規格(ECHONET Lite)を利用したスマートメーターと家電製品とを統合したHEMSサービスでの生活行動推定技術の研究",
@@ -1262,6 +1362,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2018",
     "date": "2019.01.24",
     "authors": "藤田 裕之, 濱本 望絵, 杉村 博, 一色 正男",
     "title": "エコーネットコンソーシアムが策定したECHONET Lite Web API ガイドラインの紹介",
@@ -1277,6 +1378,7 @@
   {
     "type": "review",
     "study": "教育",
+    "年度": "2018",
     "date": "2019.01.04",
     "authors": "Yusuke Kumakura, Hiroyuki Fujita, Sayo Kaneko, Moe Hamamoto, Hiroshi Sugimura, Masao Isshiki",
     "title": "Development of a curriculum and teaching materials of IoT and HEMS utilizing Node-RED",
@@ -1292,6 +1394,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2018",
     "date": "2018.09.11",
     "authors": "豊田 征岐, 町田 優希, 遠藤 大暉, 杉村 博, 奥村 万規子",
     "title": "サッカード型ラインディスプレイの製作と評価",
@@ -1307,6 +1410,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2018",
     "date": "2018.09.05",
     "authors": "志田 匠, 杉村 博",
     "title": "ECHONET Liteの情報を活用した見える化ツール",
@@ -1322,6 +1426,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2018",
     "date": "2018.08.29",
     "authors": "黄 啓新, 金井 徳兼, 三栖 貴行, 山崎 洋一, 杉村 博, 安部 惠一",
     "title": "学生の能力を伸ばす企業連携PBL教育の実践",
@@ -1337,6 +1442,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2018",
     "date": "2018.07.16",
     "authors": "Takumi Shida, Hiroshi Sugimura, Moe Hamamoto and Masao Isshiki",
     "title": "Development of Support Tool to Improve Indirectly Consciousness of Energy Saving",
@@ -1352,6 +1458,7 @@
   {
     "type": "inbook",
     "study": "書籍",
+    "年度": "2018",
     "date": "2018.06.05",
     "authors": "一色 正男 , 笹川 雄司 , 杉村 博",
     "title": "みんなで創ろう! スマートハウス事例集(第11回)ECHONET Liteのソフトウェアを一望しよう",
@@ -1367,6 +1474,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2017",
     "date": "2018.03.20",
     "authors": "宮澤 重明, 志田 匠, 杉村 博",
     "title": "家電機器内のセンサ活用による室内環境に応じた不規則な消費電力量の予測",
@@ -1382,6 +1490,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2018.03.14",
     "authors": "志田 匠, 小室 権枝, 一色 正男, 杉村 博",
     "title": "消費電流の見える化とアノテーションを用いた節電行動支援ツール",
@@ -1397,6 +1506,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2018.03.14",
     "authors": "小室 権枝, 志田 匠, 杉村 博",
     "title": "ディープラーニングを活用した個別株上昇予測",
@@ -1412,6 +1522,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2018.03.14",
     "authors": "竹内 陽祐, 吉田 雅規, 志田 匠, 一色 正男, 杉村 博",
     "title": "構文解析Web APIを持つECHONET Lite規格データベース",
@@ -1427,6 +1538,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2018.03.14",
     "authors": "吉田 雅規, 栗原 一輝, 藤田 裕之, 関家 一雄, 一色 正男, 杉村 博",
     "title": "家電と操作操作画面を対応付けるためのQRコード自動生成",
@@ -1442,6 +1554,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2018.03.14",
     "authors": "西村 優希, 竹内 陽祐, 一色 正男, 杉村 博",
     "title": "調理支援を行う画像投影システム",
@@ -1457,6 +1570,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2018.03.14",
     "authors": "野本 裕介, 岡村 雅也, 大和田 茂, 杉村 博",
     "title": "開いたときに温湿度を自動取得する扇子",
@@ -1472,6 +1586,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2017",
     "date": "2018.03.10",
     "authors": "岡村 雅也, 野本 祐介, 大和田 茂, 杉村 博",
     "title": "温度に関する個人の嗜好情報を自動的に所得する扇子",
@@ -1487,6 +1602,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2017",
     "date": "2018.03.09",
     "authors": "宮澤 重明, 志田 匠, 杉村 博",
     "title": "スマートハウス開発者育成の動画教材の開発と実践",
@@ -1502,6 +1618,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2017",
     "date": "2018.03.09",
     "authors": "藤田 裕之, 熊倉 悠介, 杉村 博, 一色正男",
     "title": "Node-REDを用いたHome Energy Management Systemの学習教材の開発",
@@ -1517,6 +1634,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2018.01.27",
     "authors": "藤田 裕之, 杉村 博, 村上 隆史, 一色 正男",
     "title": "ECHONET Lite WebAPI と Protocol Bridge",
@@ -1532,6 +1650,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2017",
     "date": "2017.09.03",
     "authors": "Takumi Shida, Shigeaki Miyazawa, Hiroshi Sugimura, Keiichi Abe and Masao Isshiki",
     "title": "Development of a Scheduler with Visualizing Electricity Consumption and Controlling Home Appliance",
@@ -1547,6 +1666,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2017.05.25",
     "authors": "三栖 貴行, 坂本 優大, 杉村 博, 一色 正男, 堀 優樹, 今吉 秀幸",
     "title": "電動ブラインドのスラット色の変更による室内明るさ感への影響",
@@ -1562,6 +1682,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2017.05.25",
     "authors": "宮澤 重明, 志田 匠, 一色 正男, 杉村 博",
     "title": "家電の機器情報を活用した重回帰分析による消費電力量予測",
@@ -1577,6 +1698,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2017.05.25",
     "authors": "西村 優希, 竹内 陽祐, 各務 佑, 藤田 裕之, 関家 一雄, 杉村 博, 一色 正男",
     "title": "スマートメータのデータを活用するアプリケーションの開発",
@@ -1592,6 +1714,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2017",
     "date": "2017.05.25",
     "authors": "吉田 雅規, 栗原 一輝, 藤田 裕之, 関家 一雄, 杉村 博, 一色 正男",
     "title": "QRコードでスマートフォンに家電製品の詳細情報と制御画面を表示するIoTアプリケーション",
@@ -1607,6 +1730,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2017",
     "date": "2017.05.25",
     "authors": "杉村 博, 宮澤 重明, 数野 翔太, 村上 隆史, 大和田 茂, 一色 正男",
     "title": "ソーシャルアノテーション可能な多種家電連携エンターテイメントシステム",
@@ -1622,6 +1746,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2017",
     "date": "2017.05.25",
     "authors": "村上 隆史, 杉村 博, 一色 正男",
     "title": "ホームネットワーク技術の小型小売店舗への適用に向けた制御コマンドの開発と標準化",
@@ -1637,6 +1762,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2017",
     "date": "2017.05.25",
     "authors": "村上 隆史, 杉村 博, 一色 正男",
     "title": "プラットフォーム型システムアーキテクチャに基づく小型小売店舗エネルギーマネジメントシステムの検証",
@@ -1652,6 +1778,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2017",
     "date": "2017.05.25",
     "authors": "宇佐美 真, 杉村 博, 一色 正男",
     "title": "人が柔軟性を有する実体物とのインタフェースを行うためのマーカ視覚認識のみによる力覚フィードバック方式の検討",
@@ -1667,6 +1794,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2016",
     "date": "2017.03.20",
     "authors": "有馬 一貴, 金子 将之, 杉村 博",
     "title": "長期運用及び定期的利用のためのHEMSサービスの開発",
@@ -1682,6 +1810,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2016",
     "date": "2017.03.20",
     "authors": "宮澤 重明, 志田 匠, 杉村 博",
     "title": "家電内センサを活用した消費電力予測の研究",
@@ -1697,6 +1826,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2017.03.16",
     "authors": "志田 匠, 原 笑, 宮澤 重明, 杉村 博",
     "title": "省エネ促進のための電力の見える化機能を併せ持つ家電制御ツールの開発",
@@ -1712,6 +1842,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2017.03.16",
     "authors": "原 笑, 松原 侃樹, 藤田 裕之, 一色 正男, 杉村 博",
     "title": "ECHONET Lite規格書のオープンデータベースシステム",
@@ -1727,6 +1858,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2017.03.16",
     "authors": "飯島 貴裕, 志田 匠, 有馬 一貴, 杉村 博",
     "title": "小水力発電の状況を確認するためのWebシステムの開発",
@@ -1742,6 +1874,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2017.03.16",
     "authors": "細谷 広海, 堀井 亮伸, 金子 将之, 杉村 博",
     "title": "ユーザ識別機能を持つ家庭用デジタルサイネージの開発",
@@ -1757,6 +1890,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2017.03.16",
     "authors": "松原 侃樹, 梶山 翔一, 金子 将之, 杉村 博",
     "title": "日本語入力の効率化を図る同時打鍵手法",
@@ -1772,6 +1906,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2017.03.16",
     "authors": "梶山 翔一, 細谷 広海, 有馬 一貫, 杉村 博",
     "title": "3D仮想空間を用いた スマートハウスコントローラ",
@@ -1787,6 +1922,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2017.03.16",
     "authors": "宮澤 重明, 志田 匠, 一色 正男, 杉村 博",
     "title": "家電内センサ情報によるRNNを活用した消費電力予測",
@@ -1802,6 +1938,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2016",
     "date": "2017.03.08",
     "authors": "有馬 一貴, 金子 将之, 杉村 博",
     "title": "フィットネストラッカーの現状調査と連携方法に関する学習教材の開発",
@@ -1817,6 +1954,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2017.01.20",
     "authors": "数野 翔太, 熊倉 悠介, 梅田 柾, 和田 直樹, 横尾 智康, 小田原 健雄, 村上 隆史, 杉村 博, 一色 正男",
     "title": "人を幸せにする生活IoTの研究",
@@ -1832,6 +1970,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2017.01.20",
     "authors": "藤田裕之, 杉村博, 村上隆史, 一色正男",
     "title": "ECHONET機器オブジェクト詳細規定のデータ化",
@@ -1847,6 +1986,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2016",
     "date": "2017.01.10",
     "authors": "Masayuki Kaneko, Kazuki Arima, Takashi Murakami, Masao Isshiki, Hiroshi Sugimura",
     "title": "Design and Implementation of Interactive Control System for Smart Houses",
@@ -1862,6 +2002,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2016",
     "date": "2017.01.10",
     "authors": "Kazuki Arima, Masayuki Kaneko, Takashi Murakami, Masao Isshiki, Hiroshi Sugimura",
     "title": "User Experience to Enable Long-term Operation for HEMS",
@@ -1877,6 +2018,7 @@
   {
     "type": "review",
     "study": "教育",
+    "年度": "2016",
     "date": "2017.01.04",
     "authors": "Masao Isshiki, Hiroshi Sugimura, Yuuji Sasagawa, Takashi Murakami, Yoshimi Teshigawara",
     "title": "Awareness Education for the Open IoT Platform System Market Growth",
@@ -1892,6 +2034,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2016",
     "date": "2016.11.03",
     "authors": "Yoichi Yamazaki, Kentaro Nakamura, Masaki Mikami, Takayuki Misu, Hiroshi Sugimura, Takuya Hashimoto, Shingo Otsuka, Akihiko Shirai, Masao Isshiki and Kaoru Hirota",
     "title": "Personal Characteristic Motion of Elderly Gait for Nursing Relocation using Robot and Telepresence Smart House",
@@ -1907,6 +2050,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2016",
     "date": "2016.10.11",
     "authors": "Masayuki Kaneko, Kazuki Arima, Takashi Murakami, Masao Isshiki and Hiroshi Sugimura",
     "title": "Development of Superposing Projection System for Cooking Support",
@@ -1922,6 +2066,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2016",
     "date": "2016.10.11",
     "authors": "Kazuki Arima, Masayuki Kaneko, Takashi Murakami, Masao Isshiki and Hiroshi Sugimura",
     "title": "User Experience for HEMS Based on Gamification and Life Log",
@@ -1937,6 +2082,7 @@
   {
     "type": "book",
     "study": "書籍",
+    "年度": "2016",
     "date": "2016.09.24",
     "authors": "杉村 博, 笹川 雄司, 関家 一雄, 藤田 裕之, 一色 正男",
     "title": "ECHONET Lite入門 スマートハウスの通信技術を学ぼう!",
@@ -1952,6 +2098,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2016",
     "date": "2016.09.15",
     "authors": "粂野 文洋, 杉村 博, 清 雄一, 鄭 顕志, 田原 康之, 大須賀 昭彦",
     "title": "複数の機器連携を前提としたスマートホームサービス導出の試み",
@@ -1967,6 +2114,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.09.09",
     "authors": "有馬 一貴, 金子 将之, 村上 隆史, 一色 正男, 杉村 博",
     "title": "ゲーミフィケーションを用いたHEMS継続利用システムの開発",
@@ -1982,6 +2130,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.09.09",
     "authors": "金子 将之, 有馬 一貴, 村上 隆史, 一色 正男, 杉村 博",
     "title": "メッセージツールを活用した家電制御BOTシステムの開発",
@@ -1997,6 +2146,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2016",
     "date": "2016.09.05",
     "authors": "黄 啓新, 林 沛群, 金井 徳兼, 杉村 博, 奥村 万規子",
     "title": "海外大学と連携したものづくりワークショップによるグローバル人材の育成",
@@ -2012,6 +2162,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.08.31",
     "authors": "有馬 一貴, 金子 将之, 村上 隆史, 一色 正男, 杉村 博",
     "title": "ミニアンビエントセンシングを用いた節電行動提案システム",
@@ -2027,6 +2178,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.08.31",
     "authors": "金子 将之, 有馬 一貴, 村上 隆史, 一色 正男, 杉村 博",
     "title": "馴化防止のための複合起床支援システムの開発",
@@ -2042,6 +2194,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.08.24",
     "authors": "杉村博, 宮澤重明, 数野翔太, 村上隆史, 大和田茂, 一色正男",
     "title": "多種機器連携動画システムとアノテーション共有サービスの開発",
@@ -2057,6 +2210,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.08.24",
     "authors": "宇佐美真, 杉村博, 一色正男",
     "title": "人が柔軟性を有する実体物とのインタフェースを行うためのマーカ視覚認識のみによる力覚フィードバック方式の検討",
@@ -2072,6 +2226,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.06.02",
     "authors": "数野 翔太, 熊倉 悠介, 小田原 健雄, 村上 隆史, 杉村 博, 一色 正男",
     "title": "人とIoTとHEMSの連携フレームワークの研究",
@@ -2087,6 +2242,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.06.02",
     "authors": "松原 侃樹, 三改木 颯太, 高遠 拓也, 杉村 博, 近藤 善則",
     "title": "可変配光照明の制作",
@@ -2102,6 +2258,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.06.02",
     "authors": "村上 隆史, 杉村 博, 一色 正男",
     "title": "プラットフォーム型システムアーキテクチャに基づく小型小売店舗エネルギーマネジメントシステムの検証",
@@ -2117,6 +2274,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.06.02",
     "authors": "藤田 裕之, 一色 正男, 杉村 博, 村上 隆史",
     "title": "ECHONET Liteパケット送受信ツール「SSNG for iPhone」の開発",
@@ -2132,6 +2290,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.06.02",
     "authors": "志田 匠, 宇田 涼介, 井野 雅之, 杉村 博, 一色 正男",
     "title": "遠隔地リアルタイム映像と没入空間の連携",
@@ -2147,6 +2306,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.06.02",
     "authors": "梶山 翔一, 山下 祥平, 池田 将, 杉村 博, 奥村 万規子",
     "title": "シースルーモバイルビュアーのロバスト性の実験",
@@ -2162,6 +2322,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2016",
     "date": "2016.06.02",
     "authors": "村上 隆史, 杉村 博, 一色 正男",
     "title": "ホームネットワーク技術の小型小売店舗への適用に向けた制御コマンドの開発と標準化",
@@ -2177,6 +2338,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2016",
     "date": "2016.04.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第12回）",
@@ -2192,6 +2354,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2015",
     "date": "2016.03.20",
     "authors": "有馬 一貴, 杉村 博, 黄 啓新",
     "title": "節電に向けたHEMSユーザインタフェイスの開発",
@@ -2207,6 +2370,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2015",
     "date": "2016.03.20",
     "authors": "金子 将之, 杉村 博, 黄 啓新",
     "title": "住空間にコントローラと情報を重畳するシステムの開発",
@@ -2222,6 +2386,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2015",
     "date": "2016.03.20",
     "authors": "宇佐美 真, 杉村 博, 三浦 喬平, 一色正男",
     "title": "バーチャルリアリティゲーム用途を想定し，操作物形状に最適化できる形状自由度特性を有したマーカ技術の有効性検討",
@@ -2237,6 +2402,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2015",
     "date": "2016.03.20",
     "authors": "笹川 雄司, 関家 一雄, 藤田 裕之, 杉村 博, 一色 正男",
     "title": "HEMS認証支援センターを活用した地域貢献，企業支援，国エネルギー施策への取り組み",
@@ -2252,6 +2418,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2015",
     "date": "2016.03.20",
     "authors": "藤田 裕之, 関家 一雄, 笹川 雄司, 杉村 博, 一色 正男",
     "title": "HEMSサービス開発のかなめとなるECHONET Liteの実行環境や国際競争力を考慮したSDKの開発",
@@ -2267,6 +2434,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2016.03.09",
     "authors": "金子 将之, 有馬 一貴, 杉村 博, 一色 正男, 黄 啓新",
     "title": "睡眠周期を利用した家電製品連携システムの開発",
@@ -2282,6 +2450,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2016.03.09",
     "authors": "有馬 一貴, 金子 将之, 杉村 博,一色 正男, 黄 啓新",
     "title": "節電行動を促進するHEMS支援ツールの開発",
@@ -2297,6 +2466,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2016.03.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第11回）",
@@ -2312,6 +2482,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2016.02.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第10回）",
@@ -2327,6 +2498,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2015",
     "date": "2016.01.14",
     "authors": "杉村 博, 笹川 雄司, 藤田 裕之, 関家 一雄, 黄 啓新, 一色 正男",
     "title": "HEMSコントローラ開発者育成のためのECHONET Lite教育コンテンツの開発",
@@ -2342,6 +2514,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2016.01.14",
     "authors": "桑田 陽介, 李 俊男, 杉村 博, 一色 正男",
     "title": "センサデータマイニングによる消費電力予測",
@@ -2357,6 +2530,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2016.01.14",
     "authors": "李 俊男, 武内 浩平, 杉村 博, 黄 啓新",
     "title": "外国人のための音声調整方法の検討",
@@ -2372,6 +2546,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2016.01.14",
     "authors": "宮澤 重明, 桑田 陽介, 杉村 博, 一色 正男",
     "title": "ロボットを介したゆるい親子間コミュニケーションツールの開発",
@@ -2387,6 +2562,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2016.01.14",
     "authors": "山梨 紘哉, 湯浅 泰樹, 小田原 健雄, 岡本 健司, 関家 一雄, 杉村 博, 三栖 貴行, 一色 正男",
     "title": "「ゼロエネ+エネハベ」がつくる健康HEMSの研究",
@@ -2402,6 +2578,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2015",
     "date": "2016.01.06",
     "authors": "Takashi Murakami, Hiroshi Sugimura, Masao Isshiki",
     "title": "Application of ECHONET Lite Which is Open Standard into Energy Management System",
@@ -2417,6 +2594,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2016.01.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第9回）",
@@ -2432,6 +2610,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2016.01.05",
     "authors": "杉村 博, 波多野 匠, 一色 正男",
     "title": "偏光板を使った自然光の強さ調整",
@@ -2447,6 +2626,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2015.12.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第8回）",
@@ -2462,6 +2642,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2015.11.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第7回）",
@@ -2477,6 +2658,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2015",
     "date": "2015.10.27",
     "authors": "Masayuki Kaneko, Kazuki Arima, Makoto Usami, Hiroshi Sugimura, Masao Isshiki and Keishin Koh",
     "title": "Development of Information Living Integrated by Home Appliances and Web Services",
@@ -2492,6 +2674,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2015",
     "date": "2015.10.27",
     "authors": "Makoto Usami, Kyohei Miura, Hiroshi Sugimura and Masao Isshiki",
     "title": "3D Augmented Reality Marker Expands Workable Fields of Virtual Reality Action Games",
@@ -2507,6 +2690,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2015.10.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第6回）",
@@ -2522,6 +2706,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2015",
     "date": "2015.10.03",
     "authors": "宇佐美 真, 杉村 博, 三浦 喬平, 一色 正男",
     "title": "人の動作に対してグラフィクスを高速かつシームレスに追従させる3次元ARマーカの開発",
@@ -2537,6 +2722,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2015.10.01",
     "authors": "宇佐美 真, 杉村 博, 三浦 喬平, 一色 正男",
     "title": "新3次元マーカの活用により動作環境範囲を拡大させたバーチャルリアリティアクションゲーム方式の提案",
@@ -2552,6 +2738,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2015.10.01",
     "authors": "村上 隆史, 一色 正男, 杉村 博, 横山 悠平",
     "title": "HEMSにおける通信インタフェースの業務用機器への拡張",
@@ -2567,6 +2754,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2015",
     "date": "2015.09.15",
     "authors": "金子 将之, 有馬 一貴, 村上 隆史, 杉村 博, 一色 正男",
     "title": "家電製品遠隔制御を用いた複合起床支援システムの開発",
@@ -2582,6 +2770,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2015.09.15",
     "authors": "有馬 一貴, 金子 将之, 宇佐美 真, 杉村 博, 一色 正男",
     "title": "CONCON:節電を継続するためのHEMS支援ツール",
@@ -2597,6 +2786,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2015.09.15",
     "authors": "岡本 健司, 杉村 博, 三栖 貴行, 一色 正男, 今吉 秀幸",
     "title": "電動ブラインドと一般照明を用いた照度最適化システムの検討",
@@ -2612,6 +2802,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2015.09.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第5回）",
@@ -2627,6 +2818,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2015.08.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第4回）",
@@ -2642,6 +2834,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2015",
     "date": "2015.08.01",
     "authors": "杉村 博, 宇佐美 真, 村上 隆史, 大和田 茂, 渡邊 智樹, 一色 正男",
     "title": "ビデオアノテーションを利用したサラウンド照明システムの開発",
@@ -2657,6 +2850,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2015.07.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第3回）",
@@ -2672,6 +2866,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2015.06.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第2回）",
@@ -2687,6 +2882,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2015.05.27",
     "authors": "宮澤 重明, 石川 誠弥, 葉山 拓哉, 岡本 健司, 関家 一雄, 杉村 博, 奥山 武彦, 一色 正男",
     "title": "新世代HEMSサービスの開発 ～スマートメータのデータ活用～",
@@ -2702,6 +2898,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2015.05.27",
     "authors": "茂木 奈菜, 桑田 陽介, 有馬 一貴, 杉村 博, 関家 一雄, 梅田 哲士, 一色 正男",
     "title": "電流波形解析による家電機器分離技術のHEMS実用化支援",
@@ -2717,6 +2914,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2015.05.27",
     "authors": "武内 浩平, 鈴木 洸斗, 金子 将之, 関家 一雄, 杉村 博, 益子 寛, 一色 正男",
     "title": "汎用赤外線リモコンのECHONET Lite化と家電ゲームの開発",
@@ -2732,6 +2930,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2015",
     "date": "2015.05.21",
     "authors": "内海 和貴, 岡本 健司, 村上 隆史, 宇佐美 真, 杉村 博, 一色 正男",
     "title": "クラウド型HEMSサービス基盤の研究",
@@ -2747,6 +2946,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2015",
     "date": "2015.05.05",
     "authors": "杉村 博, 笹川 雄司, 一色 正男",
     "title": "自分で作ろう！スマートハウス－ECHONET Lite入門（連載第1回）",
@@ -2762,6 +2962,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2015.03.17",
     "authors": "手平 裕希, 有馬 一貴, 宇佐美 真, 杉村 博, 一色 正男",
     "title": "聴覚障がい者のための音声認識システムの音声ピッチ調整方法",
@@ -2777,6 +2978,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2015.03.17",
     "authors": "有馬 一貴, 金子 将之, 村上 隆史, 杉村 博, 一色 正男",
     "title": "HEMS継続利用のための節電支援ツールの開発",
@@ -2792,6 +2994,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2015.03.17",
     "authors": "横山 悠平, 佐々木 まどか, 川崎 耀馬, 今泉 優樹, 岡本 健司, 一色 正男, 杉村 博",
     "title": "ECHONET Liteを用いたHEMSサービス開発環境の構築",
@@ -2807,6 +3010,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2015.03.17",
     "authors": "波多野 匠, 金子 将之, 宇佐美 真, 杉村 博, 一色 正男",
     "title": "パッシブを利用した自然光制御装置の開発",
@@ -2822,6 +3026,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2015.03.17",
     "authors": "金子 将之, 波多野 匠, 村上 隆史, 杉村 博, 一色 正男",
     "title": "快適な目覚めをサポートする家電製品連携システムの開発",
@@ -2837,6 +3042,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2014",
     "date": "2015.03.05",
     "authors": "杉村 博, 三栖 貴行, 山崎 洋一, 笹川 雄司, 藤田 裕之, 関家 一雄, 村上 隆史, 一色 正男",
     "title": "HEMS開発者教育用コンテンツの開発と教育の実施",
@@ -2852,6 +3058,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2014",
     "date": "2015.03.05",
     "authors": "鷹野 孝典, 納富 一宏, 西村 広光, 五百蔵 重典, 稲葉 達也, 八木 勲, 鳥井 秀幸, 海野 浩, 平野 照比古, 服部 元史, 杉村 博, 黒古 敦, 関口 幸三,上平 員丈",
     "title": "KAIT夢コン2014実施報告",
@@ -2867,6 +3074,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2014",
     "date": "2015.02.01",
     "authors": "渡部 智樹, 高嶋 洋一, 杉村 博, 一色 正男",
     "title": "Webサービスとマルチデバイスのフレキシブルな連携方式の実現",
@@ -2882,6 +3090,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2014",
     "date": "2015.01.26",
     "authors": "杉村 博, 三栖 貴行, 山崎 洋一, 笹川 雄司, 藤田 裕之, 関家 一雄, 村上 隆史, 一色 正男",
     "title": "コンシューマデバイス開発者育成のためのECHONET Lite教育コンテンツの開発",
@@ -2897,6 +3106,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2015.01.26",
     "authors": "村上 隆史, 一色 正男, 杉村 博, 横山 悠平",
     "title": "HEMSにおける通信インタフェースの業務用機器への拡張",
@@ -2912,6 +3122,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2014.12.15",
     "authors": "岡本 健司, 今泉 優樹, 斉藤 隆児, 湯田 和馬, 渡邊 亮, 呉 天, 横山 悠平, 杉村 博, 三栖 貴行, 一色正男, 今吉秀幸",
     "title": "電動ブラインドによる光環境最適化システムの検討",
@@ -2927,6 +3138,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2014.10.10",
     "authors": "岡本 健司, 横山 悠平, 呉 天, 杉村 博, 三栖 貴行, 一色 正男, 今吉 秀幸",
     "title": "ECHONET Liteによる光環境最適化システムの提案",
@@ -2942,6 +3154,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2014",
     "date": "2014.10.07",
     "authors": "Hiroshi SUGIMURA, Kazuki UTSUMI, Masayuki KANEKO, Kazuki ARIMA, Masahiro SAKAMOTO, Yuki IMAIZUMI, Tomoki WATANABE and Masao ISSHIKI",
     "title": "Development of Immersive Display System of Web Service in Living Space",
@@ -2957,6 +3170,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2014",
     "date": "2014.10.01",
     "authors": "杉村 博, 林 敏, 森 武昭",
     "title": "データマイニングに基づく毎日の太陽光発電の発電電力予測手法",
@@ -2972,6 +3186,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2014.09.04",
     "authors": "岡本 健司, 横山 悠平, 斉藤 隆児, 湯田 和真, 渡邊 亮, 呉 天, 杉村 博, 三栖 貴行, 一色 正男",
     "title": "ECHONET Liteによる電動ブラインド制御の検討",
@@ -2987,6 +3202,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2014",
     "date": "2014.08.08",
     "authors": "三栖 貴行, 金井 徳兼, 奥村 万規子, 黄 啓新, 一色 正男, 杉村 博",
     "title": "工学系学生向けのキャリア教育を含めたユニットプログラムの実践",
@@ -3002,6 +3218,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2014.05.23",
     "authors": "渡部 智樹, 高嶋 洋一, 杉村 博, 一色 正男",
     "title": "Webサービスとマルチデバイスのフレキシブルな連携方式の実現",
@@ -3017,6 +3234,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2014.05.22",
     "authors": "内海 和貴, 金子 将之, 有馬 一貴, 坂本 優大, 今泉 優樹, 三浦 翔, 杉村 博, 一色 正男",
     "title": "LINC: 音声及びジェスチャー認識を用いた住空間情報没入型表示システム",
@@ -3032,6 +3250,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2014",
     "date": "2014.05.15",
     "authors": "一色 正男, 杉村 博",
     "title": "繋がる家電",
@@ -3047,6 +3266,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2014",
     "date": "2014.05.13",
     "authors": "星野 寛登, 杉村 博, 松本 一教",
     "title": "視線移動パターンデータの文書理解への応用",
@@ -3062,6 +3282,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2013",
     "date": "2014.03.20",
     "authors": "杉村 博, 林 敏, 森 武昭",
     "title": "相関ルールを用いた太陽光発電電力の予測ルール抽出手法",
@@ -3077,6 +3298,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2013",
     "date": "2014.03.14",
     "authors": "星野 寛登, 岩田 一, 杉村 博, 松本 一教",
     "title": "デジタル教材提示の差異による学習者の振る舞い分析　-可読性の高いデジタル教材開発に向けて-",
@@ -3092,6 +3314,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2013",
     "date": "2014.03.14",
     "authors": "田中 哲雄, 田中 博, 五百蔵 重典, 梶並 知記, 鳥井 秀幸, 海野 浩, 平野 照比古, 服部 哲, 杉村 博, 黒古 敦, 関口 幸三, 八巻 宏之, 上平 員丈",
     "title": "KAIT夢コン2013実施報告",
@@ -3107,6 +3330,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2013",
     "date": "2014.03.11",
     "authors": "岡本 健司, 横山 悠平, 三浦 翔, 関家 一雄, 呉 天, 中島 義人, 杉村 博, 三栖 貴行, 一色 正男",
     "title": "ECHONET Lite サービスプラットフォームの提案と実現",
@@ -3122,6 +3346,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2013",
     "date": "2014.03.11",
     "authors": "阿部 聡明, 池田 雅人, 渡部 智樹, 杉村 博, 一色 正男",
     "title": "家電の状態に応じたユーザーへの通知システム",
@@ -3137,6 +3362,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2013",
     "date": "2014.03.05",
     "authors": "森 史英, 杉村 博, 三栖 貴行, 黄 啓新",
     "title": "快適な室内環境を実現するためのセンサーユニットとそのシステムの検討",
@@ -3152,6 +3378,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2013",
     "date": "2014.02.28",
     "authors": "Hiroshi Sugimura, Masao Issiki, Takeaki Mori and Kazunori Matsumoto",
     "title": "Building Open Hems-Lifelog Over Social Networking Service with Sensor Data",
@@ -3167,6 +3394,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2013",
     "date": "2013.11.26",
     "authors": "Tomoaki UEDA, Hiroshi SUGIMURA, Tetsuo TANAKA, Kazunori MATSUMOTO",
     "title": "Estimating Degree of Concentration through Activity Recognition: Use in a Classroom with SNS",
@@ -3182,6 +3410,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2013",
     "date": "2013.09.04",
     "authors": "林 敏, 杉村 博, 森 武昭",
     "title": "データマイニングを用いた太陽光発電の発電電力予測",
@@ -3197,6 +3426,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2013",
     "date": "2013.08.27",
     "authors": "Hiroshi Sugimura",
     "title": "Introduction to the ECHONET Lite SDK distributed by HEMS Certification Support Center of KAIT",
@@ -3212,6 +3442,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2013",
     "date": "2013.08.27",
     "authors": "Masao Isshiki, Kazuo Sekiya and Hiroshi Sugimura",
     "title": "Smart-Home Business Will Be Grown by HEMS Certification Support Center of KAIT",
@@ -3227,6 +3458,7 @@
   {
     "type": "inbook",
     "study": "Springer",
+    "年度": "2013",
     "date": "2013.08.06",
     "authors": "Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Knowledge Management System: Combination of Experts&apos; Knowledge and Automatic Improvement",
@@ -3242,6 +3474,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2013",
     "date": "2013.06.04",
     "authors": "植田 智明, 杉村 博, 松本 一教, 一色 正男",
     "title": "センサデータからの人間の行動推定",
@@ -3257,6 +3490,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2013",
     "date": "2013.05.23",
     "authors": "渡部 智樹, 望月 理香, 小林 透, 杉村 博, 一色 正男",
     "title": "視聴映像の時間長を考慮した家電制御システム",
@@ -3272,6 +3506,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2013",
     "date": "2013.04.01",
     "authors": "杉村 博, 関家 一雄, 渡部 智樹, 一色 正男",
     "title": "WebサービスによるHEMS機器相互接続テスト環境の開発",
@@ -3287,6 +3522,7 @@
   {
     "type": "misc",
     "study": "展示",
+    "年度": "2012",
     "date": "2013.03.27",
     "authors": "一色 正男, 関家 一雄, 杉村 博, 笹川 雄司",
     "title": "HEMS認証試験支援センター",
@@ -3302,6 +3538,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2012",
     "date": "2013.03.20",
     "authors": "杉村 博, 松本 一教",
     "title": "背景情報を活用するデータマイニングシステムの開発",
@@ -3317,6 +3554,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2012",
     "date": "2013.03.13",
     "authors": "Hiroto Hoshino, Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Time-series Datamining System with Annotated Information",
@@ -3332,6 +3570,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2012",
     "date": "2013.03.13",
     "authors": "Masaki Fujisawa, Hiroshi Sugimura, Hiroto Hoshino and Kazunori Matsumoto",
     "title": "Intelligent Classroom Information System using Sensing Data and Personal Records",
@@ -3347,6 +3586,7 @@
   {
     "type": "inproceedings",
     "study": "教育",
+    "年度": "2012",
     "date": "2013.03.12",
     "authors": "杉村 博, 星野 寛登, 松本 一教, 一色 正男",
     "title": "学生の状況を把握するための教員支援システム",
@@ -3362,6 +3602,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2012",
     "date": "2013.01.17",
     "authors": "藤澤 将貴, 杉村 博, 高見澤 聖子, 松本 一教",
     "title": "データマイニング手法によるセンサーデータからの行動推定",
@@ -3377,6 +3618,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2012",
     "date": "2013.01.09",
     "authors": "星野 寛登, 杉村 博, 松本 一教",
     "title": "潜在性を考慮したコンシューマ分析の提案",
@@ -3392,6 +3634,7 @@
   {
     "type": "inbook",
     "study": "記事",
+    "年度": "2012",
     "date": "2013.01.01",
     "authors": "杉村 博",
     "title": "特徴獲得とアノテーションにもとづくデータマイニング手法の研究",
@@ -3407,6 +3650,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2012",
     "date": "2012.12.06",
     "authors": "Seiko TAKAMIZAWA, Hiroshi SUGIMURA, Masaki FUJISAWA, Kazunori MATSUMOTO",
     "title": "Toward Authorship Detection based on Datamining",
@@ -3422,6 +3666,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2012",
     "date": "2012.07.19",
     "authors": "杉村 博, 高見澤 聖子, 松本 一教",
     "title": "時系列データマイニングによる行動推定技術の開発",
@@ -3437,6 +3682,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2012",
     "date": "2012.06.12",
     "authors": "杉村 博, 松本 一教",
     "title": "背景知識を利用したデータマイニング",
@@ -3452,6 +3698,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2012",
     "date": "2012.04.01",
     "authors": "杉村 博, 松本 一教",
     "title": "Web情報からの自動タギングのデータマイニングへの利用",
@@ -3467,6 +3714,7 @@
   {
     "type": "article",
     "study": "",
+    "年度": "2012",
     "date": "2012.04.01",
     "authors": "杉村 博, 松本 一教",
     "title": "アノテーション付き時系列データからの知識発見システムの開発",
@@ -3482,6 +3730,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2011",
     "date": "2012.03.18",
     "authors": "Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Knowledge discovery based on importance of features",
@@ -3497,6 +3746,7 @@
   {
     "type": "misc",
     "study": "特許",
+    "年度": "2011",
     "date": "2011.12.09",
     "authors": "杉村 博",
     "title": "データへのタグ付け装置",
@@ -3512,6 +3762,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2011",
     "date": "2011.10.09",
     "authors": "Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Classification System for Time Series Data Based on Feature Pattern Extraction",
@@ -3527,6 +3778,7 @@
   {
     "type": "misc",
     "study": "特許",
+    "年度": "2011",
     "date": "2011.09.30",
     "authors": "杉村 博",
     "title": "知識を活用する情報システム装置",
@@ -3542,6 +3794,7 @@
   {
     "type": "misc",
     "study": "特許",
+    "年度": "2011",
     "date": "2011.09.12",
     "authors": "杉村 博",
     "title": "時系列データから興味深いパタンを発見する装置",
@@ -3557,6 +3810,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2011",
     "date": "2011.09.07",
     "authors": "岡田 恵理香, 杉村 博, 佐賀 亮介, 松本 一教",
     "title": "クラス情報を用いない相関ルールによるクラス分類手法",
@@ -3572,6 +3826,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2011",
     "date": "2011.06.01",
     "authors": "杉村 博, 松本 一教",
     "title": "時系列データベースにおける特徴パタンの抽出",
@@ -3587,6 +3842,7 @@
   {
     "type": "review",
     "study": "紀要",
+    "年度": "2010",
     "date": "2011.03.20",
     "authors": "杉村 博, 松本 一教",
     "title": "時系列データクエリ言語と遺伝的アルゴリズムを基にした知識発見システム",
@@ -3602,6 +3858,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2010",
     "date": "2011.03.15",
     "authors": "Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Clues Driven Time Series Data Mining with an Automatic Improvement Mechanism",
@@ -3617,6 +3874,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2010",
     "date": "2011.03.11",
     "authors": "Hiroshi Sugimura, Ryosuke Saga and Kazunori Matsumoto",
     "title": "Identifying Authors of Text Based on Association Rules",
@@ -3632,6 +3890,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2010",
     "date": "2011.03.11",
     "authors": "Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Similarity Based Time-Series Data Exploration",
@@ -3647,6 +3906,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2010",
     "date": "2010.09.07",
     "authors": "杉村 博, 松本 一教",
     "title": "新しい時系列データクエリの記述方法をもちいた知識発見",
@@ -3662,6 +3922,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2010",
     "date": "2010.07.26",
     "authors": "Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Datamining Tool with Exploratory Search and Feature Discovery",
@@ -3677,6 +3938,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2010",
     "date": "2010.07.26",
     "authors": "Hiroshi Sugimura, Yuta Taniguchi, Ryosuke Saga and Kazunori Matsumoto",
     "title": "Text Authorship Detection Using Decision Trees and Association Rules Over N-gram",
@@ -3692,6 +3954,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2010",
     "date": "2010.06.09",
     "authors": "大里 雄一, 杉村 博, 松本 一教",
     "title": "ユーザ参加を可能にする次世代パスファインダー",
@@ -3707,6 +3970,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2010",
     "date": "2010.06.09",
     "authors": "谷口 裕大, 殿生 剛士, 杉村 博, 松本 一教",
     "title": "N-gramと決定木による筆者識別",
@@ -3722,6 +3986,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2010",
     "date": "2010.06.09",
     "authors": "杉村 博, 松本 一教",
     "title": "ヒントの改良にもとづくデータマイニングシステム",
@@ -3737,6 +4002,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2009",
     "date": "2010.03.18",
     "authors": "Yuichi Osato, Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Supporting Information Seeking: Collective Intelligence Approach",
@@ -3752,6 +4018,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2009",
     "date": "2010.03.18",
     "authors": "Hiroshi Sugimura and Kazunori Mmatsumoto",
     "title": "Hints Driven Knowledge Discovery and Management",
@@ -3767,6 +4034,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2009",
     "date": "2009.09.18",
     "authors": "杉村 博, 大里 雄一, 伊藤 知司, 松本 一教",
     "title": "図書館リファレンス知識の共有に関する考察",
@@ -3782,6 +4050,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2009",
     "date": "2009.09.02",
     "authors": "大里 雄一, 伊藤 知司, 杉村 博, 松本 一教",
     "title": "知識工学手法を用いた図書館パスファインダー構築",
@@ -3797,6 +4066,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2009",
     "date": "2009.06.17",
     "authors": "杉村 博, 松本 一教",
     "title": "ユーザ入力にもとづいた時系列データマイニングシステム",
@@ -3812,6 +4082,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2008",
     "date": "2009.03.10",
     "authors": "伊藤 知司, 大里 雄一, 杉村 博, 松本 一教",
     "title": "マインドマップを用いた発想支援に関する考察",
@@ -3827,6 +4098,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2008",
     "date": "2009.03.10",
     "authors": "杉村 博, 高野 義士, 田中 靖士, 松本 一教",
     "title": "テンプレートにもとづく時系列データからの相関ルールマイニングシステム",
@@ -3842,6 +4114,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2008",
     "date": "2009.03.10",
     "authors": "高野 義士, 杉村 博, 田中 靖士, 大里 雄一, 伊藤 知司, 松本 一教",
     "title": "経験知識にもとづく時系列データの予測システム",
@@ -3857,6 +4130,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2008",
     "date": "2009.03.10",
     "authors": "田中 靖士, 杉村 博, 高野 義士, 大里 雄一, 伊藤 知司, 松本 一教",
     "title": "アイテム探索を利用した相関ルールマイニング",
@@ -3872,6 +4146,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2008",
     "date": "2009.02.25",
     "authors": "Yoshiaki Takano, Yasushi Tanaka, Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Employing Empirical Knowledge in Practici",
@@ -3887,6 +4162,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2008",
     "date": "2009.02.25",
     "authors": "Hiroshi Sugimura, Yoshiaki Takano, Yasushi Tanaka and Kazunori Matsumoto",
     "title": "Managing Compound Information Using Intelligent Agents",
@@ -3902,6 +4178,7 @@
   {
     "type": "review",
     "study": "",
+    "年度": "2008",
     "date": "2009.02.25",
     "authors": "Yasushi Tanaka, Yoshiaki Takano, Hiroshi Sugimura and Kazunori Matsumoto",
     "title": "Knowledge Acquisition and Maintenance Based on Data Mining with Preferences",
@@ -3917,6 +4194,7 @@
   {
     "type": "inproceedings",
     "study": "",
+    "年度": "2008",
     "date": "2008.06.11",
     "authors": "杉村 博, 松本 一教",
     "title": "DPマッチングを利用する時系列データからのデータマイニング",
