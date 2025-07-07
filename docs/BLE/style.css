@@ -300,6 +300,157 @@ button {
     font-size: 17px;
 }
 
+/* トグルスイッチ */
+.toggle-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.toggle-group label {
+    font-weight: 500;
+    color: #000000;
+    font-size: 17px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E5E5E7;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .toggle-slider {
+    background-color: #007AFF;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* リアルタイム表示エリア */
+.realtime-display {
+    background: #1D1D1F;
+    color: #F5F5F7;
+    padding: 16px;
+    border-radius: 12px;
+    height: 150px;
+    overflow-y: auto;
+    font-family: 'SF Mono', Menlo, Monaco, 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 16px 0;
+    border: 1px solid #333333;
+}
+
+.realtime-display.active {
+    border-color: #007AFF;
+    background: linear-gradient(135deg, #1D1D1F, #2D2D2F);
+}
+
+.realtime-data-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #333333;
+    animation: fadeIn 0.3s ease;
+}
+
+.realtime-data-item:last-child {
+    border-bottom: none;
+}
+
+.realtime-timestamp {
+    color: #8E8E93;
+    font-size: 12px;
+}
+
+.realtime-hex {
+    color: #FF9F0A;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.realtime-text {
+    color: #34C759;
+    margin: 4px 0;
+}
+
+.realtime-bytes {
+    color: #64D2FF;
+    font-size: 12px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* リアルタイム表示の統計情報 */
+.realtime-stats {
+    background: #F5F5F7;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 16px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: #007AFF;
+    font-size: 18px;
+}
+
+.stat-label {
+    color: #666666;
+    font-size: 12px;
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 767px) {
     body {

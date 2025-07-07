@@ -97,7 +97,9 @@
                 this.server = null;
                 this.services = new Map();
                 this.characteristics = new Map();
-                this.selectedCharacteristic = null;
+                this.selectedCharacteristic = null; // 現在選択中の特性（情報表示用）
+                this.writeCharacteristic = null;   // 送信用特性
+                this.notifyCharacteristic = null;  // 受信用特性
                 this.isScanning = false;
                 this.discoveredDevices = new Map();
 
@@ -140,7 +142,30 @@
                     // すべてのBLEデバイスを検索（フィルターなし）
                     const device = await navigator.bluetooth.requestDevice({
                         acceptAllDevices: true,
-                        optionalServices: ['generic_access', 'generic_attribute', 'device_information']
+                        optionalServices: [
+                            // 基本サービス
+                            'generic_access',
+                            'generic_attribute',
+                            'device_information',
+                            // UART/シリアル通信関連
+                            '6e400001-b5a3-f393-e0a9-e50e24dcca9e', // Nordic UART Service
+                            '49535343-fe7d-4ae5-8fa9-9fafd205e455', // Microchip Transparent UART
+                            '0000ffe0-0000-1000-8000-00805f9b34fb', // HM-10 UART Service
+                            '0000fff0-0000-1000-8000-00805f9b34fb', // Common UART Service
+                            // バッテリー・センサー系
+                            'battery_service',
+                            'environmental_sensing',
+                            'heart_rate',
+                            'health_thermometer',
+                            // その他よく使われるサービス
+                            'immediate_alert',
+                            'link_loss',
+                            'tx_power',
+                            'cycling_power',
+                            'cycling_speed_and_cadence',
+                            'running_speed_and_cadence',
+                            'human_interface_device'
+                        ]
                     });
 
                     this.discoveredDevices.clear();
@@ -233,13 +258,27 @@
                     this.services.clear();
                     this.characteristics.clear();
 
+                    this.log(`📋 ${services.length} 個のサービスを発見しました`, 'success');
+
                     for (const service of services) {
                         this.services.set(service.uuid, service);
+                        this.log(`🔍 サービス探索: ${this.getServiceName(service.uuid)} (${service.uuid})`, 'info');
 
                         try {
                             const characteristics = await service.getCharacteristics();
+                            this.log(`  └─ ${characteristics.length} 個の特性を発見`, 'info');
+
                             for (const characteristic of characteristics) {
                                 this.characteristics.set(characteristic.uuid, characteristic);
+
+                                const properties = [];
+                                if (characteristic.properties.read) properties.push('Read');
+                                if (characteristic.properties.write) properties.push('Write');
+                                if (characteristic.properties.writeWithoutResponse) properties.push('WriteNoResp');
+                                if (characteristic.properties.notify) properties.push('Notify');
+                                if (characteristic.properties.indicate) properties.push('Indicate');
+
+                                this.log(`  └─ ${this.getCharacteristicName(characteristic.uuid)} [${properties.join(', ')}]`, 'info');
                             }
                         } catch (error) {
                             this.log(`⚠️ サービス ${service.uuid} の特性取得に失敗: ${error.message}`, 'warning');
@@ -247,11 +286,22 @@
                     }
 
                     this.displayServices();
-                    this.log(`✅ ${services.length} 個のサービスを発見`, 'success');
+
+                    if (services.length === 0) {
+                        this.log('⚠️ サービスが見つかりませんでした。デバイスが対応していないか、optionalServicesに含まれていない可能性があります', 'warning');
+                    }
 
                 } catch (error) {
                     this.log(`❌ サービス探索エラー: ${error.message}`, 'error');
                     this.showError(`サービスの探索に失敗しました: ${error.message}`);
+
+                    // 詳細なデバッグ情報を表示
+                    if (error.name === 'SecurityError') {
+                        this.log('💡 ヒント: SecurityErrorが発生しました。optionalServicesにサービスUUIDを追加してください', 'warning');
+                    }
+                    if (error.name === 'NotSupportedError') {
+                        this.log('💡 ヒント: デバイスがサポートしていないサービスです', 'warning');
+                    }
                 }
             }
 
@@ -285,6 +335,7 @@
                             const properties = [];
                             if (characteristic.properties.read) properties.push('Read');
                             if (characteristic.properties.write) properties.push('Write');
+                            if (characteristic.properties.writeWithoutResponse) properties.push('WriteNoResp');
                             if (characteristic.properties.notify) properties.push('Notify');
                             if (characteristic.properties.indicate) properties.push('Indicate');
 
@@ -296,8 +347,9 @@
                                 </div>
                                 <div class="characteristic-controls">
                                     ${characteristic.properties.read ? '<button class="btn-secondary" onclick="central.selectCharacteristic(\'' + charUuid + '\'); central.readData();">Read</button>' : ''}
-                                    ${characteristic.properties.write ? '<button class="btn-primary" onclick="central.selectCharacteristic(\'' + charUuid + '\');">Select</button>' : ''}
+                                    ${(characteristic.properties.write || characteristic.properties.writeWithoutResponse) ? '<button class="btn-primary" onclick="central.selectCharacteristic(\'' + charUuid + '\');">Select</button>' : ''}
                                     ${characteristic.properties.notify ? '<button class="btn-secondary" onclick="central.selectCharacteristic(\'' + charUuid + '\'); central.subscribeToNotifications();">Notify</button>' : ''}
+                                    ${characteristic.properties.indicate ? '<button class="btn-secondary" onclick="central.selectCharacteristic(\'' + charUuid + '\'); central.subscribeToNotifications();">Indicate</button>' : ''}
                                 </div>
                             `;
 
@@ -321,8 +373,8 @@
             updateDataControls() {
                 const hasCharacteristic = this.selectedCharacteristic !== null;
                 const canRead = hasCharacteristic && this.selectedCharacteristic.properties.read;
-                const canWrite = hasCharacteristic && this.selectedCharacteristic.properties.write;
-                const canNotify = hasCharacteristic && this.selectedCharacteristic.properties.notify;
+                const canWrite = hasCharacteristic && (this.selectedCharacteristic.properties.write || this.selectedCharacteristic.properties.writeWithoutResponse);
+                const canNotify = hasCharacteristic && (this.selectedCharacteristic.properties.notify || this.selectedCharacteristic.properties.indicate);
 
                 document.getElementById('writeBtn').disabled = !canWrite;
                 document.getElementById('writeHexBtn').disabled = !canWrite;
@@ -347,8 +399,16 @@
                     const encoder = new TextEncoder();
                     const dataArray = encoder.encode(data);
 
-                    await this.selectedCharacteristic.writeValue(dataArray);
-                    this.log(`📤 データ送信成功: "${data}"`, 'success');
+                    // writeWithoutResponseを優先的に使用（UART通信でよく使われる）
+                    if (this.selectedCharacteristic.properties.writeWithoutResponse) {
+                        await this.selectedCharacteristic.writeValueWithoutResponse(dataArray);
+                        this.log(`📤 データ送信成功 (WriteWithoutResponse): "${data}"`, 'success');
+                    } else if (this.selectedCharacteristic.properties.write) {
+                        await this.selectedCharacteristic.writeValue(dataArray);
+                        this.log(`📤 データ送信成功 (Write): "${data}"`, 'success');
+                    } else {
+                        throw new Error('書き込み可能な特性ではありません');
+                    }
 
                 } catch (error) {
                     this.log(`❌ データ送信エラー: ${error.message}`, 'error');
@@ -375,8 +435,17 @@
                     }
 
                     const dataArray = new Uint8Array(bytes);
-                    await this.selectedCharacteristic.writeValue(dataArray);
-                    this.log(`📤 HEXデータ送信成功: ${hexData}`, 'success');
+
+                    // writeWithoutResponseを優先的に使用（UART通信でよく使われる）
+                    if (this.selectedCharacteristic.properties.writeWithoutResponse) {
+                        await this.selectedCharacteristic.writeValueWithoutResponse(dataArray);
+                        this.log(`📤 HEXデータ送信成功 (WriteWithoutResponse): ${hexData}`, 'success');
+                    } else if (this.selectedCharacteristic.properties.write) {
+                        await this.selectedCharacteristic.writeValue(dataArray);
+                        this.log(`📤 HEXデータ送信成功 (Write): ${hexData}`, 'success');
+                    } else {
+                        throw new Error('書き込み可能な特性ではありません');
+                    }
 
                 } catch (error) {
                     this.log(`❌ HEXデータ送信エラー: ${error.message}`, 'error');
@@ -586,19 +655,35 @@
 
             getServiceName(uuid) {
                 const serviceNames = {
+                    // 標準サービス
                     '00001800-0000-1000-8000-00805f9b34fb': 'Generic Access',
                     '00001801-0000-1000-8000-00805f9b34fb': 'Generic Attribute',
                     '0000180a-0000-1000-8000-00805f9b34fb': 'Device Information',
                     '0000180f-0000-1000-8000-00805f9b34fb': 'Battery Service',
                     '00001812-0000-1000-8000-00805f9b34fb': 'Human Interface Device',
                     '0000181a-0000-1000-8000-00805f9b34fb': 'Environmental Sensing',
-                    '0000181b-0000-1000-8000-00805f9b34fb': 'Body Composition'
+                    '0000181b-0000-1000-8000-00805f9b34fb': 'Body Composition',
+                    '0000180d-0000-1000-8000-00805f9b34fb': 'Heart Rate',
+                    '00001809-0000-1000-8000-00805f9b34fb': 'Health Thermometer',
+                    '00001802-0000-1000-8000-00805f9b34fb': 'Immediate Alert',
+                    '00001803-0000-1000-8000-00805f9b34fb': 'Link Loss',
+                    '00001804-0000-1000-8000-00805f9b34fb': 'Tx Power',
+                    // UART/シリアル通信サービス
+                    '6e400001-b5a3-f393-e0a9-e50e24dcca9e': 'Nordic UART Service (NUS)',
+                    '49535343-fe7d-4ae5-8fa9-9fafd205e455': 'Microchip Transparent UART',
+                    '0000ffe0-0000-1000-8000-00805f9b34fb': 'HM-10 UART Service',
+                    '0000fff0-0000-1000-8000-00805f9b34fb': 'Common UART Service',
+                    // その他
+                    '00001816-0000-1000-8000-00805f9b34fb': 'Cycling Speed and Cadence',
+                    '00001818-0000-1000-8000-00805f9b34fb': 'Cycling Power',
+                    '00001814-0000-1000-8000-00805f9b34fb': 'Running Speed and Cadence'
                 };
                 return serviceNames[uuid] || 'Unknown Service';
             }
 
             getCharacteristicName(uuid) {
                 const characteristicNames = {
+                    // 標準特性
                     '00002a00-0000-1000-8000-00805f9b34fb': 'Device Name',
                     '00002a01-0000-1000-8000-00805f9b34fb': 'Appearance',
                     '00002a04-0000-1000-8000-00805f9b34fb': 'Peripheral Preferred Connection Parameters',
@@ -609,7 +694,23 @@
                     '00002a25-0000-1000-8000-00805f9b34fb': 'Serial Number String',
                     '00002a27-0000-1000-8000-00805f9b34fb': 'Hardware Revision String',
                     '00002a26-0000-1000-8000-00805f9b34fb': 'Firmware Revision String',
-                    '00002a28-0000-1000-8000-00805f9b34fb': 'Software Revision String'
+                    '00002a28-0000-1000-8000-00805f9b34fb': 'Software Revision String',
+                    '00002a37-0000-1000-8000-00805f9b34fb': 'Heart Rate Measurement',
+                    '00002a38-0000-1000-8000-00805f9b34fb': 'Body Sensor Location',
+                    '00002a39-0000-1000-8000-00805f9b34fb': 'Heart Rate Control Point',
+                    // Nordic UART Service 特性
+                    '6e400002-b5a3-f393-e0a9-e50e24dcca9e': 'Nordic UART RX (Write)',
+                    '6e400003-b5a3-f393-e0a9-e50e24dcca9e': 'Nordic UART TX (Notify)',
+                    // Microchip Transparent UART 特性
+                    '49535343-1e4d-4bd9-ba61-23c647249616': 'Microchip UART Data',
+                    '49535343-8841-43f4-a8d4-ecbe34729bb3': 'Microchip UART Control',
+                    // HM-10 UART 特性
+                    '0000ffe1-0000-1000-8000-00805f9b34fb': 'HM-10 UART Data',
+                    // Common UART 特性
+                    '0000fff1-0000-1000-8000-00805f9b34fb': 'Common UART RX',
+                    '0000fff2-0000-1000-8000-00805f9b34fb': 'Common UART TX',
+                    '0000fff3-0000-1000-8000-00805f9b34fb': 'Common UART Control',
+                    '0000fff4-0000-1000-8000-00805f9b34fb': 'Common UART Config'
                 };
                 return characteristicNames[uuid] || 'Unknown Characteristic';
             }
