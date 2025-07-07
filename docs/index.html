@@ -1,167 +1,329 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sugimura Lab. Top page</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<title>IoT Programming Lab. - 杉村研究室</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="css/modern-style.css" type="text/css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/footerFixed.js"></script>
 </head>
 
 <body>
-	<header>
-		<!-- トップメニュー -->
-		<div id="nav">
-			<center>
-				<ol>
-					<li><a href="index.html">TOP</a></li>
-					<li><a href="profile.htm">Profile</a></li>
-					<li><a href="smarthouse.htm">Smart house</a></li>
-					<li><a href="timeseries.htm">Datamining</a></li>
-					<li><a href="forms.htm">Forms</a></li>
-					<li><a href="papers.htm">Papers</a></li>
-					<li><a href="access.htm">Access</a></li>
-					<li><a href="links.htm">Links</a></li>
-					<li><a href="index_e.html">English</a></li>
-				</ol>
-			</center>
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="logo">
+				<h1><i class="fas fa-microchip"></i> IoT Programming Lab.</h1>
+			</div>
+			<nav class="nav">
+				<ul class="nav-list">
+					<li><a href="#home" class="nav-link">ホーム</a></li>
+					<li><a href="profile.htm" class="nav-link">Profile</a></li>
+					<li><a href="smarthouse.htm" class="nav-link">Smart House</a></li>
+					<li><a href="timeseries.htm" class="nav-link">Datamining</a></li>
+					<li><a href="papers.htm" class="nav-link">Papers</a></li>
+					<li><a href="access.htm" class="nav-link">Access</a></li>
+					<li><a href="links.htm" class="nav-link">Links</a></li>
+					<li><a href="index_e.html" class="nav-link">English</a></li>
+				</ul>
+			</nav>
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</div>
 	</header>
-	<!-- コンテンツ -->
-	<div id="contents">
-		<h1 class="shadow"> <img src="forms/sugilab_g.png" width="100"> IoT Programming Lab. (杉村研究室) </h1>
-		<div class="layoutIndex">
-			<div class="leftboxIndex">
 
-				<div class="topimg">
-					<img src="img/top9.jpg" class="topimg pict" />
-				</div>
-				<div class="topimg">
-					<img src="img/top8.jpg" class="followimg pict" />
-				</div>
-				<div class="topimg">
-					<img src="img/top7.jpg" class="followimg pict" />
-				</div>
-				<div class="topimg">
-					<img src="img/top6.jpg" class="followimg pict" />
-				</div>
-				<div class="topimg">
-					<img src="img/top5.jpg" class="followimg pict" />
-				</div>
-				<div class="followimg">
-					<img src="img/top4.png" class="followimg pict" />
-				</div>
-				<div class="followimg">
-					<img src="img/top3.jpg" class="followimg pict" />
-				</div>
-				<div class="followimg">
-					<img src="img/top2.jpg" class="followimg pict" />
-				</div>
-				<div class="followimg">
-					<img src="img/top1.jpg" class="followimg pict" />
-				</div>
-				<div class="followimg">
-					<img src="img/top0.jpg" class="followimg pict" />
+	<!-- Hero Section -->
+	<section class="hero" id="home">
+		<div class="hero-overlay">
+			<div class="hero-content">
+				<h1 class="hero-title">IoTで未来の暮らしを創造する</h1>
+				<p class="hero-subtitle">IoT、情報家電、AI技術を駆使して<br>生活をサポートする革新的システムを研究開発しています</p>
+				<div class="hero-buttons">
+					<a href="#research" class="btn btn-primary">研究内容</a>
+					<a href="access.htm" class="btn btn-secondary">お問い合わせ</a>
 				</div>
 			</div>
-			<div class="rightboxIndex">
-				<section>
-					<h3>ようこそ！</h3>
-					<p>
-						本ページは神奈川工科大学 工学部 電気電子情報工学科に所属している杉村研究室の紹介サイトです．スマートハウスやHEMSをテーマに生活のサポートをするシステムを創っていきます．
-						<br> 近況は
-						<a href="https://www.facebook.com/hiroshi.sugimura.31" target="new">わたしのFacebook</a>でわかります．
-						<br> ところでピンクはいまいちでしょうか？
-						<br>
-					</p>
-					<h3>主な研究テーマ</h3>
-					<ul>
-						<li>IoT、情報家電やWeb連携によるHEMSやスマートハウス</li>
-						<li>時系列データから知識を発見する人工知能技術</li>
-						<li>自然環境を上手に活用する機器作り</li>
-					</ul>
-					<h3>リンクについて</h3>
-					<p>
-						当Webサイトはリンクフリーです．
-						<br> リンク先はhttps://www.sugi-lab.net/でお気軽にどうぞ．
-					</p>
-					<h3>iOS用アプリ（iPhone/iPad対応）でました！</h3>
-					<p>
-						<a href="https://apps.apple.com/jp/developer/hiroshi-sugimura/id1296697111"> <img src="img/App_Store_Badge_US-UK_135x40.svg" /></a>
-					</p>
-					<ul>
-						<li>ECHONET Lite対応コントローラ(iOS, 新, 統合版)</li>
-						<li>ECHONET Lite対応照明コントローラ(iOS, 旧)</li>
-						<li>ECHONET Lite対応空気清浄機コントローラ(iOS, 旧)</li>
-						<li>ECHONET Lite対応家庭用エアーコンディショナーコントローラ(iOS, 旧)</li>
-					</ul>
-					<h3>実験的なWebシステムの紹介</h3>
-					<ul>
-						<li>ECHONET Lite Appendix 辞書サイト (現在、Release Mまで)</li>
-						<a href="https://www.sugi-lab.net/appendixViewer/">
-							こちら
-						</a>
-						<li>上高地水力発電システムの状況見える化</li>
-						<a href="https://hpg.sugi-lab.net/">
-							こちら
-						</a>
-						<li>HAL (Home-life Assessment List)システム</li>
-						<a href="https://hal.sugi-lab.net/">
-							<img src="img/HAL-Logo2.png" width="150" />
-							こちら
-						</a>
-						<li>PLIS (Platform for Life Improvement and Support)</li>
-						<a href="https://plis.sugi-lab.net/">
-							<img src="img/plis_main_yoko_w.png" width="150" />
-							こちら
-						</a>
-						<li>IoTミニチュアハウス</li>
-						<a href="https://miniature.sugi-lab.net/">
-							こちら
-						</a>
-						<li>BLE UART試験ツール（WebBluetooth）</li>
-						<a href="https://www.sugi-lab.net/BLE/">
-							こちら
-						</a>
-					</ul>
-					<h3>MISC</h3>
-					<ul>
-						<li>オープンソース化の取り組み（Github）</li>
-						<a href="https://github.com/Hiroshi-Sugimura"> <img src="img/GitHub-Mark.png" width="150px" /></a>
-
-						<li>知識共有の取り組み（Qiita）</li>
-						<a href="https://qiita.com/Sugimura-Laboratory"> <img src="img/qiita_bar.png" width="150px" /></a>
-
-						<li>教科書作成（Amazon）</li>
-						<a href="https://amzn.asia/j8nkf5A">
-							ECHONET Lite入門 スマートハウスの通信技術を学ぼう!<br>
-							<img src="img/ECHONETLite.jpg" height="150" />
-						</a>
-
-						<li>実験プログラムの公開の取り組み</li>
-						<a href="program/ELDeviceEmurator Setup 0.9.0.exe">ECHONET Lite Device Emulator (for win)</a><br>
-						<a href="program/ELDeviceEmurator-0.9.0.dmg">ECHONET Lite Device Emulator (for macOS)</a><br>
-						<a href="program/OmronEnvStore Setup 0.2.0.exe">Omron Environment Sensor Database (for win)</a><br>
-						<a href="program/MoekadenRoomJS-1.3.0 Setup.exe">MoekadenRoomJS 1.3.0 (for win)</a><br>
-						<a href="program/MoekadenRoomJS-darwin-x64-1.3.0.zip">MoekadenRoomJS 1.3.0 (for mac)</a><br>
-					</ul>
-				</section>
-			</div>
-			<!-- rightbox -->
 		</div>
-		<!-- layout -->
-	</div>
-	<!-- foote -->
-	<footer id="footer">
-		<center>
-			<address class="inline"><img src="img/LVDC.png" class="pict" /></address>
-			<br> Copyright &copy; 2013 Hiroshi SUGIMURA, All Rights Reserved.
-		</center>
+		<div class="hero-scroll">
+			<i class="fas fa-chevron-down"></i>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section class="about" id="about">
+		<div class="container">
+			<div class="section-header">
+				<h2>ようこそ！杉村研究室へ</h2>
+				<p>神奈川工科大学 工学部 電気電子情報工学科</p>
+			</div>
+			<div class="about-content">
+				<div class="about-text">
+					<p>
+						本研究室では、スマートハウスやHEMSをテーマに生活のサポートをするシステムを創っていきます。
+						IoT技術、情報家電やWeb連携による革新的なシステム開発に取り組んでいます。
+					</p>
+					<div class="stats">
+						<div class="stat-item">
+							<div class="stat-number">10+</div>
+							<div class="stat-label">年間研究実績</div>
+						</div>
+						<div class="stat-item">
+							<div class="stat-number">50+</div>
+							<div class="stat-label">研究論文</div>
+						</div>
+						<div class="stat-item">
+							<div class="stat-number">100+</div>
+							<div class="stat-label">開発プロジェクト</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-image">
+					<img src="img/hems.jpg" alt="研究室の様子" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Research Section -->
+	<section class="research" id="research">
+		<div class="container">
+			<div class="section-header">
+				<h2>主な研究テーマ</h2>
+				<p>最先端技術で未来の生活をデザイン</p>
+			</div>
+			<div class="research-grid">
+				<div class="research-card">
+					<div class="research-icon">
+						<i class="fas fa-home"></i>
+					</div>
+					<h3>スマートハウス・HEMS</h3>
+					<p>IoT、情報家電やWeb連携によるスマートハウスシステムの研究開発</p>
+				</div>
+				<div class="research-card">
+					<div class="research-icon">
+						<i class="fas fa-chart-line"></i>
+					</div>
+					<h3>AI・データマイニング</h3>
+					<p>時系列データから知識を発見する人工知能技術の研究</p>
+				</div>
+				<div class="research-card">
+					<div class="research-icon">
+						<i class="fas fa-leaf"></i>
+					</div>
+					<h3>環境IoT</h3>
+					<p>自然環境を上手に活用する機器作りとエコシステムの構築</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Apps Section -->
+	<section class="apps" id="apps">
+		<div class="container">
+			<div class="section-header">
+				<h2>開発アプリケーション</h2>
+				<p>研究成果を実用的なアプリケーションとして提供</p>
+			</div>
+			<div class="apps-content">
+				<div class="apps-text">
+					<h3>iOS用アプリ（iPhone/iPad対応）</h3>
+					<ul class="apps-list">
+						<li><i class="fas fa-mobile-alt"></i> ECHONET Lite対応コントローラ(統合版)</li>
+						<li><i class="fas fa-lightbulb"></i> 照明コントローラ</li>
+						<li><i class="fas fa-wind"></i> 空気清浄機コントローラ</li>
+						<li><i class="fas fa-thermometer-half"></i> エアコンディショナーコントローラ</li>
+					</ul>
+					<a href="https://apps.apple.com/jp/developer/hiroshi-sugimura/id1296697111" class="btn btn-primary">
+						<i class="fab fa-apple"></i> App Storeで見る
+					</a>
+				</div>
+				<div class="apps-image">
+					<img src="img/App_Store_Badge_US-UK_135x40.svg" alt="App Store" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects Section -->
+	<section class="projects" id="projects">
+		<div class="container">
+			<div class="section-header">
+				<h2>実験的Webシステム</h2>
+				<p>研究成果を体験できるWebアプリケーション</p>
+			</div>
+			<div class="projects-grid">
+				<div class="project-card">
+					<div class="project-image">
+						<img src="img/HAL-Logo2.png" alt="HAL システム" />
+					</div>
+					<div class="project-content">
+						<h3>HAL システム</h3>
+						<p>Home-life Assessment List システム</p>
+						<a href="https://hal.sugi-lab.net/" class="project-link">体験する <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div class="project-card">
+					<div class="project-image">
+						<img src="img/plis_main_yoko_w.png" alt="PLIS" />
+					</div>
+					<div class="project-content">
+						<h3>PLIS</h3>
+						<p>Platform for Life Improvement and Support</p>
+						<a href="https://plis.sugi-lab.net/" class="project-link">体験する <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div class="project-card">
+					<div class="project-content">
+						<h3>上高地水力発電システム</h3>
+						<p>状況見える化システム</p>
+						<a href="https://hpg.sugi-lab.net/" class="project-link">体験する <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div class="project-card">
+					<div class="project-content">
+						<h3>IoTミニチュアハウス</h3>
+						<p>IoT技術のデモンストレーション</p>
+						<a href="https://miniature.sugi-lab.net/" class="project-link">体験する <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div class="project-card">
+					<div class="project-content">
+						<h3>BLE UART試験ツール</h3>
+						<p>WebBluetooth技術を活用</p>
+						<a href="https://www.sugi-lab.net/BLE/" class="project-link">体験する <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+				<div class="project-card">
+					<div class="project-content">
+						<h3>ECHONET Lite辞書</h3>
+						<p>Appendix辞書サイト (Release Mまで対応)</p>
+						<a href="https://www.sugi-lab.net/appendixViewer/" class="project-link">体験する <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Gallery Section -->
+	<section class="gallery" id="gallery">
+		<div class="container">
+			<div class="section-header">
+				<h2>研究室ギャラリー</h2>
+				<p>研究活動の様子をご紹介</p>
+			</div>
+			<div class="gallery-grid">
+				<div class="gallery-item">
+					<img src="img/top9.jpg" alt="研究室の様子" />
+				</div>
+				<div class="gallery-item">
+					<img src="img/top8.jpg" alt="研究活動1" />
+				</div>
+				<div class="gallery-item">
+					<img src="img/top7.jpg" alt="研究活動2" />
+				</div>
+				<div class="gallery-item">
+					<img src="img/top6.jpg" alt="研究活動3" />
+				</div>
+				<div class="gallery-item">
+					<img src="img/top5.jpg" alt="研究活動4" />
+				</div>
+				<div class="gallery-item">
+					<img src="img/top4.png" alt="研究活動5" />
+				</div>
+				<div class="gallery-item">
+					<img src="img/top3.jpg" alt="研究活動6" />
+				</div>
+				<div class="gallery-item">
+					<img src="img/top2.jpg" alt="研究室の様子" />
+				</div>
+				<div class="gallery-item">
+					<img src="img/top1.jpg" alt="研究室の様子" />
+				</div>
+				<div class="gallery-item">
+					<img src="img/top0.jpg" alt="研究室の様子" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Resources Section -->
+	<section class="resources" id="resources">
+		<div class="container">
+			<div class="section-header">
+				<h2>リソース・リンク</h2>
+				<p>研究成果と知識共有</p>
+			</div>
+			<div class="resources-grid">
+				<div class="resource-card">
+					<div class="resource-icon">
+						<i class="fab fa-github"></i>
+					</div>
+					<h3>オープンソース</h3>
+					<p>Github での取り組み</p>
+					<a href="https://github.com/Hiroshi-Sugimura" class="btn btn-outline">GitHub</a>
+				</div>
+				<div class="resource-card">
+					<div class="resource-icon">
+						<i class="fas fa-code"></i>
+					</div>
+					<h3>知識共有</h3>
+					<p>Qiita での技術記事</p>
+					<a href="https://qiita.com/Sugimura-Laboratory" class="btn btn-outline">Qiita</a>
+				</div>
+				<div class="resource-card">
+					<div class="resource-icon">
+						<i class="fas fa-book"></i>
+					</div>
+					<h3>教科書</h3>
+					<p>ECHONET Lite入門書</p>
+					<a href="https://amzn.asia/j8nkf5A" class="btn btn-outline">Amazon</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-section">
+					<h3>IoT Programming Lab.</h3>
+					<p>神奈川工科大学 工学部 電気電子情報工学科</p>
+					<p>杉村研究室</p>
+				</div>
+				<div class="footer-section">
+					<h3>クイックリンク</h3>
+					<ul>
+						<li><a href="profile.htm">Profile</a></li>
+						<li><a href="smarthouse.htm">Smart House</a></li>
+						<li><a href="papers.htm">Papers</a></li>
+						<li><a href="access.htm">Access</a></li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h3>フォローする</h3>
+					<div class="social-links">
+						<a href="https://www.facebook.com/hiroshi.sugimura.31" target="_blank"><i class="fab fa-facebook"></i></a>
+						<a href="https://github.com/Hiroshi-Sugimura" target="_blank"><i class="fab fa-github"></i></a>
+						<a href="https://qiita.com/Sugimura-Laboratory" target="_blank"><i class="fas fa-code"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2024 Hiroshi SUGIMURA, IoT Programming Lab. All Rights Reserved.</p>
+				<p>当Webサイトはリンクフリーです。リンク先: https://www.sugi-lab.net/</p>
+			</div>
+		</div>
 	</footer>
+
+	<script src="js/modern-script.js"></script>
 </body>
 
 </html>
