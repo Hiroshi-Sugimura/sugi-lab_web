@@ -1,69 +1,152 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
 
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access: H.SUGIMURA's Web page</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Access - IoT Programming Lab. - 杉村研究室</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/modern-style.css" type="text/css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/footerFixed.js"></script>
-  </head>
+</head>
 
-  <body>
-    <header>
-	  <!-- トップメニュー -->
-	  <div id="nav">
-		<center>
-		  <ol>
-			<li><a href="index.html">TOP</a></li>
-			<li><a href="profile.htm">Profile</a></li>
-			<li><a href="smarthouse.htm">Smart house</a></li>
-			<li><a href="timeseries.htm">Datamining</a></li>
-			<li><a href="forms.htm">Forms</a></li>
-			<li><a href="papers.htm">Papers</a></li>
-			<li><a href="https://kaitcco-my.sharepoint.com/:f:/g/personal/sugimura_cco_kanagawa-it_ac_jp/EocifZAkKCZNmejwM84NahUBis5kCZbhZQmcdlPYc4RKaw?e=D6wuFX">Lectures</a></li>
-			<li><a href="access.htm">Access</a></li>
-			<li><a href="links.htm">Links</a></li>
-			<li><a href="access_e.htm">English</a></li>
-		  </ol>
-		</center>
-	  </div>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-microchip"></i> IoT Programming Lab.</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">ホーム</a></li>
+                    <li><a href="profile.htm" class="nav-link">Profile</a></li>
+                    <li><a href="smarthouse.htm" class="nav-link">Smart House</a></li>
+                    <li><a href="timeseries.htm" class="nav-link">Datamining</a></li>
+                    <li><a href="papers.htm" class="nav-link">Papers</a></li>
+                    <li><a href="access.htm" class="nav-link active">Access</a></li>
+                    <li><a href="index_e.html" class="nav-link">English</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
-    <!-- コンテンツ -->
-    <div id="contents">
-	  <h1 class="shadow">アクセス方法</h1>
-	  <div class="layoutIndex">
-		<div class="leftboxIndex">
-		  <br>
-		  <div class="topimg">
-			<img src="http://maps.googleapis.com/maps/api/streetview?size=350x350&location=35.486209,139.340746&heading=75&sensor=false" class="topimg pict" />
-		  </div>
-		  <br>
-		</div>
-		<div class="rightIndex">
-		  <h2>住所</h2>
-		  <section>
-			〒243-0292 厚木市下荻野1030 C2号棟 W603号室 杉村教員室
-			<br>
-			<br>
-			<img src="http://maps.googleapis.com/maps/api/staticmap?center=35.486602,139.342897&zoom=14&size=500x500&sensor=false" />
-			<br>
-		  </section>
-		</div>
-		<!-- rightbox -->
-	  </div>
-	  <!-- layout -->
-    </div>
-    <!-- foote -->
-    <footer id="footer">
-	  <center>
-		<address class="inline"><img src="img/LVDC.png" class="pict" /></address>
-		<br> Copyright &copy; 2013 Hiroshi SUGIMURA, All Rights Reserved.
-	  </center>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1><i class="fas fa-map-marker-alt"></i> アクセス方法</h1>
+                <p>研究室へのアクセス情報と所在地のご案内</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access Content -->
+    <section class="access-content">
+        <div class="container">
+            <div class="access-grid">
+                <div class="access-info">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-building"></i>
+                            <h3>研究室所在地</h3>
+                        </div>
+                        <div class="info-body">
+                            <p><strong>〒243-0292</strong></p>
+                            <p>神奈川県厚木市下荻野1030</p>
+                            <p>神奈川工科大学 C2号棟 W603号室</p>
+                            <p>杉村教員室</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-train"></i>
+                            <h3>交通アクセス</h3>
+                        </div>
+                        <div class="info-body">
+                            <p><strong>電車でお越しの場合：</strong></p>
+                            <p>小田急線「本厚木駅」下車</p>
+                            <p>バス約20分「神奈川工科大学前」下車</p>
+                            <br>
+                            <p><strong>お車でお越しの場合：</strong></p>
+                            <p>東名高速道路「厚木IC」から約15分</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-phone"></i>
+                            <h3>連絡先</h3>
+                        </div>
+                        <div class="info-body">
+                            <p><strong>Email:</strong> sugimura@cco.kanagawa-it.ac.jp</p>
+                            <p><strong>研究室:</strong> C2号棟 W603号室</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-section">
+                    <div class="map-card">
+                        <h3><i class="fas fa-map"></i> キャンパスマップ</h3>
+                        <div class="map-container">
+                            <img src="http://maps.googleapis.com/maps/api/staticmap?center=35.486602,139.342897&zoom=14&size=500x400&sensor=false" alt="キャンパス周辺地図" class="map-image" />
+                        </div>
+                    </div>
+
+                    <div class="streetview-card">
+                        <h3><i class="fas fa-street-view"></i> ストリートビュー</h3>
+                        <div class="streetview-container">
+                            <img src="http://maps.googleapis.com/maps/api/streetview?size=500x300&location=35.486209,139.340746&heading=75&sensor=false" alt="研究室周辺の様子" class="streetview-image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>IoT Programming Lab.</h3>
+                    <p>神奈川工科大学 工学部 電気電子情報工学科</p>
+                    <p>杉村研究室</p>
+                </div>
+                <div class="footer-section">
+                    <h3>クイックリンク</h3>
+                    <ul>
+                        <li><a href="profile.htm">Profile</a></li>
+                        <li><a href="smarthouse.htm">Smart House</a></li>
+                        <li><a href="papers.htm">Papers</a></li>
+                        <li><a href="access.htm">Access</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>フォローする</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/hiroshi.sugimura.31" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com/Hiroshi-Sugimura" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://qiita.com/Sugimura-Laboratory" target="_blank"><i class="fas fa-code"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hiroshi SUGIMURA, IoT Programming Lab. All Rights Reserved.</p>
+                <p>当Webサイトはリンクフリーです。リンク先: https://www.sugi-lab.net/</p>
+            </div>
+        </div>
     </footer>
-  </body>
+
+    <script src="js/modern-script.js"></script>
+</body>
 
 </html>

@@ -1,154 +1,259 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
 
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile: H.SUGIMURA's Web page</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Profile - IoT Programming Lab. - 杉村研究室</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/modern-style.css" type="text/css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/footerFixed.js"></script>
-  </head>
+</head>
 
-  <body>
-    <header>
-	  <!-- トップメニュー -->
-	  <div id="nav">
-		<center>
-		  <ol>
-			<li><a href="index.html">TOP</a></li>
-			<li><a href="profile.htm">Profile</a></li>
-			<li><a href="smarthouse.htm">Smart house</a></li>
-			<li><a href="timeseries.htm">Datamining</a></li>
-			<li><a href="forms.htm">Forms</a></li>
-			<li><a href="papers.htm">Papers</a></li>
-			<li><a href="access.htm">Access</a></li>
-			<li><a href="links.htm">Links</a></li>
-			<li><a href="profile_e.htm">English</a></li>
-		  </ol>
-		</center>
-	  </div>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-microchip"></i> IoT Programming Lab.</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">ホーム</a></li>
+                    <li><a href="profile.htm" class="nav-link active">Profile</a></li>
+                    <li><a href="smarthouse.htm" class="nav-link">Smart House</a></li>
+                    <li><a href="timeseries.htm" class="nav-link">Datamining</a></li>
+                    <li><a href="papers.htm" class="nav-link">Papers</a></li>
+                    <li><a href="access.htm" class="nav-link">Access</a></li>
+                    <li><a href="index_e.html" class="nav-link">English</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </header>
-    <!-- コンテンツ -->
-    <div id="contents">
-	  <h1 class="shadow">自己紹介</h1>
-	  <p>
-		少しだけ自己紹介です．
-	  </p>
-	  <div class="layoutIndex">
-		<div class="leftboxIndex">
-		  <section>
-			<h2>目次</h2>
-			<ol>
-			  <a href="#theme">
-				<li>研究概要</li>
-			  </a>
-			  <a href="#policy">
-				<li>研究方針</li>
-			  </a>
-			  <a href="#edu">
-				<li>略歴</li>
-			  </a>
-			  <a href="#out">
-				<li>学外活動</li>
-			  </a>
-			</ol>
-		  </section>
-		</div>
-		<div class="rightboxIndex">
-		  <section>
-			<a name="theme"><h2>研究概要</h2></a>
-			<p>
-			  私のテーマは，<b>「人間が直接機械を操作せずに安心で快適な暮らしをする」</b>ことです．
-			  <br> そのための具体的なキーワードは次のようなものがあります．
-			</p>
-			<ul>
-			  <li>HEMS（Home Energy Management System）</li>
-			  <li>スマートハウス</li>
-			  <li>インテリジェントデバイス</li>
-			  <li>ネットワーク家電</li>
-			  <li>人工知能</li>
-			  <li>知的情報処理</li>
-			  <li>意思決定論</li>
-			  <li>データマイニング</li>
-			  <li>システム工学</li>
-			  <li>ソフトウェア工学</li>
-			</ul>
-			<p>
-			  現在取り組んでいる研究は大きく次のようなものがあります．
-			  <br>
-			</p>
-			<br>
-			<ul>
-			  <li>時間軸に従って蓄積された数値のシーケンスである「時系列データ」から知識を自動的に発見する．</li>
-			  <li>時系列データと背景情報を融合させ，新たな知識獲得を行う．</li>
-			  <li>機械と機械をつなぎ，ユーザの行動を知的にサポートする．</li>
-			</ul>
-			<br>
-			<p>
-			  具体的な研究事例は専用ページを用意しました．
-			  <br>
-			  <a href="smarthouse.htm">スマートハウス</a>
-			  <br>
-			  <a href="timeseries.htm">時系列データマイニング</a>
-			  <br> 学生向けですので，あしからず．
-			</p>
-		  </section>
-		  <section>
-			<a name="policy"><h2>研究方針</h2></a>
-			<p>
-			  とにかく手を動かして，物を作ることから始めましょう．
-			</p>
-		  </section>
-		  <section>
-			<a name="edu"><h2>略歴</h2></a>
-			<ol>
-			  <li>1981年3月　静岡県焼津市生まれ</li>
-			  <li>1999年3月　静岡学園高等学校　理数科　卒業</li>
-			  <li>2003年3月　神奈川工科大学　工学部　情報工学科　卒業</li>
-			  <li>2003年4月　サイバーコム株式会社</li>
-			  <li>2007年3月　神奈川工科大学大学院 工学研究科 情報工学専攻 博士前期課程修了</li>
-			  <li>2010年4月　株式会社keez.jp　非常勤</li>
-			  <li>2012年4月　神奈川工科大学　工学教育研究推進機構　スマートハウス研究センター　特別研究員</li>
-			  <li>2012年6月　神奈川工科大学大学院 工学研究科 情報工学専攻 博士後期課程終了　学位取得</li>
-			  <li>2013年4月～2016年3月　神奈川工科大学　創造工学部　ホームエレクトロニクス開発学科　助教</li>
-			  <li>2016年4月～現在　神奈川工科大学　創造工学部　ホームエレクトロニクス開発学科　准教授</li>
-			</ol>
-		  </section>
-		  <section>
-			<a name="out"><h2>学外活動</h2></a>
-			<ol>
-			  <li>2007年　情報処理学会入会</li>
-			  <li>2009年　人工知能学会入会</li>
-			  <li>2010年　IADIS入会</li>
-			  <li>2011年　IEEE入会</li>
-			  <li>2011年　産学戦略的研究フォーラム　インターウェア研究会　幹事</li>
-			  <li>2011年　2011 IEEE Symposium on Computers &amp; Informatics　査読委員</li>
-			  <li>2012年　CDS研究会　査読委員</li>
-			  <li>2013年　CDS研究会　編集・運営委員</li>
-			  <li>2014年　CDS研究会　編集・運営委員</li>
-			  <li>2014年　CDS研究会　学生スマートフォンアプリコンテスト運営委員</li>
-			  <li>2015年　日本工学教育協会入会</li>
-			  <li>2015年　産学戦略的研究フォーラム　多数・異種機器間連携による次世代HEMSサービスの実現可能性に関する調査研究　幹事</li>
-			  <li>2015年　CDS研究会　編集・運営委員</li>
-			  <li>2015年　第13回コンシューマ・デバイス＆システム(CDS)研究発表会(ITS研究会と合同開催)　幹事</li>
-			  <li>2015年　COMPSAC 2015, Program Committee</li>
-			</ol>
-		  </section>
-		</div>
-		<!-- rightbox -->
-	  </div>
-	  <!-- layout -->
-    </div>
-    <!-- foote -->
-    <footer id="footer">
-	  <center>
-		<address class="inline"><img src="img/LVDC.png" class="pict" /></address>
-		<br> Copyright &copy; 2013 Hiroshi SUGIMURA, All Rights Reserved.
-	  </center>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1><i class="fas fa-user-circle"></i> プロフィール</h1>
+                <p>研究者としての経歴と活動内容をご紹介</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Content -->
+    <section class="profile-content">
+        <div class="container">
+            <div class="profile-grid">
+                <!-- Navigation Sidebar -->
+                <div class="profile-nav">
+                    <div class="nav-card">
+                        <h3><i class="fas fa-list"></i> 目次</h3>
+                        <ul class="nav-menu">
+                            <li><a href="#theme"><i class="fas fa-search"></i> 研究概要</a></li>
+                            <li><a href="#policy"><i class="fas fa-bullseye"></i> 研究方針</a></li>
+                            <li><a href="#edu"><i class="fas fa-graduation-cap"></i> 略歴</a></li>
+                            <li><a href="#out"><i class="fas fa-users"></i> 学外活動</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="profile-main">
+                    <div class="intro-section">
+                        <div class="intro-card">
+                            <h2><i class="fas fa-hand-wave"></i> ようこそ</h2>
+                            <p>少しだけ自己紹介です。IoT技術を活用したスマートハウスシステムの研究開発に取り組んでいます。</p>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="theme">
+                        <div class="content-card">
+                            <h2><i class="fas fa-search"></i> 研究概要</h2>
+                            <div class="research-overview">
+                                <div class="research-item">
+                                    <div class="research-icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="research-text">
+                                        <h3>スマートハウス・HEMS</h3>
+                                        <p>住環境に関する研究開発に従事しています。具体的には、スマートハウス・HEMS（ホームエネルギーマネジメントシステム）のためのソフトウェア開発、計測、制御、可視化等に関する研究を行っています。</p>
+                                    </div>
+                                </div>
+                                <div class="research-item">
+                                    <div class="research-icon">
+                                        <i class="fas fa-network-wired"></i>
+                                    </div>
+                                    <div class="research-text">
+                                        <h3>IoT技術開発</h3>
+                                        <p>IoT（Internet of Things）に代表される身の回りのモノ（Things）をコンピュータネットワークにつなげる技術開発に関する研究を行っています。</p>
+                                    </div>
+                                </div>
+                                <div class="research-item">
+                                    <div class="research-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="research-text">
+                                        <h3>データマイニング</h3>
+                                        <p>時系列データから知識を発見するマイニング技術の開発も行っています。機械学習を活用した予測システムの構築に取り組んでいます。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="policy">
+                        <div class="content-card">
+                            <h2><i class="fas fa-bullseye"></i> 研究方針</h2>
+                            <div class="policy-content">
+                                <div class="policy-highlight">
+                                    <i class="fas fa-quote-left"></i>
+                                    <p>とにかく手を動かして、物を作ることから始めましょう。</p>
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <p>実践的な研究アプローチを重視し、理論だけでなく実際に動作するシステムの構築を通じて学習と研究を進めていきます。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="edu">
+                        <div class="content-card">
+                            <h2><i class="fas fa-graduation-cap"></i> 略歴</h2>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-year">1981</div>
+                                    <div class="timeline-content">
+                                        <h4>誕生</h4>
+                                        <p>静岡県焼津市生まれ</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">1999</div>
+                                    <div class="timeline-content">
+                                        <h4>高校卒業</h4>
+                                        <p>静岡学園高等学校 理数科 卒業</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2003</div>
+                                    <div class="timeline-content">
+                                        <h4>大学卒業・就職</h4>
+                                        <p>神奈川工科大学 工学部 情報工学科 卒業<br>サイバーコム株式会社入社</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2007</div>
+                                    <div class="timeline-content">
+                                        <h4>修士課程修了</h4>
+                                        <p>神奈川工科大学大学院 工学研究科 情報工学専攻 博士前期課程修了</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2012</div>
+                                    <div class="timeline-content">
+                                        <h4>博士号取得</h4>
+                                        <p>神奈川工科大学大学院 工学研究科 情報工学専攻 博士後期課程終了 学位取得<br>スマートハウス研究センター 特別研究員</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2013</div>
+                                    <div class="timeline-content">
+                                        <h4>助教着任</h4>
+                                        <p>神奈川工科大学 創造工学部 ホームエレクトロニクス開発学科 助教</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">2016</div>
+                                    <div class="timeline-content">
+                                        <h4>准教授昇進</h4>
+                                        <p>神奈川工科大学 創造工学部 ホームエレクトロニクス開発学科 准教授（現在）</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-section" id="out">
+                        <div class="content-card">
+                            <h2><i class="fas fa-users"></i> 学外活動</h2>
+                            <div class="activities-grid">
+                                <div class="activity-category">
+                                    <h3><i class="fas fa-university"></i> 学会活動</h3>
+                                    <ul class="activity-list">
+                                        <li>情報処理学会 会員（2007年〜）</li>
+                                        <li>人工知能学会 会員（2009年〜）</li>
+                                        <li>IEEE 会員（2011年〜）</li>
+                                        <li>IADIS 会員（2010年〜）</li>
+                                        <li>日本工学教育協会 会員（2015年〜）</li>
+                                    </ul>
+                                </div>
+                                <div class="activity-category">
+                                    <h3><i class="fas fa-edit"></i> 査読・編集活動</h3>
+                                    <ul class="activity-list">
+                                        <li>CDS研究会 編集・運営委員（2013年〜2015年）</li>
+                                        <li>IEEE Symposium on Computers & Informatics 査読委員（2011年）</li>
+                                        <li>COMPSAC 2015 Program Committee</li>
+                                        <li>CDS研究会 査読委員（2012年）</li>
+                                    </ul>
+                                </div>
+                                <div class="activity-category">
+                                    <h3><i class="fas fa-handshake"></i> 産学連携活動</h3>
+                                    <ul class="activity-list">
+                                        <li>産学戦略的研究フォーラム インターウェア研究会 幹事（2011年）</li>
+                                        <li>多数・異種機器間連携による次世代HEMSサービスの実現可能性に関する調査研究 幹事（2015年）</li>
+                                        <li>CDS研究会 学生スマートフォンアプリコンテスト運営委員（2014年）</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>IoT Programming Lab.</h3>
+                    <p>神奈川工科大学 工学部 電気電子情報工学科</p>
+                    <p>杉村研究室</p>
+                </div>
+                <div class="footer-section">
+                    <h3>クイックリンク</h3>
+                    <ul>
+                        <li><a href="profile.htm">Profile</a></li>
+                        <li><a href="smarthouse.htm">Smart House</a></li>
+                        <li><a href="papers.htm">Papers</a></li>
+                        <li><a href="access.htm">Access</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>フォローする</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/hiroshi.sugimura.31" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com/Hiroshi-Sugimura" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://qiita.com/Sugimura-Laboratory" target="_blank"><i class="fas fa-code"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hiroshi SUGIMURA, IoT Programming Lab. All Rights Reserved.</p>
+                <p>当Webサイトはリンクフリーです。リンク先: https://www.sugi-lab.net/</p>
+            </div>
+        </div>
     </footer>
-  </body>
+
+    <script src="js/modern-script.js"></script>
+</body>
 
 </html>
