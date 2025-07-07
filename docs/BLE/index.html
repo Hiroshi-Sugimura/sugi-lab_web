@@ -10,7 +10,7 @@
     <div class="container">
         <h1>🔵 WebBLE Central</h1>
         <p class="subtitle">
-            BLE Peripheral デバイスのテストツール
+            BLE Peripheral (UART) のテストツール
         </p>
 
         <!-- 接続状態 -->
@@ -55,6 +55,14 @@
         <!-- データ送受信 -->
         <div class="control-section">
             <h2>📡 データ送受信</h2>
+
+            <!-- 設定 -->
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="ignoreEcho" checked>
+                    エコーバックを無視する（送信データと同じ内容の受信データを非表示）
+                </label>
+            </div>
 
             <div class="input-group">
                 <label for="writeData">送信データ:</label>
@@ -102,6 +110,9 @@
                 this.notifyCharacteristic = null;  // 受信用特性
                 this.isScanning = false;
                 this.discoveredDevices = new Map();
+                this.ignoreEcho = true;             // エコーバックを無視するフラグ
+                this.lastSentData = null;           // 最後に送信したデータ
+                this.lastSentTime = 0;              // 最後に送信した時刻
 
                 this.initializeUI();
                 this.checkBluetoothSupport();
@@ -120,6 +131,10 @@
                 document.getElementById('subscribeBtn').addEventListener('click', () => this.subscribeToNotifications());
                 document.getElementById('unsubscribeBtn').addEventListener('click', () => this.unsubscribeFromNotifications());
                 document.getElementById('clearLogBtn').addEventListener('click', () => this.clearLog());
+                document.getElementById('ignoreEcho').addEventListener('change', (e) => {
+                    this.ignoreEcho = e.target.checked;
+                    this.log(`🔄 エコーバック無視: ${this.ignoreEcho ? 'ON' : 'OFF'}`, 'info');
+                });
             }
 
             checkBluetoothSupport() {
@@ -347,9 +362,9 @@
                                 </div>
                                 <div class="characteristic-controls">
                                     ${characteristic.properties.read ? '<button class="btn-secondary" onclick="central.selectCharacteristic(\'' + charUuid + '\'); central.readData();">Read</button>' : ''}
-                                    ${(characteristic.properties.write || characteristic.properties.writeWithoutResponse) ? '<button class="btn-primary" onclick="central.selectCharacteristic(\'' + charUuid + '\');">Select</button>' : ''}
-                                    ${characteristic.properties.notify ? '<button class="btn-secondary" onclick="central.selectCharacteristic(\'' + charUuid + '\'); central.subscribeToNotifications();">Notify</button>' : ''}
-                                    ${characteristic.properties.indicate ? '<button class="btn-secondary" onclick="central.selectCharacteristic(\'' + charUuid + '\'); central.subscribeToNotifications();">Indicate</button>' : ''}
+                                    ${(characteristic.properties.write || characteristic.properties.writeWithoutResponse) ? '<button class="btn-primary" onclick="central.selectWriteCharacteristic(\'' + charUuid + '\');">Select Write</button>' : ''}
+                                    ${characteristic.properties.notify ? '<button class="btn-secondary" onclick="central.selectNotifyCharacteristic(\'' + charUuid + '\'); central.subscribeToNotifications();">Notify</button>' : ''}
+                                    ${characteristic.properties.indicate ? '<button class="btn-secondary" onclick="central.selectNotifyCharacteristic(\'' + charUuid + '\'); central.subscribeToNotifications();">Indicate</button>' : ''}
                                 </div>
                             `;
 
@@ -366,26 +381,54 @@
                 this.selectedCharacteristic = this.characteristics.get(uuid);
                 if (this.selectedCharacteristic) {
                     this.log(`🎯 特性を選択: ${this.getCharacteristicName(uuid)}`, 'info');
+                }
+            }
+
+            selectWriteCharacteristic(uuid) {
+                this.writeCharacteristic = this.characteristics.get(uuid);
+                this.selectedCharacteristic = this.writeCharacteristic; // 情報表示用
+                if (this.writeCharacteristic) {
+                    this.log(`📤 送信用特性を選択: ${this.getCharacteristicName(uuid)}`, 'success');
+                    this.updateDataControls();
+                }
+            }
+
+            selectNotifyCharacteristic(uuid) {
+                this.notifyCharacteristic = this.characteristics.get(uuid);
+                this.selectedCharacteristic = this.notifyCharacteristic; // 情報表示用
+                if (this.notifyCharacteristic) {
+                    this.log(`📥 受信用特性を選択: ${this.getCharacteristicName(uuid)}`, 'success');
                     this.updateDataControls();
                 }
             }
 
             updateDataControls() {
-                const hasCharacteristic = this.selectedCharacteristic !== null;
-                const canRead = hasCharacteristic && this.selectedCharacteristic.properties.read;
-                const canWrite = hasCharacteristic && (this.selectedCharacteristic.properties.write || this.selectedCharacteristic.properties.writeWithoutResponse);
-                const canNotify = hasCharacteristic && (this.selectedCharacteristic.properties.notify || this.selectedCharacteristic.properties.indicate);
+                const hasWriteCharacteristic = this.writeCharacteristic !== null;
+                const hasNotifyCharacteristic = this.notifyCharacteristic !== null;
+                const hasSelectedCharacteristic = this.selectedCharacteristic !== null;
+
+                const canRead = hasSelectedCharacteristic && this.selectedCharacteristic.properties.read;
+                const canWrite = hasWriteCharacteristic && (this.writeCharacteristic.properties.write || this.writeCharacteristic.properties.writeWithoutResponse);
+                const canNotify = hasNotifyCharacteristic && (this.notifyCharacteristic.properties.notify || this.notifyCharacteristic.properties.indicate);
 
                 document.getElementById('writeBtn').disabled = !canWrite;
                 document.getElementById('writeHexBtn').disabled = !canWrite;
                 document.getElementById('readBtn').disabled = !canRead;
                 document.getElementById('subscribeBtn').disabled = !canNotify;
                 document.getElementById('unsubscribeBtn').disabled = !canNotify;
+
+                // 現在の状態をログに表示
+                if (hasWriteCharacteristic) {
+                    this.log(`✅ 送信準備完了: ${this.getCharacteristicName(this.writeCharacteristic.uuid)}`, 'info');
+                }
+                if (hasNotifyCharacteristic) {
+                    this.log(`✅ 受信準備完了: ${this.getCharacteristicName(this.notifyCharacteristic.uuid)}`, 'info');
+                }
             }
 
             async writeData() {
-                if (!this.selectedCharacteristic) {
-                    this.showError('特性が選択されていません');
+                if (!this.writeCharacteristic) {
+                    this.showError('送信用特性が選択されていません');
                     return;
                 }
 
@@ -399,13 +442,17 @@
                     const encoder = new TextEncoder();
                     const dataArray = encoder.encode(data);
 
+                    // 送信データを記録（エコーバック検出用）
+                    this.lastSentData = dataArray;
+                    this.lastSentTime = Date.now();
+
                     // writeWithoutResponseを優先的に使用（UART通信でよく使われる）
-                    if (this.selectedCharacteristic.properties.writeWithoutResponse) {
-                        await this.selectedCharacteristic.writeValueWithoutResponse(dataArray);
-                        this.log(`📤 データ送信成功 (WriteWithoutResponse): "${data}"`, 'success');
-                    } else if (this.selectedCharacteristic.properties.write) {
-                        await this.selectedCharacteristic.writeValue(dataArray);
-                        this.log(`📤 データ送信成功 (Write): "${data}"`, 'success');
+                    if (this.writeCharacteristic.properties.writeWithoutResponse) {
+                        await this.writeCharacteristic.writeValueWithoutResponse(dataArray);
+                        this.log(`📤 データ送信成功 (WriteWithoutResponse): "${data}" → ${this.getCharacteristicName(this.writeCharacteristic.uuid)}`, 'success');
+                    } else if (this.writeCharacteristic.properties.write) {
+                        await this.writeCharacteristic.writeValue(dataArray);
+                        this.log(`📤 データ送信成功 (Write): "${data}" → ${this.getCharacteristicName(this.writeCharacteristic.uuid)}`, 'success');
                     } else {
                         throw new Error('書き込み可能な特性ではありません');
                     }
@@ -417,8 +464,8 @@
             }
 
             async writeHexData() {
-                if (!this.selectedCharacteristic) {
-                    this.showError('特性が選択されていません');
+                if (!this.writeCharacteristic) {
+                    this.showError('送信用特性が選択されていません');
                     return;
                 }
 
@@ -436,12 +483,16 @@
 
                     const dataArray = new Uint8Array(bytes);
 
+                    // 送信データを記録（エコーバック検出用）
+                    this.lastSentData = dataArray;
+                    this.lastSentTime = Date.now();
+
                     // writeWithoutResponseを優先的に使用（UART通信でよく使われる）
-                    if (this.selectedCharacteristic.properties.writeWithoutResponse) {
-                        await this.selectedCharacteristic.writeValueWithoutResponse(dataArray);
+                    if (this.writeCharacteristic.properties.writeWithoutResponse) {
+                        await this.writeCharacteristic.writeValueWithoutResponse(dataArray);
                         this.log(`📤 HEXデータ送信成功 (WriteWithoutResponse): ${hexData}`, 'success');
-                    } else if (this.selectedCharacteristic.properties.write) {
-                        await this.selectedCharacteristic.writeValue(dataArray);
+                    } else if (this.writeCharacteristic.properties.write) {
+                        await this.writeCharacteristic.writeValue(dataArray);
                         this.log(`📤 HEXデータ送信成功 (Write): ${hexData}`, 'success');
                     } else {
                         throw new Error('書き込み可能な特性ではありません');
@@ -471,18 +522,19 @@
             }
 
             async subscribeToNotifications() {
-                if (!this.selectedCharacteristic) {
-                    this.showError('特性が選択されていません');
+                if (!this.notifyCharacteristic) {
+                    this.showError('受信用特性が選択されていません');
                     return;
                 }
 
                 try {
-                    await this.selectedCharacteristic.startNotifications();
-                    this.selectedCharacteristic.addEventListener('characteristicvaluechanged', (event) => {
+                    await this.notifyCharacteristic.startNotifications();
+                    this.notifyCharacteristic.addEventListener('characteristicvaluechanged', (event) => {
                         this.displayReceivedData(event.target.value);
+                        this.log(`📥 通知受信: ${this.getCharacteristicName(event.target.uuid)}`, 'info');
                     });
 
-                    this.log(`🔔 通知を開始しました`, 'success');
+                    this.log(`🔔 通知を開始しました: ${this.getCharacteristicName(this.notifyCharacteristic.uuid)}`, 'success');
 
                 } catch (error) {
                     this.log(`❌ 通知開始エラー: ${error.message}`, 'error');
@@ -491,14 +543,14 @@
             }
 
             async unsubscribeFromNotifications() {
-                if (!this.selectedCharacteristic) {
-                    this.showError('特性が選択されていません');
+                if (!this.notifyCharacteristic) {
+                    this.showError('受信用特性が選択されていません');
                     return;
                 }
 
                 try {
-                    await this.selectedCharacteristic.stopNotifications();
-                    this.log(`🔕 通知を停止しました`, 'success');
+                    await this.notifyCharacteristic.stopNotifications();
+                    this.log(`🔕 通知を停止しました: ${this.getCharacteristicName(this.notifyCharacteristic.uuid)}`, 'success');
 
                 } catch (error) {
                     this.log(`❌ 通知停止エラー: ${error.message}`, 'error');
@@ -507,11 +559,22 @@
             }
 
             displayReceivedData(dataView) {
+                // バイト配列として変換
+                const byteArray = new Uint8Array(dataView.buffer);
+
+                // エコーバック検出
+                if (this.ignoreEcho && this.lastSentData && this.lastSentTime) {
+                    const timeDiff = Date.now() - this.lastSentTime;
+                    // 5秒以内に送信されたデータと同じ内容ならエコーバックとして無視
+                    if (timeDiff < 5000 && this.arraysEqual(byteArray, this.lastSentData)) {
+                        this.log(`🔄 エコーバック検出（無視）: ${this.arrayToHex(byteArray)}`, 'warning');
+                        return;
+                    }
+                }
+
                 const receivedDataDiv = document.getElementById('receivedData');
                 const dataContentDiv = document.getElementById('dataContent');
 
-                // バイト配列として表示
-                const byteArray = new Uint8Array(dataView.buffer);
                 const hexString = Array.from(byteArray)
                     .map(b => b.toString(16).padStart(2, '0'))
                     .join(' ');
@@ -538,6 +601,22 @@
                 this.log(`📥 データ受信: HEX[${hexString}] TEXT[${textString}]`, 'info');
             }
 
+            // 配列比較用ヘルパーメソッド
+            arraysEqual(a, b) {
+                if (a.length !== b.length) return false;
+                for (let i = 0; i < a.length; i++) {
+                    if (a[i] !== b[i]) return false;
+                }
+                return true;
+            }
+
+            // HEX文字列変換用ヘルパーメソッド
+            arrayToHex(array) {
+                return Array.from(array)
+                    .map(b => b.toString(16).padStart(2, '0'))
+                    .join(' ');
+            }
+
             async disconnect() {
                 try {
                     if (this.server) {
@@ -556,6 +635,10 @@
                 this.services.clear();
                 this.characteristics.clear();
                 this.selectedCharacteristic = null;
+                this.writeCharacteristic = null;
+                this.notifyCharacteristic = null;
+                this.lastSentData = null;
+                this.lastSentTime = 0;
                 this.updateConnectionStatus(false);
                 this.log('🔌 デバイスが切断されました', 'warning');
             }

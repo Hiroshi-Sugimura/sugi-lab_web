@@ -451,6 +451,30 @@ input:checked + .toggle-slider:before {
     font-size: 12px;
 }
 
+/* 設定グループ */
+.setting-group {
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #F8F9FA;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+}
+
+.setting-group label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+}
+
+.setting-group input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #007AFF;
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 767px) {
     body {
