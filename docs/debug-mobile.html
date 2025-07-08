@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Mobile Navigation Debug</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <link rel="stylesheet" href="css/layout.css" type="text/css">
+    <link rel="stylesheet" href="css/components.css" type="text/css">
+    <link rel="stylesheet" href="css/mobile-nav.css" type="text/css">
+    <style>
+        body {
+            padding-top: 120px;
+            background: #f0f0f0;
+        }
+        .test-content {
+            padding: 2rem;
+            text-align: center;
+            min-height: 200vh;
+            background: linear-gradient(45deg, #f1f1f1, #e1e1e1);
+        }
+        .debug-info {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 11px;
+            z-index: 9999;
+            max-width: 300px;
+            font-family: monospace;
+        }
+
+        /* 詳細デバッグ用スタイル */
+        .header .nav {
+            border: 3px solid red !important;
+        }
+
+        .header .nav.active {
+            border: 3px solid lime !important;
+            background: rgba(255, 255, 0, 0.3) !important;
+        }
+
+        .header .nav-list {
+            border: 2px solid blue !important;
+        }
+
+        .header .nav-list.active {
+            border: 2px solid cyan !important;
+        }
+
+        .header .nav-link {
+            border: 1px solid purple !important;
+            margin: 2px !important;
+        }
+
+        /* スクリーン幅表示 */
+        .width-indicator {
+            position: fixed;
+            top: 80px;
+            right: 10px;
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 9998;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-microchip"></i> Debug Lab</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#test1" class="nav-link">Test 1</a></li>
+                    <li><a href="#test2" class="nav-link">Test 2</a></li>
+                    <li><a href="#test3" class="nav-link">Test 3</a></li>
+                    <li><a href="#test4" class="nav-link">Test 4</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="width-indicator" id="widthIndicator">
+        幅: <span id="currentWidth"></span>px
+    </div>
+
+    <div class="test-content">
+        <h1>📱 詳細モバイルナビゲーションデバッグ</h1>
+        <p>画面幅を768px以下にしてハンバーガーメニューをテストしてね！</p>
+        <p>赤枠: .nav / 緑枠: .nav.active / 青枠: .nav-list / 水色枠: .nav-list.active</p>
+
+        <div id="test1" style="margin: 50px 0; padding: 20px; background: white;">
+            <h2>Test Section 1</h2>
+            <p>メニューが表示されるかテスト</p>
+        </div>
+
+        <div id="test2" style="margin: 50px 0; padding: 20px; background: white;">
+            <h2>Test Section 2</h2>
+            <p>メニューアニメーションテスト</p>
+        </div>
+
+        <div id="test3" style="margin: 50px 0; padding: 20px; background: white;">
+            <h2>Test Section 3</h2>
+            <p>メニュークリックテスト</p>
+        </div>
+
+        <div id="test4" style="margin: 50px 0; padding: 20px; background: white;">
+            <h2>Test Section 4</h2>
+            <p>最終テスト</p>
+        </div>
+    </div>
+
+    <div class="debug-info" id="debugInfo">
+        <div><strong>デバッグ情報:</strong></div>
+        <div>画面幅: <span id="screenWidth"></span>px</div>
+        <div>ハンバーガー表示: <span id="hamburgerDisplay"></span></div>
+        <div>ナビ表示: <span id="navDisplay"></span></div>
+        <div>ナビクラス: <span id="navClasses"></span></div>
+        <div>ナビリストクラス: <span id="navListClasses"></span></div>
+    </div>
+
+    <script src="js/modern-script.js"></script>
+    <script>
+        // 詳細デバッグ用スクリプト
+        function updateDebugInfo() {
+            const width = window.innerWidth;
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav');
+            const navList = document.querySelector('.nav-list');
+
+            document.getElementById('currentWidth').textContent = width;
+            document.getElementById('screenWidth').textContent = width;
+
+            if (hamburger) {
+                const hamburgerStyle = window.getComputedStyle(hamburger);
+                document.getElementById('hamburgerDisplay').textContent = hamburgerStyle.display;
+            }
+
+            if (nav) {
+                const navStyle = window.getComputedStyle(nav);
+                document.getElementById('navDisplay').textContent = navStyle.display;
+                document.getElementById('navClasses').textContent = nav.className;
+            }
+
+            if (navList) {
+                document.getElementById('navListClasses').textContent = navList.className;
+            }
+        }
+
+        window.addEventListener('resize', updateDebugInfo);
+        updateDebugInfo();
+
+        // さらに詳細なデバッグ
+        setInterval(updateDebugInfo, 1000);
+
+        console.log('詳細デバッグページ読み込み完了');
+        console.log('全要素:', {
+            hamburger: document.querySelector('.hamburger'),
+            nav: document.querySelector('.nav'),
+            navList: document.querySelector('.nav-list')
+        });
+    </script>
+</body>
+</html>

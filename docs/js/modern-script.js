@@ -24,28 +24,100 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.nav');
-const navList = document.querySelector('.nav-list');
+// Mobile menu toggle - より堅牢なアプローチ
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+    const navList = document.querySelector('.nav-list');
 
-if (hamburger && nav && navList) {
-    hamburger.addEventListener('click', () => {
-        nav.classList.toggle('active');
-        navList.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+    console.log('DOMContentLoaded - ハンバーガーメニュー要素:', hamburger);
+    console.log('DOMContentLoaded - ナビゲーション要素:', nav);
+    console.log('DOMContentLoaded - ナビリスト要素:', navList);
 
-    // Close menu when clicking on nav links
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            navList.classList.remove('active');
-            hamburger.classList.remove('active');
+    if (hamburger && nav && navList) {
+        console.log('すべての要素が見つかりました - イベントリスナーを追加');        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            console.log('ハンバーガーメニューがクリックされました');
+            console.log('クリック前 - nav classes:', nav.className);
+            console.log('クリック前 - navList classes:', navList.className);
+            console.log('クリック前 - hamburger classes:', hamburger.className);
+
+            // トグル実行
+            nav.classList.toggle('active');
+            navList.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            console.log('クリック後 - nav classes:', nav.className);
+            console.log('クリック後 - navList classes:', navList.className);
+            console.log('クリック後 - hamburger classes:', hamburger.className);
+
+            // さらに詳細なデバッグ
+            const isNavActive = nav.classList.contains('active');
+            console.log('ナビゲーションアクティブ状態:', isNavActive);
+
+            // CSSが効いてない場合の強制スタイル適用
+            if (isNavActive) {
+                console.log('メニューが開きました');
+                // 強制的にスタイルを適用
+                nav.style.display = 'block';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.zIndex = '1000';
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'column';
+                navList.style.padding = '1rem';
+                navList.style.gap = '1rem';
+                navList.style.margin = '0';
+                navList.style.listStyle = 'none';
+            } else {
+                console.log('メニューが閉じました');
+                // 強制的に隠す
+                nav.style.display = 'none';
+            }
+
+            // 計算されたスタイルもログ出力
+            const navStyles = window.getComputedStyle(nav);
+            console.log('nav computed display:', navStyles.display);
+            console.log('nav computed position:', navStyles.position);
         });
-    });
-}
+
+        // Close menu when clicking on nav links
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                console.log('ナビリンクがクリックされました - メニューを閉じます');
+                nav.classList.remove('active');
+                navList.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+                if (nav.classList.contains('active')) {
+                    console.log('外側クリック - メニューを閉じます');
+                    nav.classList.remove('active');
+                    navList.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            }
+        });
+
+    } else {
+        console.error('ハンバーガーメニューの要素が見つかりません:');
+        console.error('hamburger:', hamburger);
+        console.error('nav:', nav);
+        console.error('navList:', navList);
+    }
+});
 
 // Intersection Observer for animations
 const observerOptions = {

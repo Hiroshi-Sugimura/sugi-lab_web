@@ -28,18 +28,68 @@
 }
 
 /* Base Styles */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* 横スクロール防止 */
+    max-width: 100vw; /* ビューポート幅を超えないように */
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
-    overflow-x: hidden;
+    overflow-x: hidden; /* 横スクロール防止 */
+    max-width: 100vw; /* ビューポート幅を超えないように */
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 全ての要素で横はみ出しを防ぐ */
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+*:not(html):not(body) {
+    max-width: 100%;
+}
+
+/* 画像やメディアの基本レスポンシブ対応 */
+img, video, iframe, object, embed {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* SVGの追加対応 */
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* フレックスアイテムでの画像対応 */
+img {
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* テーブルのレスポンシブ対応 */
+table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
 }
 
 /* Smooth Scrolling */

@@ -2,6 +2,72 @@
    Layout Styles - Header, Footer, Grid Layouts, and Page Structure
    ========================================================================== */
 
+/* 横スクロール完全防止 */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Container - レスポンシブコンテナ */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 大画面対応 */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+        padding: 0 2rem;
+    }
+}
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+}
+
+/* 小型モバイル対応 */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+}
+
+/* 極小モバイル対応 */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 0.5rem;
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+}
+
 /* Header */
 .header {
     background: rgba(255, 255, 255, 0.95);
@@ -19,6 +85,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 20px;
+    position: relative; /* ナビゲーションの絶対配置のために必要 */
 }
 
 .logo h1 {
@@ -69,19 +136,7 @@
     color: var(--secondary-color);
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--primary-color);
-    transition: all 0.3s ease;
-}
+/* ハンバーガーメニューのスタイルは mobile-nav.css で管理 */
 
 /* Hero Section */
 .hero {
@@ -318,6 +373,9 @@ section:nth-child(odd) {
 .resources-grid {
     display: grid;
     gap: 2rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .research-grid {
@@ -337,12 +395,74 @@ section:nth-child(odd) {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
+/* Grid Layouts - モバイル対応 */
+@media (max-width: 768px) {
+    .research-grid,
+    .projects-grid,
+    .gallery-grid,
+    .resources-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .about-content,
+    .apps-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .stats {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .research-grid,
+    .projects-grid,
+    .gallery-grid,
+    .resources-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem;
+    }
+}
+
 /* Layout Utilities */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .apps-content {
@@ -350,10 +470,16 @@ section:nth-child(odd) {
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     align-items: center;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }

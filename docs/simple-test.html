@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Mobile Menu Test</title>
+    <style>
+        /* 基本リセット */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* CSS変数 */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #2c3e50;
+            --border-color: #e9ecef;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f0f0;
+            padding-top: 80px;
+        }
+
+        /* ヘッダー */
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+            position: relative;
+        }
+
+        .logo h1 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        /* ナビゲーション - デスクトップ */
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+        }
+
+        /* ハンバーガーメニュー */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            gap: 4px;
+            background: none;
+            border: none;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            display: block;
+        }
+
+        /* モバイル対応 */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex !important;
+            }
+
+            .nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                background: white;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav.active {
+                display: block !important;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem;
+            }
+
+            .nav-link {
+                display: block;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border-color);
+                text-align: center;
+            }
+
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        /* テストコンテンツ */
+        .content {
+            padding: 2rem;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .status {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🧪 Simple Test</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#test1" class="nav-link">Test 1</a></li>
+                    <li><a href="#test2" class="nav-link">Test 2</a></li>
+                    <li><a href="#test3" class="nav-link">Test 3</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>シンプルテスト</h1>
+        <p>これは最小限のHTMLとCSSだけでのテストです</p>
+        <p>画面幅を768px以下にしてハンバーガーメニューをクリックしてください</p>
+
+        <div id="test1" style="margin: 3rem 0; padding: 2rem; background: white; border-radius: 8px;">
+            <h2>Test Section 1</h2>
+        </div>
+        <div id="test2" style="margin: 3rem 0; padding: 2rem; background: white; border-radius: 8px;">
+            <h2>Test Section 2</h2>
+        </div>
+        <div id="test3" style="margin: 3rem 0; padding: 2rem; background: white; border-radius: 8px;">
+            <h2>Test Section 3</h2>
+        </div>
+    </div>
+
+    <div class="status" id="status">
+        画面幅: <span id="width"></span>px<br>
+        メニュー状態: <span id="menuStatus">閉じ</span>
+    </div>
+
+    <script>
+        // シンプルなJavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav');
+            const statusEl = document.getElementById('menuStatus');
+            const widthEl = document.getElementById('width');
+
+            console.log('シンプルテスト読み込み完了');
+            console.log('hamburger:', hamburger);
+            console.log('nav:', nav);
+
+            if (hamburger && nav) {
+                hamburger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('ハンバーガークリック');
+
+                    nav.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+
+                    const isOpen = nav.classList.contains('active');
+                    statusEl.textContent = isOpen ? '開き' : '閉じ';
+
+                    console.log('メニュー状態:', isOpen ? '開き' : '閉じ');
+                    console.log('nav classes:', nav.className);
+                });
+            }
+
+            function updateWidth() {
+                widthEl.textContent = window.innerWidth;
+            }
+
+            window.addEventListener('resize', updateWidth);
+            updateWidth();
+        });
+    </script>
+</body>
+</html>

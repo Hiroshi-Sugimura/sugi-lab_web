@@ -1,0 +1,141 @@
+/* 超強力なモバイルナビゲーション - 全ての他のCSSを上書き */
+@media (max-width: 768px) {
+    /* ハンバーガーメニューを強制表示 - 全ての他のスタイルより優先 */
+    header.header .container .hamburger,
+    .header .container .hamburger,
+    header .hamburger,
+    .hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        cursor: pointer !important;
+        padding: 0.5rem !important;
+        gap: 4px !important;
+        z-index: 1001 !important;
+        background: none !important;
+        border: none !important;
+        position: relative !important;
+    }
+
+    /* ハンバーガーのスパン要素 */
+    header.header .container .hamburger span,
+    .header .container .hamburger span,
+    header .hamburger span,
+    .hamburger span {
+        width: 25px !important;
+        height: 3px !important;
+        background: #2c3e50 !important;
+        transition: all 0.3s ease !important;
+        border-radius: 2px !important;
+        display: block !important;
+    }
+
+    /* デスクトップナビゲーションを隠す */
+    header.header .container .nav,
+    .header .container .nav,
+    header .nav,
+    .nav {
+        display: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1000 !important;
+        width: 100% !important;
+    }
+
+    /* アクティブ時のナビゲーション表示 */
+    header.header .container .nav.active,
+    .header .container .nav.active,
+    header .nav.active,
+    .nav.active {
+        display: block !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* ナビリストのスタイル */
+    header.header .container .nav.active .nav-list,
+    .header .container .nav.active .nav-list,
+    header .nav.active .nav-list,
+    .nav.active .nav-list,
+    header.header .container .nav .nav-list.active,
+    .header .container .nav .nav-list.active,
+    header .nav .nav-list.active,
+    .nav .nav-list.active {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 1rem !important;
+        gap: 1rem !important;
+        margin: 0 !important;
+        list-style: none !important;
+        width: 100% !important;
+    }
+
+    /* ナビリンクのスタイル */
+    header.header .container .nav.active .nav-link,
+    .header .container .nav.active .nav-link,
+    header .nav.active .nav-link,
+    .nav.active .nav-link {
+        padding: 0.75rem 1rem !important;
+        text-align: center !important;
+        border-bottom: 1px solid #e9ecef !important;
+        border-radius: 8px !important;
+        transition: all 0.3s ease !important;
+        display: block !important;
+        text-decoration: none !important;
+        color: #2c3e50 !important;
+        font-weight: 500 !important;
+    }
+
+    /* ハンバーガーアニメーション */
+    header.header .container .hamburger.active span:nth-child(1),
+    .header .container .hamburger.active span:nth-child(1),
+    header .hamburger.active span:nth-child(1),
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px) !important;
+    }
+
+    header.header .container .hamburger.active span:nth-child(2),
+    .header .container .hamburger.active span:nth-child(2),
+    header .hamburger.active span:nth-child(2),
+    .hamburger.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    header.header .container .hamburger.active span:nth-child(3),
+    .header .container .hamburger.active span:nth-child(3),
+    header .hamburger.active span:nth-child(3),
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px) !important;
+    }
+}
+
+/* デスクトップ表示の確保 */
+@media (min-width: 769px) {
+    header.header .container .hamburger,
+    .header .container .hamburger,
+    header .hamburger,
+    .hamburger {
+        display: none !important;
+    }
+
+    header.header .container .nav,
+    .header .container .nav,
+    header .nav,
+    .nav {
+        display: block !important;
+    }
+
+    header.header .container .nav-list,
+    .header .container .nav-list,
+    header .nav-list,
+    .nav-list {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 2rem !important;
+        position: static !important;
+        background: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+}

@@ -425,7 +425,59 @@
    Navigation Components
    ================================================================================ */
 
-/* ハンバーガーメニューのスタイルは mobile-nav.css で管理 */
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover div {
+    background: #f39c12;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav.active {
+        display: block !important;
+    }
+}
 
 /* ================================================================================
    Card Components
