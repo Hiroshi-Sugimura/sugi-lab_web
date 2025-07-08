@@ -870,9 +870,15 @@ section:nth-child(odd) {
 }
 
 /* Profile Navigation Sidebar */
-.profile-nav {
-    position: sticky;
-    top: 2rem;
+/* 大画面でのみ固定サイドバーを有効化 */
+@media (min-width: 1025px) {
+    .profile-nav {
+        position: sticky;
+        top: calc(70px + 1rem);
+        align-self: start;
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
+    }
 }
 
 .nav-card {
@@ -1316,6 +1322,10 @@ section:nth-child(odd) {
     .hero-subtitle {
         font-size: 1.2rem;
         padding: 0 20px;
+    }
+
+    .profile-grid {
+        gap: 2rem;
     }
 }
 
