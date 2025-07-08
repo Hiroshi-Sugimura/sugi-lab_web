@@ -1,11 +1,9 @@
-/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
-/* Root Variables - Research Lab Theme */
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -20,46 +18,43 @@
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
     --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --tech-gradient: linear-gradient(135deg, #d8eefe 0%, #d0ffe5 100%);
+    --tech-gradient: linear-gradient(135deg, #d8eefe 0%, #d0ffe5 100%)
 }
 
-/* Base Styles */
 body {
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px
 }
 
-/* Smooth Scrolling */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth
 }
 
-/* Header */
 .header {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, .95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 20px;
+    padding: 1rem 20px
 }
 
 .logo h1 {
@@ -68,27 +63,27 @@ html {
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .logo i {
     color: var(--secondary-color);
-    font-size: 2rem;
+    font-size: 2rem
 }
 
 .nav-list {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2rem
 }
 
 .nav-link {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     position: relative;
-    padding: 0.5rem 0;
+    padding: .5rem 0
 }
 
 .nav-link::after {
@@ -99,37 +94,35 @@ html {
     width: 0;
     height: 2px;
     background: var(--secondary-color);
-    transition: width 0.3s ease;
+    transition: width .3s ease
 }
 
 .nav-link:hover::after {
-    width: 100%;
+    width: 100%
 }
 
 .nav-link:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color)
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 4px;
+    gap: 4px
 }
 
 .hamburger span {
     width: 25px;
     height: 3px;
     background: var(--primary-color);
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
-/* Hero Section */
 .hero {
     height: 100vh !important;
     background-color: #ff6b6b !important;
-    background-image: linear-gradient(135deg, rgba(52, 152, 219, 0.4) 0%, rgba(44, 62, 80, 0.4) 100%),
-                      url('../img/IMG_6530.jpg') !important;
+    background-image: linear-gradient(135deg, rgba(52, 152, 219, .4) 0, rgba(44, 62, 80, .4) 100%), url('../img/IMG_6530.jpg') !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -138,8 +131,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-align: center;
+    color: #fff;
+    text-align: center
 }
 
 .hero-overlay {
@@ -148,15 +141,15 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, .2);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .hero-content {
     max-width: 800px;
-    padding: 0 20px;
+    padding: 0 20px
 }
 
 .hero-title {
@@ -164,21 +157,21 @@ html {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .7)
 }
 
 .hero-subtitle {
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
-    opacity: 0.9;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    opacity: .9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .7)
 }
 
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .hero-scroll {
@@ -187,93 +180,97 @@ html {
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .hero-scroll i {
     font-size: 2rem;
-    color: white;
+    color: #fff
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
+
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        transform: translateX(-50%) translateY(0)
     }
+
     40% {
-        transform: translateX(-50%) translateY(-10px);
+        transform: translateX(-50%) translateY(-10px)
     }
+
     60% {
-        transform: translateX(-50%) translateY(-5px);
+        transform: translateX(-50%) translateY(-5px)
     }
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     border: 2px solid transparent;
     text-align: center;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .btn-primary {
     background: var(--secondary-color);
-    color: white;
+    color: #fff
 }
 
 .btn-primary:hover {
     background: #2980b9;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .btn-secondary {
-    background: transparent;
-    color: white;
-    border-color: white;
+    background: 0 0;
+    color: #fff;
+    border-color: #fff
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
+    background: #fff;
+    color: var(--primary-color)
 }
 
 .btn-outline {
-    background: transparent;
+    background: 0 0;
     color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    border-color: var(--secondary-color)
 }
 
 .btn-outline:hover {
     background: var(--secondary-color);
-    color: white;
+    color: #fff
 }
 
-/* Sections */
 section {
     padding: 5rem 0;
     position: relative;
-    z-index: 5;
+    z-index: 5
 }
 
-/* Alternating section backgrounds for better visibility */
-section:nth-child(even) {
-    background: var(--light-bg);
+section:nth-child(2n) {
+    background: var(--light-bg)
 }
 
 section:nth-child(odd) {
-    background: var(--bg-color);
+    background: var(--bg-color)
 }
 
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
     position: relative;
-    z-index: 10;
+    z-index: 10
 }
 
 .section-header h2 {
@@ -282,41 +279,40 @@ section:nth-child(odd) {
     margin-bottom: 1rem;
     color: var(--primary-color);
     text-shadow: none;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, .9);
+    padding: .5rem 1rem;
     border-radius: 10px;
-    display: inline-block;
+    display: inline-block
 }
 
 .section-header p {
     font-size: 1.2rem;
     color: var(--light-text);
-    background: rgba(255, 255, 255, 0.8);
-    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, .8);
+    padding: .5rem 1rem;
     border-radius: 5px;
     display: inline-block;
-    margin-top: 0.5rem;
+    margin-top: .5rem
 }
 
-/* About Section */
 .about {
     background: var(--light-bg) !important;
     position: relative;
     z-index: 10;
     margin-top: 0;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color)
 }
 
 .about .container {
     position: relative;
-    z-index: 15;
+    z-index: 15
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: center
 }
 
 .about-text p {
@@ -324,64 +320,63 @@ section:nth-child(odd) {
     margin-bottom: 2rem;
     line-height: 1.8;
     color: var(--text-color);
-    text-shadow: none;
+    text-shadow: none
 }
 
 .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 2rem
 }
 
 .stat-item {
     text-align: center;
-    background: white;
+    background: #fff;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    transition: transform .3s ease
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px)
 }
 
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: var(--secondary-color)
 }
 
 .stat-label {
     color: var(--light-text);
-    font-weight: 500;
+    font-weight: 500
 }
 
 .about-image img {
     width: 100%;
     border-radius: 15px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
-/* Research Section */
 .research-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2rem
 }
 
 .research-card {
-    background: white;
+    background: #fff;
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .research-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .research-icon {
@@ -392,68 +387,66 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1.5rem
 }
 
 .research-icon i {
     font-size: 2rem;
-    color: white;
+    color: #fff
 }
 
 .research-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--primary-color)
 }
 
-/* Apps Section */
 .apps {
-    background: var(--light-bg);
+    background: var(--light-bg)
 }
 
 .apps-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: center
 }
 
 .apps-list {
     list-style: none;
-    margin: 2rem 0;
+    margin: 2rem 0
 }
 
 .apps-list li {
-    padding: 0.8rem 0;
+    padding: .8rem 0;
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .apps-list i {
     color: var(--secondary-color);
-    width: 20px;
+    width: 20px
 }
 
-/* Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: 2rem
 }
 
 .project-card {
-    background: white;
+    background: #fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .project-image {
@@ -462,23 +455,23 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1rem
 }
 
 .project-image img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: contain
 }
 
 .project-content {
-    padding: 1.5rem;
+    padding: 1.5rem
 }
 
 .project-content h3 {
     font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    margin-bottom: .5rem;
+    color: var(--primary-color)
 }
 
 .project-link {
@@ -487,24 +480,23 @@ section:nth-child(odd) {
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
     margin-top: 1rem;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .project-link:hover {
-    transform: translateX(5px);
+    transform: translateX(5px)
 }
 
-/* Gallery Section */
 .gallery {
-    background: var(--light-bg);
+    background: var(--light-bg)
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 1rem
 }
 
 .gallery-item {
@@ -512,38 +504,37 @@ section:nth-child(odd) {
     overflow: hidden;
     border-radius: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover
 }
 
-/* Resources Section */
 .resources-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 2rem
 }
 
 .resource-card {
-    background: white;
+    background: #fff;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .resource-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .resource-icon {
@@ -554,59 +545,58 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1rem
 }
 
 .resource-icon i {
     font-size: 1.5rem;
-    color: white;
+    color: #fff
 }
 
 .resource-card h3 {
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    margin-bottom: .5rem;
+    color: var(--primary-color)
 }
 
-/* Footer */
 .footer {
     background: var(--primary-color);
-    color: white;
-    padding: 3rem 0 1rem;
+    color: #fff;
+    padding: 3rem 0 1rem
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
 }
 
 .footer-section h3 {
     margin-bottom: 1rem;
-    color: var(--secondary-color);
+    color: var(--secondary-color)
 }
 
 .footer-section ul {
-    list-style: none;
+    list-style: none
 }
 
 .footer-section ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem
 }
 
 .footer-section a {
     color: #bdc3c7;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color .3s ease
 }
 
 .footer-section a:hover {
-    color: white;
+    color: #fff
 }
 
 .social-links {
     display: flex;
-    gap: 1rem;
+    gap: 1rem
 }
 
 .social-links a {
@@ -617,29 +607,28 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .social-links a:hover {
     background: var(--tech-color);
-    transform: translateY(-2px);
+    transform: translateY(-2px)
 }
 
 .footer-bottom {
     padding-top: 2rem;
     border-top: 1px solid #34495e;
     text-align: center;
-    color: #bdc3c7;
+    color: #bdc3c7
 }
 
-/* Page Hero Section */
 .page-hero {
     background: var(--tech-gradient);
-    color: white;
+    color: #fff;
     padding: 8rem 0 4rem;
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .page-hero::before {
@@ -652,13 +641,13 @@ section:nth-child(odd) {
     background: url('../img/C789_keitainotepen500.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.1;
-    z-index: 1;
+    opacity: .1;
+    z-index: 1
 }
 
 .page-hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 2
 }
 
 .page-hero h1 {
@@ -668,49 +657,52 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1rem
 }
 
 .page-hero h1 i {
     font-size: 2.5rem;
-    color: var(--accent-color);
+    color: var(--accent-color)
 }
 
 .page-hero p {
     font-size: 1.2rem;
-    opacity: 0.9;
+    opacity: .9
 }
 
-/* Access Content */
 .access-content {
     padding: 4rem 0;
-    background: var(--light-bg);
+    background: var(--light-bg)
 }
 
 .access-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    align-items: start;
+    align-items: start
 }
 
 .access-info {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2rem
 }
 
-.info-card, .map-card, .streetview-card {
-    background: white;
+.info-card,
+.map-card,
+.streetview-card {
+    background: #fff;
     border-radius: 15px;
     padding: 2rem;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
-.info-card:hover, .map-card:hover, .streetview-card:hover {
+.info-card:hover,
+.map-card:hover,
+.streetview-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .info-header {
@@ -719,122 +711,125 @@ section:nth-child(odd) {
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--light-bg);
+    border-bottom: 2px solid var(--light-bg)
 }
 
 .info-header i {
     font-size: 1.5rem;
     color: var(--secondary-color);
-    width: 30px;
+    width: 30px
 }
 
 .info-header h3 {
     font-size: 1.3rem;
     color: var(--primary-color);
-    margin: 0;
+    margin: 0
 }
 
 .info-body p {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6
 }
 
 .info-body strong {
-    color: var(--primary-color);
+    color: var(--primary-color)
 }
 
 .map-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2rem
 }
 
-.map-card h3, .streetview-card h3 {
+.map-card h3,
+.streetview-card h3 {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: var(--primary-color)
 }
 
-.map-card h3 i, .streetview-card h3 i {
-    color: var(--secondary-color);
+.map-card h3 i,
+.streetview-card h3 i {
+    color: var(--secondary-color)
 }
 
-.map-container, .streetview-container {
+.map-container,
+.streetview-container {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 .map-links {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .map-links .btn {
     flex: 1;
     min-width: 200px;
-    text-align: center;
+    text-align: center
 }
 
 .campus-info-card {
-    background: white;
+    background: #fff;
     border-radius: 15px;
     padding: 2rem;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .campus-info-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .campus-info-card h3 {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
+    color: var(--primary-color)
 }
 
 .campus-info-card h3 i {
-    color: var(--secondary-color);
+    color: var(--secondary-color)
 }
 
 .campus-info {
     display: grid;
-    gap: 1.5rem;
+    gap: 1.5rem
 }
 
 .access-item h4 {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .access-item h4 i {
     color: var(--secondary-color);
-    width: 20px;
+    width: 20px
 }
 
 .access-item ul {
     list-style: none;
-    padding-left: 1.5rem;
+    padding-left: 1.5rem
 }
 
 .access-item li {
     position: relative;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6
 }
 
 .access-item li:before {
@@ -842,159 +837,159 @@ section:nth-child(odd) {
     color: var(--secondary-color);
     position: absolute;
     left: -1rem;
-    font-weight: bold;
+    font-weight: 700
 }
 
-/* Profile Page Styles */
 .page-hero.profile-hero {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    background: linear-gradient(135deg, #9b59b6 0, #8e44ad 100%)
 }
 
 .page-hero.profile-hero::before {
     background: url('../img/top9.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.2;
+    opacity: .2
 }
 
 .profile-content {
     padding: 4rem 0;
-    background: var(--light-bg);
+    background: var(--light-bg)
 }
 
 .profile-grid {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 3rem;
-    align-items: start;
+    align-items: start
 }
 
-/* Profile Navigation Sidebar */
-/* 大画面でのみ固定サイドバーを有効化 */
-@media (min-width: 1025px) {
+@media (min-width:1025px) {
     .profile-nav {
         position: sticky;
         top: calc(70px + 1rem);
         align-self: start;
         max-height: calc(100vh - 90px);
-        overflow-y: auto;
+        overflow-y: auto
     }
 }
 
 .nav-card {
-    background: white;
+    background: #fff;
     border-radius: 15px;
     padding: 2rem;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .nav-card:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .nav-card h3 {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 1.2rem
 }
 
 .nav-card h3 i {
-    color: var(--tech-color);
+    color: var(--tech-color)
 }
 
 .nav-menu {
     list-style: none;
-    padding: 0;
+    padding: 0
 }
 
 .nav-menu li {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem
 }
 
 .nav-menu a {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
+    gap: .75rem;
+    padding: .75rem 1rem;
     color: var(--text-color);
     text-decoration: none;
     border-radius: 8px;
-    transition: all 0.3s ease;
-    font-weight: 500;
+    transition: all .3s ease;
+    font-weight: 500
 }
 
 .nav-menu a:hover {
     background: var(--tech-gradient);
-    color: white;
-    transform: translateX(5px);
+    color: #fff;
+    transform: translateX(5px)
 }
 
 .nav-menu a i {
     width: 20px;
     color: var(--tech-color);
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .nav-menu a:hover i {
-    color: white;
+    color: #fff
 }
 
-/* Profile Main Content */
 .profile-main {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2rem
 }
 
-.intro-section, .content-section {
-    animation: fadeInUp 0.6s ease forwards;
+.content-section,
+.intro-section {
+    animation: fadeInUp .6s ease forwards
 }
 
-.intro-card, .content-card {
-    background: white;
+.content-card,
+.intro-card {
+    background: #fff;
     border-radius: 15px;
     padding: 2.5rem;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
-.intro-card:hover, .content-card:hover {
+.content-card:hover,
+.intro-card:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
-.intro-card h2, .content-card h2 {
+.content-card h2,
+.intro-card h2 {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: .75rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
     font-size: 1.5rem;
     border-bottom: 2px solid var(--light-bg);
-    padding-bottom: 1rem;
+    padding-bottom: 1rem
 }
 
-.intro-card h2 i, .content-card h2 i {
+.content-card h2 i,
+.intro-card h2 i {
     color: var(--tech-color);
-    font-size: 1.3rem;
+    font-size: 1.3rem
 }
 
 .intro-card p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: var(--text-color);
+    color: var(--text-color)
 }
 
-/* Research Overview */
 .research-overview {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2rem
 }
 
 .research-item {
@@ -1003,13 +998,13 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 12px;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .research-item:hover {
-    background: white;
+    background: #fff;
     box-shadow: var(--shadow);
-    transform: translateX(10px);
+    transform: translateX(10px)
 }
 
 .research-icon {
@@ -1021,64 +1016,62 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.5rem;
+    color: #fff;
+    font-size: 1.5rem
 }
 
 .research-text h3 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    font-size: 1.2rem
 }
 
 .research-text p {
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6
 }
 
-/* Policy Section */
 .policy-content {
-    text-align: center;
+    text-align: center
 }
 
 .policy-highlight {
     background: var(--tech-gradient);
-    color: white;
+    color: #fff;
     padding: 2rem;
     border-radius: 12px;
     margin-bottom: 2rem;
     position: relative;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 500
 }
 
 .policy-highlight i {
     font-size: 1.5rem;
-    opacity: 0.8;
+    opacity: .8
 }
 
 .policy-highlight .fa-quote-left {
     position: absolute;
     top: 1rem;
-    left: 1.5rem;
+    left: 1.5rem
 }
 
 .policy-highlight .fa-quote-right {
     position: absolute;
     bottom: 1rem;
-    right: 1.5rem;
+    right: 1.5rem
 }
 
 .policy-content p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: var(--text-color);
+    color: var(--text-color)
 }
 
-/* Timeline */
 .timeline {
     position: relative;
-    padding-left: 2rem;
+    padding-left: 2rem
 }
 
 .timeline::before {
@@ -1088,14 +1081,14 @@ section:nth-child(odd) {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--tech-gradient);
+    background: var(--tech-gradient)
 }
 
 .timeline-item {
     position: relative;
     margin-bottom: 2rem;
     display: flex;
-    gap: 2rem;
+    gap: 2rem
 }
 
 .timeline-item::before {
@@ -1107,71 +1100,70 @@ section:nth-child(odd) {
     height: 16px;
     border-radius: 50%;
     background: var(--tech-color);
-    border: 3px solid white;
-    box-shadow: 0 0 0 3px var(--tech-color);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px var(--tech-color)
 }
 
 .timeline-year {
     flex-shrink: 0;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--tech-color);
     font-size: 1.1rem;
-    min-width: 60px;
+    min-width: 60px
 }
 
 .timeline-content h4 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    margin-bottom: .5rem;
+    font-size: 1.1rem
 }
 
 .timeline-content p {
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6
 }
 
-/* Activities Grid */
 .activities-grid {
     display: grid;
-    gap: 2rem;
+    gap: 2rem
 }
 
 .activity-category {
     background: var(--light-bg);
     padding: 2rem;
     border-radius: 12px;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .activity-category:hover {
-    background: white;
-    box-shadow: var(--shadow);
+    background: #fff;
+    box-shadow: var(--shadow)
 }
 
 .activity-category h3 {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.2rem
 }
 
 .activity-category h3 i {
-    color: var(--tech-color);
+    color: var(--tech-color)
 }
 
 .activity-list {
     list-style: none;
-    padding: 0;
+    padding: 0
 }
 
 .activity-list li {
     position: relative;
     padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: .75rem;
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6
 }
 
 .activity-list li::before {
@@ -1179,13 +1171,12 @@ section:nth-child(odd) {
     position: absolute;
     left: 0;
     color: var(--tech-color);
-    font-size: 0.8rem;
+    font-size: .8rem
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .hamburger {
-        display: flex;
+        display: flex
     }
 
     .nav {
@@ -1193,30 +1184,30 @@ section:nth-child(odd) {
         top: 70px;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(255, 255, 255, .98);
         backdrop-filter: blur(10px);
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 1000;
+        transition: all .3s ease;
+        z-index: 1000
     }
 
     .nav-list {
         flex-direction: column;
         padding: 20px 0;
-        margin: 0;
+        margin: 0
     }
 
     .nav-list li {
         margin: 0;
         text-align: center;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, .1)
     }
 
     .nav-list li:last-child {
-        border-bottom: none;
+        border-bottom: none
     }
 
     .nav-link {
@@ -1224,118 +1215,120 @@ section:nth-child(odd) {
         padding: 15px 20px;
         color: var(--text-color);
         font-weight: 500;
-        transition: all 0.3s ease;
+        transition: all .3s ease
     }
 
     .nav-link:hover {
         background: var(--primary-color);
-        color: white;
+        color: #fff
     }
 
-    /* Active state for mobile menu */
     .nav.active {
         transform: translateY(0);
         opacity: 1;
-        visibility: visible;
+        visibility: visible
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.5rem
     }
 
     .hero-buttons {
         flex-direction: column;
-        align-items: center;
+        align-items: center
     }
 
     .about-content,
     .apps-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2rem
     }
 
     .stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 
     .section-header h2 {
-        font-size: 2rem;
+        font-size: 2rem
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr)
     }
 
     .page-hero {
-        padding: 6rem 0 3rem;
+        padding: 6rem 0 3rem
     }
 
     .page-hero h1 {
         font-size: 2rem;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: .5rem
     }
 
     .access-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2rem
     }
 
-    .info-card, .map-card, .streetview-card, .campus-info-card {
-        padding: 1.5rem;
+    .campus-info-card,
+    .info-card,
+    .map-card,
+    .streetview-card {
+        padding: 1.5rem
     }
 
     .info-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem;
+        gap: .5rem
     }
 
     .map-links {
-        flex-direction: column;
+        flex-direction: column
     }
 
     .map-links .btn {
-        min-width: auto;
+        min-width: auto
     }
 
     .campus-info {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 
     .profile-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2rem
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
     .hero-title {
         font-size: 3rem;
-        padding: 0 20px;
+        padding: 0 20px
     }
 
     .hero-subtitle {
         font-size: 1.2rem;
-        padding: 0 20px;
+        padding: 0 20px
     }
 
     .profile-grid {
-        gap: 2rem;
+        gap: 2rem
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .hero-title {
         font-size: 2.2rem !important;
         margin-bottom: 1rem;
         padding: 0 10px !important;
         line-height: 1.3 !important;
-        word-wrap: break-word;
+        word-wrap: break-word
     }
 
     .hero-subtitle {
@@ -1343,31 +1336,31 @@ section:nth-child(odd) {
         margin-bottom: 2rem;
         padding: 0 10px !important;
         line-height: 1.5;
-        word-wrap: break-word;
+        word-wrap: break-word
     }
 
     .hero-content {
         max-width: 100% !important;
-        padding: 0 10px !important;
+        padding: 0 10px !important
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        padding: 0 10px;
+        padding: 0 10px
     }
 
     .hero-buttons .btn {
         width: 200px;
-        text-align: center;
+        text-align: center
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width:530px) {
     .hero {
         min-height: 80vh !important;
-        padding: 15px 0;
+        padding: 15px 0
     }
 
     .hero-title {
@@ -1376,40 +1369,40 @@ section:nth-child(odd) {
         padding: 0 8px !important;
         word-wrap: break-word;
         hyphens: auto;
-        max-width: 100%;
+        max-width: 100%
     }
 
     .hero-subtitle {
-        font-size: 0.95rem !important;
+        font-size: .95rem !important;
         line-height: 1.4 !important;
         padding: 0 8px !important;
         word-wrap: break-word;
-        max-width: 100%;
+        max-width: 100%
     }
 
     .hero-content {
         padding: 0 8px !important;
         width: 100%;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
 
     .hero-buttons {
         padding: 0 8px;
         width: 100%;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
 
     .hero-buttons .btn {
         width: 170px;
-        padding: 0.7rem 1.2rem;
-        font-size: 0.85rem;
+        padding: .7rem 1.2rem;
+        font-size: .85rem
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width:480px) {
     .hero {
         min-height: 80vh !important;
-        padding: 20px 0;
+        padding: 20px 0
     }
 
     .hero-title {
@@ -1417,155 +1410,166 @@ section:nth-child(odd) {
         line-height: 1.2 !important;
         padding: 0 10px !important;
         word-wrap: break-word;
-        hyphens: auto;
+        hyphens: auto
     }
 
     .hero-subtitle {
         font-size: 1rem !important;
         line-height: 1.4 !important;
         padding: 0 10px !important;
-        word-wrap: break-word;
+        word-wrap: break-word
     }
 
     .hero-buttons {
-        padding: 0 10px;
+        padding: 0 10px
     }
 
     .hero-buttons .btn {
         width: 180px;
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
+        padding: .8rem 1.5rem;
+        font-size: .9rem
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width:320px) {
     .hero-title {
         font-size: 1.6rem !important;
         padding: 0 5px !important;
         line-height: 1.1 !important;
         max-width: 100%;
-        overflow-wrap: break-word;
+        overflow-wrap: break-word
     }
 
     .hero-subtitle {
-        font-size: 0.85rem !important;
+        font-size: .85rem !important;
         padding: 0 5px !important;
         line-height: 1.3 !important;
         max-width: 100%;
-        overflow-wrap: break-word;
+        overflow-wrap: break-word
     }
 
     .hero-content {
         padding: 0 5px !important;
         width: 100%;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
 
     .hero-buttons {
         padding: 0 5px;
         width: 100%;
-        box-sizing: border-box;
+        box-sizing: border-box
     }
 
     .hero-buttons .btn {
         width: 150px;
-        padding: 0.6rem 0.8rem;
-        font-size: 0.8rem;
+        padding: .6rem .8rem;
+        font-size: .8rem
     }
 }
 
-/* Header Responsive Design */
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .header .container {
-        padding: 0.8rem 15px;
+        padding: .8rem 15px
     }
 
     .logo h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem
     }
 
     .nav-list {
-        display: none;
+        display: none
     }
 
     .hamburger {
-        display: flex;
+        display: flex
     }
 
     .hamburger span {
         width: 25px;
         height: 3px;
         background: var(--primary-color);
-        transition: all 0.3s ease;
-        border-radius: 2px;
+        transition: all .3s ease;
+        border-radius: 2px
     }
 
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+    .hamburger.active span:first-child {
+        transform: rotate(45deg) translate(5px, 5px)
     }
 
     .hamburger.active span:nth-child(2) {
-        opacity: 0;
+        opacity: 0
     }
 
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(7px, -6px)
     }
 }
 
-/* Typing Animation for Hero */
 .hero-title {
     overflow: visible;
     border-right: none;
     white-space: normal;
-    animation: none;
+    animation: none
 }
 
 .typing-text {
     overflow: visible;
     border-right: none;
     white-space: normal;
-    animation: none;
+    animation: none
 }
 
-@media (min-width: 769px) {
+@media (min-width:769px) {
     .typing-text {
         overflow: hidden;
-        border-right: 3px solid rgba(255, 255, 255, 0.7);
+        border-right: 3px solid rgba(255, 255, 255, .7);
         white-space: nowrap;
-        animation: typing 2.5s steps(16, end), blink-caret 0.75s step-end infinite;
+        animation: typing 2.5s steps(16, end), blink-caret .75s step-end infinite
     }
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: rgba(255, 255, 255, 0.7); }
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgba(255, 255, 255, .7)
+    }
 }
 
-/* Smooth Hover Transitions */
-.project-card, .resource-card, .gallery-item {
-    transition: all 0.3s ease;
+.gallery-item,
+.project-card,
+.resource-card {
+    transition: all .3s ease
 }
 
-.project-card:hover, .resource-card:hover {
+.project-card:hover,
+.resource-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
-/* Enhanced Button Styles */
 .btn {
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .btn::before {
@@ -1575,12 +1579,12 @@ section:nth-child(odd) {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+    transition: left .5s
 }
 
 .btn:hover::before {
-    left: 100%;
+    left: 100%
 }
 
 .scroll-to-top {
@@ -1588,7 +1592,7 @@ section:nth-child(odd) {
     bottom: 20px;
     right: 20px;
     background: var(--secondary-color);
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -1597,29 +1601,27 @@ section:nth-child(odd) {
     cursor: pointer;
     display: none;
     z-index: 1000;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow);
+    transition: all .3s ease;
+    box-shadow: var(--shadow)
 }
 
 .scroll-to-top:hover {
     background: var(--tech-color);
     transform: scale(1.1);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
-/* Loading Animation */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s ease;
+    transition: all .6s ease
 }
 
 .fade-in.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0)
 }
 
-/* Scroll to Top Button */
 .scroll-top {
     position: fixed;
     bottom: 30px;
@@ -1631,46 +1633,45 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #fff;
     text-decoration: none;
     opacity: 0;
-    transition: all 0.3s ease;
-    z-index: 1000;
+    transition: all .3s ease;
+    z-index: 1000
 }
 
 .scroll-top.visible {
-    opacity: 1;
+    opacity: 1
 }
 
 .scroll-top:hover {
     background: var(--tech-color);
-    transform: translateY(-3px);
+    transform: translateY(-3px)
 }
 
-/* Forms Page Styles */
 .forms-content {
     padding: 6rem 0;
-    background: var(--bg-color);
+    background: var(--bg-color)
 }
 
 .forms-grid {
     display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 3rem;
+    gap: 3rem
 }
 
 .toc-sidebar {
     position: sticky;
     top: 100px;
-    height: fit-content;
+    height: fit-content
 }
 
 .toc-card {
-    background: white;
+    background: #fff;
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color)
 }
 
 .toc-card h3 {
@@ -1679,51 +1680,51 @@ section:nth-child(odd) {
     font-size: 1.2rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .toc-list {
     list-style: none;
-    padding: 0;
+    padding: 0
 }
 
 .toc-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem
 }
 
 .toc-link {
     color: var(--light-text);
     text-decoration: none;
-    padding: 0.5rem 0;
+    padding: .5rem 0;
     display: block;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
+    border-radius: .5rem;
+    transition: all .3s ease
 }
 
 .toc-link:hover {
     color: var(--secondary-color);
     background: var(--light-bg);
-    padding-left: 1rem;
+    padding-left: 1rem
 }
 
 .forms-main {
-    max-width: none;
+    max-width: none
 }
 
 .forms-section {
-    background: white;
+    background: #fff;
     border-radius: 1rem;
     padding: 2.5rem;
     margin-bottom: 3rem;
     box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color)
 }
 
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 2px solid var(--light-bg);
+    border-bottom: 2px solid var(--light-bg)
 }
 
 .section-header h2 {
@@ -1733,20 +1734,19 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .section-header p {
     color: var(--light-text);
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
-/* Emblem Grid */
 .emblem-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem
 }
 
 .emblem-item {
@@ -1754,76 +1754,82 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 1rem;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .emblem-item:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .emblem-item img {
     margin-bottom: 1rem;
-    border-radius: 0.5rem;
+    border-radius: .5rem
 }
 
 .emblem-links {
     display: flex;
-    gap: 0.5rem;
+    gap: .5rem;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .btn-sm {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-    border-radius: 0.5rem;
+    padding: .4rem .8rem;
+    font-size: .9rem;
+    border-radius: .5rem
 }
 
-/* Subsection Styles */
 .subsection {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color)
 }
 
 .subsection h3 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
-    font-size: 1.3rem;
+    font-size: 1.3rem
 }
 
-.stl-grid, .qr-grid, .logo-grid {
+.logo-grid,
+.qr-grid,
+.stl-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 1.5rem
 }
 
-.stl-item, .qr-item, .logo-item {
+.logo-item,
+.qr-item,
+.stl-item {
     text-align: center;
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 1rem;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
-.stl-item:hover, .qr-item:hover, .logo-item:hover {
+.logo-item:hover,
+.qr-item:hover,
+.stl-item:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
-.stl-item img, .qr-item img, .logo-item img {
+.logo-item img,
+.qr-item img,
+.stl-item img {
     margin-bottom: 1rem;
-    border-radius: 0.5rem;
+    border-radius: .5rem
 }
 
-/* PPT Grid */
 .ppt-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
 }
 
 .ppt-item {
@@ -1831,23 +1837,22 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 1rem;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .ppt-item:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .ppt-item img {
     margin-bottom: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1)
 }
 
-/* Report Grid */
 .report-category {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem
 }
 
 .report-category h3 {
@@ -1855,13 +1860,13 @@ section:nth-child(odd) {
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
     border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
+    padding-bottom: .5rem
 }
 
 .report-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2rem
 }
 
 .report-item {
@@ -1869,34 +1874,33 @@ section:nth-child(odd) {
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .report-item:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .report-item i {
     font-size: 3rem;
     color: var(--secondary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
 .report-item h4 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem
 }
 
 .report-item p {
     color: var(--light-text);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem
 }
 
-/* Word Manual */
 .word-manual {
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 
 .manual-item {
@@ -1905,94 +1909,95 @@ section:nth-child(odd) {
     border-radius: 1rem;
     text-align: center;
     max-width: 400px;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .manual-item:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .manual-item i {
     font-size: 3rem;
     color: var(--secondary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
 .manual-item h4 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem
 }
 
 .manual-item p {
     color: var(--light-text);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem
 }
 
-/* Disclaimer and Credits */
-.disclaimer, .credits {
+.credits,
+.disclaimer {
     background: var(--light-bg);
     padding: 2rem;
     border-radius: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
 }
 
-.disclaimer h3, .credits h3 {
+.credits h3,
+.disclaimer h3 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
-.disclaimer p, .credits p {
+.credits p,
+.disclaimer p {
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6
 }
 
-/* Links Page Styles */
 .links-content {
     padding: 6rem 0;
-    background: var(--light-bg);
+    background: var(--light-bg)
 }
 
 .links-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
+    gap: 2rem
 }
 
 .links-category {
-    background: white;
+    background: #fff;
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .links-category:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .category-header {
     margin-bottom: 2rem;
     text-align: center;
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--light-bg);
+    border-bottom: 2px solid var(--light-bg)
 }
 
 .category-header h2 {
     color: var(--primary-color);
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .links-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.5rem
 }
 
 .link-item {
@@ -2002,13 +2007,13 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 1rem;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .link-item:hover {
-    background: white;
+    background: #fff;
     box-shadow: var(--shadow);
-    transform: translateX(5px);
+    transform: translateX(5px)
 }
 
 .link-icon {
@@ -2020,91 +2025,89 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.2rem;
+    color: #fff;
+    font-size: 1.2rem
 }
 
 .link-content {
-    flex: 1;
+    flex: 1
 }
 
 .link-content h3 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    margin-bottom: .5rem;
+    font-size: 1.1rem
 }
 
 .link-content p {
     color: var(--light-text);
     margin-bottom: 1rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: .9rem;
+    line-height: 1.4
 }
 
 .link-urls {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .link-url {
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: .3rem;
     color: var(--secondary-color);
     text-decoration: none;
-    padding: 0.4rem 0.8rem;
-    background: rgba(52, 152, 219, 0.1);
-    border-radius: 0.5rem;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
+    padding: .4rem .8rem;
+    background: rgba(52, 152, 219, .1);
+    border-radius: .5rem;
+    font-size: .85rem;
+    transition: all .3s ease
 }
 
 .link-url:hover {
     background: var(--secondary-color);
-    color: white;
-    transform: translateY(-2px);
+    color: #fff;
+    transform: translateY(-2px)
 }
 
 .link-url i {
-    font-size: 0.8rem;
+    font-size: .8rem
 }
 
-/* Responsive Design for Links */
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .links-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1rem
     }
 
     .link-item {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
+        gap: 1rem
     }
 
     .link-icon {
-        align-self: center;
+        align-self: center
     }
 
     .link-urls {
-        justify-content: center;
+        justify-content: center
     }
 }
 
-/* Smart House Page Styles */
 .smarthouse-content {
     padding: 6rem 0;
-    background: var(--bg-color);
+    background: var(--bg-color)
 }
 
 .smarthouse-intro {
     text-align: center;
     margin-bottom: 4rem;
     padding: 3rem;
-    background: white;
+    background: #fff;
     border-radius: 1rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 .smarthouse-intro h2 {
@@ -2114,7 +2117,7 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .smarthouse-intro p {
@@ -2122,32 +2125,32 @@ section:nth-child(odd) {
     font-size: 1.1rem;
     line-height: 1.6;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .research-features {
-    margin-bottom: 4rem;
+    margin-bottom: 4rem
 }
 
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2rem
 }
 
 .feature-card {
-    background: white;
+    background: #fff;
     padding: 2.5rem;
     border-radius: 1rem;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    transition: all .3s ease;
+    border: 1px solid var(--border-color)
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .feature-icon {
@@ -2159,27 +2162,27 @@ section:nth-child(odd) {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    color: white;
-    font-size: 2rem;
+    color: #fff;
+    font-size: 2rem
 }
 
 .feature-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.3rem
 }
 
 .feature-card p {
     color: var(--light-text);
-    line-height: 1.6;
+    line-height: 1.6
 }
 
 .presentation-section {
     margin-bottom: 4rem;
-    background: white;
+    background: #fff;
     padding: 3rem;
     border-radius: 1rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 .presentation-section h2 {
@@ -2189,24 +2192,24 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .presentation-section p {
     color: var(--light-text);
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .iframe-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 1rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 .iframe-container iframe {
@@ -2215,14 +2218,14 @@ section:nth-child(odd) {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 1rem;
+    border-radius: 1rem
 }
 
 .research-areas {
-    background: white;
+    background: #fff;
     padding: 3rem;
     border-radius: 1rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 .research-areas h2 {
@@ -2233,26 +2236,26 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .areas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 2rem
 }
 
 .area-card {
     background: var(--light-bg);
     padding: 2rem;
     border-radius: 1rem;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .area-card:hover {
-    background: white;
+    background: #fff;
     box-shadow: var(--shadow);
-    transform: translateY(-5px);
+    transform: translateY(-5px)
 }
 
 .area-card h3 {
@@ -2261,113 +2264,112 @@ section:nth-child(odd) {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .area-card h3 i {
-    color: var(--secondary-color);
+    color: var(--secondary-color)
 }
 
 .area-card p {
     color: var(--light-text);
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: .95rem
 }
 
-/* Timeseries Page Styles */
 .timeseries-content {
     padding: 6rem 0;
-    background: var(--bg-color);
+    background: var(--bg-color)
 }
 
 .timeseries-grid {
     display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 3rem;
+    gap: 3rem
 }
 
 .timeseries-main {
-    max-width: none;
+    max-width: none
 }
 
 .timeseries-section {
-    background: white;
+    background: #fff;
     border-radius: 1rem;
     padding: 2.5rem;
     margin-bottom: 3rem;
     box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color)
 }
 
 .overview-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    align-items: center;
+    align-items: center
 }
 
 .overview-text {
-    padding-right: 1rem;
+    padding-right: 1rem
 }
 
 .research-list {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 1rem
 }
 
 .research-list li {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.8rem;
-    padding: 0.5rem 0;
-    color: var(--text-color);
+    gap: .5rem;
+    margin-bottom: .8rem;
+    padding: .5rem 0;
+    color: var(--text-color)
 }
 
 .research-list li i {
     color: var(--secondary-color);
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .overview-image {
-    text-align: center;
+    text-align: center
 }
 
 .feature-image {
     max-width: 100%;
     height: auto;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow);
+    border-radius: .5rem;
+    box-shadow: var(--shadow)
 }
 
 .example-content {
     display: grid;
-    gap: 2rem;
+    gap: 2rem
 }
 
 .example-description {
     background: var(--light-bg);
     padding: 2rem;
     border-radius: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
 }
 
 .example-description h3 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
 .example-description p {
     color: var(--text-color);
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
 .example-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2rem
 }
 
 .image-card {
@@ -2375,38 +2377,38 @@ section:nth-child(odd) {
     padding: 1.5rem;
     border-radius: 1rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .image-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover)
 }
 
 .example-image {
     width: 100%;
     max-width: 300px;
     height: auto;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1)
 }
 
 .image-card h4 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem
 }
 
 .image-card p {
     color: var(--light-text);
-    font-size: 0.9rem;
+    font-size: .9rem
 }
 
 .software-item {
     background: var(--light-bg);
     padding: 2rem;
     border-radius: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
 }
 
 .software-item h3 {
@@ -2415,110 +2417,109 @@ section:nth-child(odd) {
     font-size: 1.4rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
-.software-item > p {
+.software-item>p {
     color: var(--text-color);
     margin-bottom: 2rem;
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .software-features {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 2rem;
+    gap: 2rem
 }
 
 .feature-list ul {
     list-style: none;
-    padding: 0;
+    padding: 0
 }
 
 .feature-list li {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem;
     margin-bottom: 1rem;
-    padding: 0.5rem 0;
-    color: var(--text-color);
+    padding: .5rem 0;
+    color: var(--text-color)
 }
 
 .feature-list li i {
     color: var(--secondary-color);
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .software-screenshots {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    gap: 1rem
 }
 
 .screenshot-card {
-    background: white;
+    background: #fff;
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .screenshot-card:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 .software-image {
     width: 100%;
     max-width: 200px;
     height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
 }
 
-/* Papers Page Styles */
 .papers-content {
     padding: 2rem 0;
-    background: var(--light-bg);
+    background: var(--light-bg)
 }
 
 .papers-intro {
-    background: white;
+    background: #fff;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: center
 }
 
 .papers-intro p {
     color: var(--light-text);
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .papers-layout {
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 2rem;
-    align-items: start;
+    align-items: start
 }
 
 .papers-sidebar {
-    background: white;
+    background: #fff;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
     position: sticky;
-    top: 100px;
+    top: 100px
 }
 
 .papers-sidebar .control-section {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
 }
 
 .papers-sidebar .control-section:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .papers-sidebar h3 {
@@ -2527,94 +2528,94 @@ section:nth-child(odd) {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .papers-nav {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .papers-nav-link {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
+    gap: .5rem;
+    padding: .75rem 1rem;
     color: var(--text-color);
     text-decoration: none;
     border-radius: 8px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    transition: all .3s ease;
+    border: 1px solid var(--border-color)
 }
 
 .papers-nav-link:hover {
     background: var(--secondary-color);
-    color: white;
-    transform: translateX(5px);
+    color: #fff;
+    transform: translateX(5px)
 }
 
 .form-group {
-    margin: 0.5rem 0;
+    margin: .5rem 0
 }
 
 .form-select {
     width: 100%;
-    padding: 0.75rem;
+    padding: .75rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    background: white;
+    background: #fff;
     color: var(--text-color);
-    font-size: 0.9rem;
-    transition: border-color 0.3s ease;
+    font-size: .9rem;
+    transition: border-color .3s ease
 }
 
 .form-select:focus {
-    outline: none;
+    outline: 0;
     border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, .1)
 }
 
 .external-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .external-link {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
+    gap: .5rem;
+    padding: .75rem 1rem;
     color: var(--secondary-color);
     text-decoration: none;
     border-radius: 8px;
     border: 1px solid var(--secondary-color);
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     text-align: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .external-link:hover {
     background: var(--secondary-color);
-    color: white;
-    transform: translateY(-2px);
+    color: #fff;
+    transform: translateY(-2px)
 }
 
 .papers-main {
-    background: white;
+    background: #fff;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    overflow: hidden;
+    overflow: hidden
 }
 
 .papers-section {
     padding: 2rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color)
 }
 
 .papers-section:last-child {
-    border-bottom: none;
+    border-bottom: none
 }
 
 .papers-section h2 {
@@ -2623,19 +2624,19 @@ section:nth-child(odd) {
     font-size: 1.5rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--secondary-color);
+    gap: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--secondary-color)
 }
 
 .papers-list {
     min-height: 50px;
-    color: var(--text-color);
+    color: var(--text-color)
 }
 
 .papers-list ul {
     list-style: none;
-    padding: 0;
+    padding: 0
 }
 
 .papers-list li {
@@ -2643,56 +2644,55 @@ section:nth-child(odd) {
     padding: 1rem;
     background: var(--light-bg);
     border-radius: 8px;
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--secondary-color)
 }
 
 .cinii-info {
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 0
 }
 
-/* Privacy Policy Page Styles */
 .privacy-policy-content {
     padding: 2rem 0;
-    background: var(--light-bg);
+    background: var(--light-bg)
 }
 
 .privacy-intro {
-    background: white;
+    background: #fff;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: center
 }
 
 .privacy-intro p {
     color: var(--light-text);
-    font-size: 1.1rem;
+    font-size: 1.1rem
 }
 
 .privacy-layout {
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 2rem;
-    align-items: start;
+    align-items: start
 }
 
 .privacy-sidebar {
-    background: white;
+    background: #fff;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
     position: sticky;
-    top: 100px;
+    top: 100px
 }
 
 .privacy-sidebar .control-section {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem
 }
 
 .privacy-sidebar .control-section:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .privacy-sidebar h3 {
@@ -2701,47 +2701,47 @@ section:nth-child(odd) {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .privacy-nav {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: .5rem
 }
 
 .privacy-nav-link {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
+    gap: .5rem;
+    padding: .75rem 1rem;
     color: var(--text-color);
     text-decoration: none;
     border-radius: 8px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    transition: all .3s ease;
+    border: 1px solid var(--border-color)
 }
 
 .privacy-nav-link:hover {
     background: var(--secondary-color);
-    color: white;
-    transform: translateX(5px);
+    color: #fff;
+    transform: translateX(5px)
 }
 
 .privacy-main {
-    background: white;
+    background: #fff;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    overflow: hidden;
+    overflow: hidden
 }
 
 .privacy-section {
     padding: 2rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color)
 }
 
 .privacy-section:last-child {
-    border-bottom: none;
+    border-bottom: none
 }
 
 .privacy-section h2 {
@@ -2750,9 +2750,9 @@ section:nth-child(odd) {
     font-size: 1.8rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--secondary-color);
+    gap: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid var(--secondary-color)
 }
 
 .privacy-item {
@@ -2760,128 +2760,172 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 10px;
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--secondary-color)
 }
 
 .privacy-item:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
 .privacy-item h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .privacy-item p {
     color: var(--text-color);
     line-height: 1.8;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem
 }
 
 .privacy-item p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0
 }
 
-/* Responsive Design for Privacy Policy */
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .privacy-layout {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1rem
     }
 
     .privacy-sidebar {
         position: relative;
         top: auto;
-        padding: 1.5rem;
+        padding: 1.5rem
     }
 
     .privacy-section {
-        padding: 1.5rem;
+        padding: 1.5rem
     }
 
     .privacy-section h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem
     }
 
     .privacy-item {
-        padding: 1rem;
+        padding: 1rem
     }
 
     .privacy-item h3 {
-        font-size: 1.2rem;
+        font-size: 1.2rem
     }
 
     .privacy-nav-link {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.9rem;
+        padding: .5rem .75rem;
+        font-size: .9rem
     }
 }
 
-/* Page-specific hero backgrounds */
-.page-hero.profile-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+/* ============================================
+   共通ページコンテンツスタイル (profile, timeseries共通)
+   ============================================ */
+
+/* ページコンテンツ共通スタイル */
+.page-content {
+    padding: 4rem 0;
+    background: var(--light-bg);
 }
 
-.page-hero.profile-hero::before {
-    background: url('../img/C789_keitainotepen500.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
+.content-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
 }
 
-.page-hero.smarthouse-hero {
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+/* 共通ナビゲーションサイドバー */
+@media (min-width: 1025px) {
+    .content-nav {
+        position: sticky;
+        top: calc(70px + 1rem);
+        align-self: start;
+        max-height: calc(100vh - 90px);
+        overflow-y: auto;
+    }
 }
 
-.page-hero.smarthouse-hero::before {
-    background: url('../img/hems.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
+/* 共通メインコンテンツ */
+.content-main {
+    min-width: 0; /* グリッドオーバーフロー防止 */
 }
 
-.page-hero.datamining-hero {
-    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+/* 既存のprofile-contentとの互換性 */
+.profile-content {
+    padding: 4rem 0;
+    background: var(--light-bg);
 }
 
-.page-hero.datamining-hero::before {
-    background: url('../img/time_knowledge.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
+/* 既存のprofile-gridとの互換性 */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
 }
 
-.page-hero.papers-hero {
-    background: linear-gradient(135deg, #6224e7 0%, #6224e7 80%);
+/* 共通コンテンツグリッドのレスポンシブ対応 */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
-.page-hero.papers-hero::before {
-    background: url('../img/MS251_ahirucyanshinbunshien500.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15;
+/*
+============================================
+共通HTMLテンプレート用CSS
+============================================
+共通ヘッダー・フッター・目次のスタイル
+*/
+
+/* 共通ページヒーロー */
+.page-hero {
+    background: var(--gradient);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
 }
 
-.page-hero.access-hero {
-    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+.page-hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.page-hero.access-hero::before {
-    background: url('../img/YUK_kyotonosakura500.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2;
+.page-hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.page-hero.privacy-hero {
-    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+/* 共通目次ナビゲーション強化 */
+.content-nav .nav-menu .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
 }
 
-.page-hero.privacy-hero::before {
-    background: url('../img/PAK85_USB131310500.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.1;
+.content-nav .nav-menu .nav-link:hover {
+    background: var(--light-bg);
+    border-left-color: var(--secondary-color);
+    padding-left: 1.25rem;
+}
+
+.content-nav .nav-menu .nav-link i {
+    color: var(--tech-color);
+    font-size: 0.9rem;
 }
