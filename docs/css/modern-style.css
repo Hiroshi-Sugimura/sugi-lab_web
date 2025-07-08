@@ -1870,42 +1870,411 @@ section:nth-child(odd) {
     line-height: 1.4;
 }
 
-/* Responsive Design for Timeseries */
+/* Papers Page Styles */
+.papers-content {
+    padding: 2rem 0;
+    background: var(--light-bg);
+}
+
+.papers-intro {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.papers-intro p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+.papers-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.papers-sidebar {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 100px;
+}
+
+.papers-sidebar .control-section {
+    margin-bottom: 2rem;
+}
+
+.papers-sidebar .control-section:last-child {
+    margin-bottom: 0;
+}
+
+.papers-sidebar h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.papers-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.papers-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.papers-nav-link:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+.form-group {
+    margin: 0.5rem 0;
+}
+
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: white;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.external-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.external-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    transition: all 0.3s ease;
+    text-align: center;
+    justify-content: center;
+}
+
+.external-link:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.papers-main {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.papers-section {
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.papers-section:last-child {
+    border-bottom: none;
+}
+
+.papers-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.papers-list {
+    min-height: 50px;
+    color: var(--text-color);
+}
+
+.papers-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.papers-list li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.cinii-info {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Privacy Policy Page Styles */
+.privacy-policy-content {
+    padding: 2rem 0;
+    background: var(--light-bg);
+}
+
+.privacy-intro {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.privacy-intro p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+.privacy-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.privacy-sidebar {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 100px;
+}
+
+.privacy-sidebar .control-section {
+    margin-bottom: 2rem;
+}
+
+.privacy-sidebar .control-section:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-sidebar h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.privacy-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.privacy-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.privacy-nav-link:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+.privacy-main {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.privacy-section {
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.privacy-section:last-child {
+    border-bottom: none;
+}
+
+.privacy-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.privacy-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--light-bg);
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.privacy-item:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.privacy-item p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.privacy-item p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design for Privacy Policy */
 @media (max-width: 768px) {
-    .timeseries-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .toc-sidebar {
-        position: static;
-        order: 2;
-    }
-
-    .timeseries-main {
-        order: 1;
-    }
-
-    .overview-content {
+    .privacy-layout {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    .overview-text {
-        padding-right: 0;
+    .privacy-sidebar {
+        position: relative;
+        top: auto;
+        padding: 1.5rem;
     }
 
-    .example-images {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .privacy-section {
+        padding: 1.5rem;
     }
 
-    .software-features {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .privacy-section h2 {
+        font-size: 1.5rem;
     }
 
-    .software-screenshots {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .privacy-item {
+        padding: 1rem;
     }
+
+    .privacy-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .privacy-nav-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Page-specific hero backgrounds */
+.page-hero.profile-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.page-hero.profile-hero::before {
+    background: url('../img/smarthouse.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+}
+
+.page-hero.smarthouse-hero {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.page-hero.smarthouse-hero::before {
+    background: url('../img/hems.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.page-hero.datamining-hero {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.page-hero.datamining-hero::before {
+    background: url('../img/time_knowledge.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+}
+
+.page-hero.papers-hero {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.page-hero.papers-hero::before {
+    background: url('../img/lgf01a201308280900.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+}
+
+.page-hero.access-hero {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+}
+
+.page-hero.access-hero::before {
+    background: url('../img/YUK_kyotonosakura500.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.page-hero.privacy-hero {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+}
+
+.page-hero.privacy-hero::before {
+    background: url('../img/PAK85_USB131310500.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart House - 杉村研究室</title>
+    <title>Smart Home - 杉村研究室</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -18,19 +18,18 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1><i class="fas fa-flask"></i> 杉村研究室</h1>
+                <h1><i class="fas fa-microchip"></i> IoT Programming Lab.</h1>
             </div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">TOP</a></li>
+                    <li><a href="index.html" class="nav-link">Top</a></li>
                     <li><a href="profile.htm" class="nav-link">Profile</a></li>
-                    <li><a href="smarthouse.htm" class="nav-link">Smart House</a></li>
-                    <li><a href="timeseries.htm" class="nav-link">Data Mining</a></li>
+                    <li><a href="smarthome.htm" class="nav-link active">Smart Home</a></li>
+                    <li><a href="timeseries.htm" class="nav-link">Datamining</a></li>
                     <li><a href="forms.htm" class="nav-link">Forms</a></li>
                     <li><a href="papers.htm" class="nav-link">Papers</a></li>
                     <li><a href="access.htm" class="nav-link">Access</a></li>
-                    <li><a href="links.htm" class="nav-link">Links</a></li>
-                    <li><a href="smarthouse_e.htm" class="nav-link">English</a></li>
+                    <li><a href="index_e.html" class="nav-link">English</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,10 +37,10 @@
 
     <main>
         <!-- Page Hero -->
-        <section class="page-hero">
+        <section class="page-hero smarthouse-hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1><i class="fas fa-home"></i> スマートハウス研究</h1>
+                    <h1><i class="fas fa-home"></i> スマートホーム研究</h1>
                     <p>HEMS（Home Energy Management System）とIoT技術の融合</p>
                 </div>
             </div>
@@ -51,8 +50,8 @@
         <section class="smarthouse-content">
             <div class="container">
                 <div class="smarthouse-intro">
-                    <h2><i class="fas fa-lightbulb"></i> スマートハウスとは</h2>
-                    <p>スマートハウスは、IoT技術とエネルギー管理システムを組み合わせた次世代住宅です。私たちの研究室では、HEMS（Home Energy Management System）を中心とした効率的なエネルギー利用と、快適な住環境の実現を目指しています。</p>
+                    <h2><i class="fas fa-lightbulb"></i> スマートホームとは</h2>
+                    <p>スマートホームは、IoT技術とエネルギー管理システムを組み合わせた次世代住宅です。私たちの研究室では、HEMS（Home Energy Management System）を中心とした効率的なエネルギー利用と、快適な住環境の実現を目指しています。</p>
                 </div>
 
                 <div class="research-features">
@@ -83,19 +82,19 @@
 
                 <div class="presentation-section">
                     <h2><i class="fas fa-presentation"></i> 研究紹介プレゼンテーション</h2>
-                    <p>以下のプレゼンテーションでは、私たちの研究室で取り組んでいるスマートハウス・HEMS技術の詳細をご紹介しています。</p>
-                    
+                    <p>以下のプレゼンテーションでは、私たちの研究室で取り組んでいるスマートホーム・HEMS技術の詳細をご紹介しています。</p>
+
                     <div class="iframe-container">
-                        <iframe src="//sway.com/s/xfeJQrhRJm7ChdcU/embed" 
-                                frameborder="0" 
-                                marginheight="0" 
-                                marginwidth="0" 
-                                max-width="100%" 
-                                sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts" 
-                                scrolling="no" 
-                                allowfullscreen 
-                                mozallowfullscreen 
-                                msallowfullscreen 
+                        <iframe src="//sway.com/s/xfeJQrhRJm7ChdcU/embed"
+                                frameborder="0"
+                                marginheight="0"
+                                marginwidth="0"
+                                max-width="100%"
+                                sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-same-origin allow-scripts"
+                                scrolling="no"
+                                allowfullscreen
+                                mozallowfullscreen
+                                msallowfullscreen
                                 webkitallowfullscreen>
                         </iframe>
                     </div>
@@ -106,19 +105,15 @@
                     <div class="areas-grid">
                         <div class="area-card">
                             <h3><i class="fas fa-solar-panel"></i> 再生可能エネルギー</h3>
-                            <p>太陽光発電システムの最適化と蓄電池との連携による効率的なエネルギー管理</p>
+                            <p>小水力発電システムの最適化と蓄電池との連携による効率的なエネルギー管理</p>
                         </div>
                         <div class="area-card">
-                            <h3><i class="fas fa-car-battery"></i> 電気自動車連携</h3>
-                            <p>Vehicle-to-Home（V2H）技術による電気自動車と住宅の電力共有システム</p>
+                            <h3><i class="fas fa-car-battery"></i> ウェアラブルデバイス連携</h3>
+                            <p>Wearableデバイスを利用した生活行動の測定と生活改善アドバイスシステム</p>
                         </div>
                         <div class="area-card">
-                            <h3><i class="fas fa-thermometer-half"></i> 環境制御</h3>
-                            <p>温度、湿度、照度の自動調整による快適な住環境の実現</p>
-                        </div>
-                        <div class="area-card">
-                            <h3><i class="fas fa-shield-alt"></i> セキュリティ</h3>
-                            <p>IoTデバイスのセキュリティ強化とプライバシー保護技術</p>
+                            <h3><i class="fas fa-thermometer-half"></i> 環境測定と制御</h3>
+                            <p>温度、湿度、照度の自動調整による快適な住環境の実現や生活行動の改善</p>
                         </div>
                     </div>
                 </div>

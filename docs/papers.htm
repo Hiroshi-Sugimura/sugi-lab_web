@@ -1,124 +1,170 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
+<head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Papers: H.SUGIMURA's Web page</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<title>Papers - IoT Programming Lab. - 杉村研究室</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="css/modern-style.css" type="text/css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<!-- <script type="text/javascript" src="js/footerFixed.js"></script> -->
 	<script type="text/javascript" src="js/papers.js"></script>
-  </head>
+</head>
 
-  <body>
-	<header>
-	  <!-- トップメニュー -->
-	  <div id="nav">
-		<center>
-		  <ol>
-			<li><a href="index.html">TOP</a></li>
-			<li><a href="profile.htm">Profile</a></li>
-			<li><a href="smarthouse.htm">Smart house</a></li>
-			<li><a href="timeseries.htm">Datamining</a></li>
-			<li><a href="forms.htm">Forms</a></li>
-			<li><a href="papers.htm">Papers</a></li>
-			<li><a href="access.htm">Access</a></li>
-			<li><a href="links.htm">Links</a></li>
-			<li><a href="papers.htm">English</a></li>
-		  </ol>
-		</center>
-	  </div>
+<body>
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="logo">
+				<h1><i class="fas fa-microchip"></i> IoT Programming Lab.</h1>
+			</div>
+			<nav class="nav">
+				<ul class="nav-list">
+					<li><a href="index.html" class="nav-link">Top</a></li>
+					<li><a href="profile.htm" class="nav-link">Profile</a></li>
+					<li><a href="smarthome.htm" class="nav-link">Smart Home</a></li>
+					<li><a href="timeseries.htm" class="nav-link">Datamining</a></li>
+					<li><a href="forms.htm" class="nav-link">Forms</a></li>
+					<li><a href="papers.htm" class="nav-link active">Papers</a></li>
+					<li><a href="access.htm" class="nav-link">Access</a></li>
+					<li><a href="index_e.html" class="nav-link">English</a></li>
+				</ul>
+			</nav>
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</header>
 
-	<!-- コンテンツ -->
-	<div id="contents">
-
-	  <h1 class="shadow">Papers</h1>
-	  <p>
-		JavaScriptとJSONの勉強もかねていろいろテストをしていますので，あまりきれいとは言えない見え方をしている場合があります．<br>
-	  </p>
-
-	  <div class="layoutIndex">
-
-		<div class="leftboxIndex">
-		  <section>
-			<h2>目次</h2>
-			<ol>
-			  <a href="#journal"><li>論文誌</li></a>
-			  <a href="#review"><li>査読付き論文，紀要</li></a>
-			  <a href="#presentation"><li>査読無し口頭発表</li></a>
-			  <a href="#others"><li>その他，特許</li></a>
-			</ol>
-
-			<h2>表示形式</h2>
-			<p>
-			  <select id="id_format" onChange="f_formatOnChange();">
-				<option value="bibtex">BIBTEX</option>
-				<option value="cv" selected>履歴書的</option>
-			  </select>
-			</p>
-
-
-			<h2>種類別</h2>
-
-			<p>
-			  <select id="id_classify" onChange="f_formatOnChange();">
-				<option value="yes" selected>する</option>
-				<option value="no">しない</option>
-			  </select>
-			  (NA).
-			</p>
-
-			<h2>外部リンク</h2>
-			<ol>
-			  <a href="#cinii"><li>CiNii</li></a>
-			</ol>
-		  </section>
-
+	<!-- Page Hero -->
+	<section class="page-hero papers-hero">
+		<div class="container">
+			<div class="page-hero-content">
+				<h1><i class="fas fa-scroll"></i> 研究論文・発表</h1>
+				<p>研究成果として発表した論文と学会発表の一覧</p>
+			</div>
 		</div>
+	</section>
 
-		<div class="rightboxIndex">
+	<!-- Papers Content -->
+	<section class="papers-content">
+		<div class="container">
+			<div class="papers-intro">
+				<p>
+					JavaScriptとJSONの勉強もかねていろいろテストをしていますので，あまりきれいとは言えない見え方をしている場合があります．
+				</p>
+			</div>
 
-		  <section>
-			<h2><a name="journal"></a>論文誌</h2>
-			<div id="journal"></div>
-		  </section>
+			<div class="papers-layout">
+				<div class="papers-sidebar">
+					<div class="control-section">
+						<h3><i class="fas fa-list"></i> 目次</h3>
+						<div class="papers-nav">
+							<a href="#journal" class="papers-nav-link"><i class="fas fa-journal-whills"></i> 論文誌</a>
+							<a href="#review" class="papers-nav-link"><i class="fas fa-file-alt"></i> 査読付き論文，紀要</a>
+							<a href="#presentation" class="papers-nav-link"><i class="fas fa-presentation"></i> 査読無し口頭発表</a>
+							<a href="#others" class="papers-nav-link"><i class="fas fa-folder"></i> その他，特許</a>
+						</div>
+					</div>
 
-		  <section>
-			<h2><a name="review"></a>査読付き論文，紀要</h2>
-			<div id="review"></div>
-		  </section>
+					<div class="control-section">
+						<h3><i class="fas fa-cog"></i> 表示形式</h3>
+						<div class="form-group">
+							<select id="id_format" onChange="f_formatOnChange();" class="form-select">
+								<option value="bibtex">BIBTEX</option>
+								<option value="cv" selected>履歴書的</option>
+							</select>
+						</div>
+					</div>
 
-		  <section>
-			<h2><a name="presentation"></a>査読無し論文，口頭発表</h2>
-			<div id="presentation"></div>
-		  </section>
+					<div class="control-section">
+						<h3><i class="fas fa-filter"></i> 種類別</h3>
+						<div class="form-group">
+							<select id="id_classify" onChange="f_formatOnChange();" class="form-select">
+								<option value="yes" selected>する</option>
+								<option value="no">しない</option>
+							</select>
+						</div>
+					</div>
 
+					<div class="control-section">
+						<h3><i class="fas fa-external-link-alt"></i> 外部リンク</h3>
+						<div class="external-links">
+							<a href="#cinii" class="external-link"><i class="fas fa-database"></i> CiNii</a>
+						</div>
+					</div>
+				</div>
 
-		  <section>
-			<h2><a name="others"></a>書籍，特許，ポスター発表，その他</h2>
-			<div id="others"></div>
-		  </section>
+				<div class="papers-main">
+					<div class="papers-section">
+						<h2><a name="journal"></a><i class="fas fa-journal-whills"></i> 論文誌</h2>
+						<div id="journal" class="papers-list"></div>
+					</div>
 
-		  <section>
-			<h2><a name="cinii"></a>CiNii</h2>
-			<p>
-			  <a href="https://ci.nii.ac.jp/nrid/9000014656058">著者検索: 杉村 博, SUGIMURA Hiroshi</a><br>
-			</p>
-		  </section>
+					<div class="papers-section">
+						<h2><a name="review"></a><i class="fas fa-file-alt"></i> 査読付き論文，紀要</h2>
+						<div id="review" class="papers-list"></div>
+					</div>
+
+					<div class="papers-section">
+						<h2><a name="presentation"></a><i class="fas fa-presentation"></i> 査読無し論文，口頭発表</h2>
+						<div id="presentation" class="papers-list"></div>
+					</div>
+
+					<div class="papers-section">
+						<h2><a name="others"></a><i class="fas fa-folder"></i> 書籍，特許，ポスター発表，その他</h2>
+						<div id="others" class="papers-list"></div>
+					</div>
+
+					<div class="papers-section">
+						<h2><a name="cinii"></a><i class="fas fa-database"></i> CiNii</h2>
+						<div class="cinii-info">
+							<a href="https://ci.nii.ac.jp/nrid/9000014656058" class="btn btn-outline">
+								<i class="fas fa-search"></i> 著者検索: 杉村 博, SUGIMURA Hiroshi
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	  </div>
-	</div>
+	</section>
 
-	<!-- foote -->
-	<footer id="footer">
-	  <center>
-		<address class="inline"><img src="img/LVDC.png" class="pict" /></address><br>
-		Copyright &copy; 2013 Hiroshi SUGIMURA, All Rights Reserved.
-	  </center>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-section">
+					<h3>IoT Programming Lab.</h3>
+					<p>神奈川工科大学 工学部 電気電子情報工学科</p>
+					<p>杉村研究室</p>
+				</div>
+				<div class="footer-section">
+					<h3>クイックリンク</h3>
+					<ul>
+						<li><a href="profile.htm">Profile</a></li>
+						<li><a href="smarthome.htm">Smart Home</a></li>
+						<li><a href="papers.htm">Papers</a></li>
+						<li><a href="access.htm">Access</a></li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h3>フォローする</h3>
+					<div class="social-links">
+						<a href="https://www.facebook.com/hiroshi.sugimura.31" target="_blank"><i class="fab fa-facebook"></i></a>
+						<a href="https://github.com/Hiroshi-Sugimura" target="_blank"><i class="fab fa-github"></i></a>
+						<a href="https://qiita.com/Sugimura-Laboratory" target="_blank"><i class="fas fa-code"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2024 Hiroshi SUGIMURA, IoT Programming Lab. All Rights Reserved.</p>
+				<p>当Webサイトはリンクフリーです。リンク先: https://www.sugi-lab.net/</p>
+			</div>
+		</div>
 	</footer>
 
-  </body>
-</html>
+	<script src="js/modern-script.js"></script>
