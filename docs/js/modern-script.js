@@ -29,9 +29,10 @@ const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 const nav = document.querySelector('.nav');
 
-if (hamburger && navList) {
+if (hamburger && navList && nav) {
     hamburger.addEventListener('click', () => {
         navList.classList.toggle('active');
+        nav.classList.toggle('active');
         hamburger.classList.toggle('active');
     });
 
@@ -40,14 +41,16 @@ if (hamburger && navList) {
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navList.classList.remove('active');
+            nav.classList.remove('active');
             hamburger.classList.remove('active');
         });
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target)) {
+        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
             navList.classList.remove('active');
+            nav.classList.remove('active');
             hamburger.classList.remove('active');
         }
     });
