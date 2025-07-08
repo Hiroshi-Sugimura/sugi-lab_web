@@ -20,7 +20,7 @@
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
     --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --tech-gradient: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);
+    --tech-gradient: linear-gradient(135deg, #d8eefe 0%, #d0ffe5 100%);
 }
 
 /* Base Styles */
@@ -845,7 +845,336 @@ section:nth-child(odd) {
     font-weight: bold;
 }
 
-/* // ...existing code... */
+/* Profile Page Styles */
+.page-hero.profile-hero {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.page-hero.profile-hero::before {
+    background: url('../img/top9.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.profile-content {
+    padding: 4rem 0;
+    background: var(--light-bg);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Profile Navigation Sidebar */
+.profile-nav {
+    position: sticky;
+    top: 2rem;
+}
+
+.nav-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.nav-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.nav-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.nav-card h3 i {
+    color: var(--tech-color);
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    background: var(--tech-gradient);
+    color: white;
+    transform: translateX(5px);
+}
+
+.nav-menu a i {
+    width: 20px;
+    color: var(--tech-color);
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover i {
+    color: white;
+}
+
+/* Profile Main Content */
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.intro-section, .content-section {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.intro-card, .content-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.intro-card:hover, .content-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.intro-card h2, .content-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--light-bg);
+    padding-bottom: 1rem;
+}
+
+.intro-card h2 i, .content-card h2 i {
+    color: var(--tech-color);
+    font-size: 1.3rem;
+}
+
+.intro-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* Research Overview */
+.research-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.research-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--light-bg);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.research-item:hover {
+    background: white;
+    box-shadow: var(--shadow);
+    transform: translateX(10px);
+}
+
+.research-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--tech-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.research-text h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.research-text p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Policy Section */
+.policy-content {
+    text-align: center;
+}
+
+.policy-highlight {
+    background: var(--tech-gradient);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.policy-highlight i {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.policy-highlight .fa-quote-left {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.policy-highlight .fa-quote-right {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+}
+
+.policy-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--tech-gradient);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--tech-color);
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--tech-color);
+}
+
+.timeline-year {
+    flex-shrink: 0;
+    font-weight: bold;
+    color: var(--tech-color);
+    font-size: 1.1rem;
+    min-width: 60px;
+}
+
+.timeline-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.timeline-content p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Activities Grid */
+.activities-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.activity-category {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.activity-category:hover {
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.activity-category h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.activity-category h3 i {
+    color: var(--tech-color);
+}
+
+.activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.activity-list li::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: var(--tech-color);
+    font-size: 0.8rem;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -923,6 +1252,11 @@ section:nth-child(odd) {
 
     .campus-info {
         grid-template-columns: 1fr;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
