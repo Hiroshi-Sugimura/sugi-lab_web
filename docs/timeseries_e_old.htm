@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Timeseries-data: H.SUGIMURA's Web page</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/footerFixed.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<!-- トップメニュー -->
+			<div id="nav">
+				<center>
+					<ol>
+						<li>
+							<a href="index_e.html">TOP</a>
+						</li>
+						<li>
+							<a href="profile_e.htm">Profile</a>
+						</li>
+						<li>
+							<a href="smarthouse_e.htm">Smart house</a>
+						</li>
+						<li>
+							<a href="timeseries_e.htm">Datamining</a>
+						</li>
+						<li>
+							<a href="forms_e.htm">Forms</a>
+						</li>
+						<li>
+							<a href="papers.htm">Papers</a>
+						</li>
+						<li>
+							<a href="access_e.htm">Access</a>
+						</li>
+						<li>
+							<a href="links_e.htm">Links</a>
+						</li>
+						<li>
+							<a href="timeseries.htm">日本語</a>
+						</li>
+					</ol>
+				</center>
+			</div>
+		</header>
+		<!-- コンテンツ -->
+		<div id="contents">
+			<h1 class="shadow">Time Series Datamining</h1>
+			<div class="layoutIndex">
+				<div class="leftboxIndex">
+					<section>
+						<h2>Index</h2>
+						<ol>
+							<li>
+								<a href="#theme">Overview</a>
+							</li>
+							<li>
+								<a name="theme_ex">Examles</a>
+							</li>
+							<li>
+								<a href="#software">Software</a>
+							</li>
+						</ol>
+					</section>
+				</div>
+				<div class="rightboxIndex">
+					<section>
+						<a name="theme">
+							<h2>Overview</h2>
+						</a>
+						<p>
+							The purpose is discovering knowledge from timeseries data which is stored pairs of measurement time and value such as accumlated
+							data from sensors. For example, we develop methods for prediction of future behavior of stock price
+							data, forecasting of condition of the patient from body templature and blood element.
+							<br>
+							<img src="img/time_knowledge.jpg" />
+						</p>
+					</section>
+					<section>
+						<a name="theme_ex">
+							<h2>Example</h2>
+						</a>
+						<p>
+							In the case of prediction of generation power of photovoltaic power generation, rules are extracted by combination of value
+							of solar radiation, templature and humidity. The graph of solar radiation is
+							<br>
+							<br>
+							<img src="img/time_st1-1.png" width="400px" />
+							<br>
+							<br> Extracted rules are represented by IF-THEN style for easy to understand.
+							<br>
+							<br>
+							<img src="img/time_st1-2.png" width="400px" />
+							<br>
+							<br>
+						</p>
+					</section>
+					<section>
+						<a name="software">
+							<h2>Software</h2>
+						</a>
+						<p>
+							Introduce several softwares.
+						</p>
+						<h3>Time series data Searcher</h3>
+						<p>
+							Here is visualize retrieveral system for timeseries database．
+							<br> It retrieves similar behaviors into database, and extracts them into csv format file.
+						</p>
+						<p>
+							<img src="img/TimeseriesSearcher_QueryDialog.png" width="300px" />
+							<img src="img/TimeseriesSearcher_ResultDialog.png" width="300px" />
+						</p>
+						<p>
+							In the query dialog, a user is drawable on a graph of a behavior pattern by using any pointing device. Pattern matching is
+							calculated with Dynamic Time Warping．
+						</p>
+						<p>
+							<img src="img/TimeseriesSearcher_QueryDialog.png" />
+						</p>
+						<p>
+							In the result dialog, start time of matched period is listed. Listed items are able to choose and show. And also, it can
+							extract just matched periods into CSV format.
+						</p>
+						<p>
+							<img src="img/TimeseriesSearcher_ResultDialog.png" width="400px" />
+						</p>
+						<h3>Time series data Analyzer</h3>
+						<p>
+							Here is a tool for analysis of timeseries data with combination of multiple shape. The application is able to carries out
+							high flexible retrieval by combination of shape drawing area and original query language. And also
+							obtained data is throwable into machine language engine of Weka.
+						</p>
+						<p>
+							<img src="img/TimeseriesAnalyzer_query_dialog.png" width="300px" />
+							<img src="img/TimeseriesAnalyzer_decisionTree.png" width="300px" />
+						</p>
+						<p>
+							For initialize and making database, CSV format is importable.
+						</p>
+						<p>
+							<img src="img/TimeseriesAnalyzer_mainwindow.png" width="400" />
+						</p>
+						<p>
+							Here is query dialog.
+						</p>
+						<p>
+							<img src="img/TimeseriesAnalyzer_query_dialog.png" width="400" />
+						</p>
+						<p>
+							Result dialog shows retrieved time period. The right side shows retrieved time period. The left side bar shows the amount
+							of the database and an indicator for currently showing time period. Status bar shows the number of
+							retrieved periods.
+						</p>
+						<p>
+							<img src="img/TimeseriesAnalyzer_query_result.png" width="400" />
+						</p>
+						<p>
+							Here is an example of the extracted rules by using desicion tree learning.
+						</p>
+						<p>
+							<img src="img/TimeseriesAnalyzer_decisionTree.png" width="400" />
+						</p>
+					</section>
+				</div>
+				<!-- rightbox -->
+			</div>
+			<!-- layout -->
+		</div>
+		<!-- foote -->
+		<footer id="footer">
+			<center>
+				<address class="inline">
+					<img src="img/LVDC.png" class="pict" />
+				</address>
+				<br> Copyright &copy; 2013 Hiroshi SUGIMURA, All Rights Reserved.
+			</center>
+		</footer>
+	</body>
+
+</html>

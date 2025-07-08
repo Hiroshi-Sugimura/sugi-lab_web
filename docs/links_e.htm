@@ -1,161 +1,251 @@
 <!DOCTYPE HTML>
-<html lang="ja">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Liks: H.SUGIMURA's Web page</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/footerFixed.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links - Sugimura Laboratory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
-
 <body>
-	<header>
-		<!-- トップメニュー -->
-		<div id="nav">
-			<center>
-				<ol>
-					<li><a href="index_e.html">TOP</a></li>
-					<li><a href="profile_e.htm">Profile</a></li>
-					<li><a href="smarthouse_e.htm">Smart house</a></li>
-					<li><a href="timeseries_e.htm">Datamining</a></li>
-					<li><a href="forms_e.htm">Forms</a></li>
-					<li><a href="papers.htm">Papers</a></li>
-					<li><a href="access_e.htm">Access</a></li>
-					<li><a href="links_e.htm">Links</a></li>
-					<li><a href="links.htm">日本語</a></li>
-				</ol>
-			</center>
-		</div>
-	</header>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-microchip"></i> IoT Programming Lab.</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index_e.html" class="nav-link">Top</a></li>
+                    <li><a href="profile_e.htm" class="nav-link">Profile</a></li>
+                    <li><a href="smarthome_e.htm" class="nav-link">Smart Home</a></li>
+                    <li><a href="timeseries_e.htm" class="nav-link">Datamining</a></li>
+                    <li><a href="forms_e.htm" class="nav-link">Forms</a></li>
+                    <li><a href="papers_e.htm" class="nav-link">Papers</a></li>
+                    <li><a href="access_e.htm" class="nav-link">Access</a></li>
+                    <li><a href="links_e.htm" class="nav-link active">Links</a></li>
+                    <li><a href="index.html" class="nav-link">Japanese</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-	<!-- コンテンツ -->
-	<div id="contents">
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero access-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><i class="fas fa-link"></i> Related Links</h1>
+                    <p>Useful links related to university, academic societies, and research</p>
+                </div>
+            </div>
+        </section>
 
-		<h1 class="shadow">Links</h1>
+        <!-- Links Content -->
+        <section class="links-content">
+            <div class="container">
+                <div class="links-grid">
+                    <!-- University Related -->
+                    <div class="links-category">
+                        <div class="category-header">
+                            <h2><i class="fas fa-university"></i> University Related</h2>
+                        </div>
+                        <div class="links-list">
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>Kanagawa Institute of Technology</h3>
+                                    <p>Faculty of Creative Engineering, Department of Home Electronics Development</p>
+                                    <a href="http://www.he.kanagawa-it.ac.jp/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Department Website
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>Kanagawa Institute of Technology</h3>
+                                    <p>Official University Website</p>
+                                    <a href="http://www.kait.jp/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Official Website
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- International Conferences -->
+                    <div class="links-category">
+                        <div class="category-header">
+                            <h2><i class="fas fa-globe"></i> International Societies</h2>
+                        </div>
+                        <div class="links-list">
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>IEEE SMC</h3>
+                                    <p>Systems, Man, & Cybernetics Society</p>
+                                    <a href="https://ieeesmc.org/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> IEEE SMC
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>IEEE</h3>
+                                    <p>Institute of Electrical and Electronics Engineers</p>
+                                    <a href="https://www.ieee.org/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> IEEE
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>IJCAI</h3>
+                                    <p>International Joint Conferences on Artificial Intelligence</p>
+                                    <a href="https://www.ijcai.org/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> IJCAI
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-		<section>
-			<h2>University / College</h2>
+                    <!-- Japanese Academic Societies -->
+                    <div class="links-category">
+                        <div class="category-header">
+                            <h2><i class="fas fa-flag"></i> Japanese Academic Societies</h2>
+                        </div>
+                        <div class="links-list">
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>IPSJ</h3>
+                                    <p>Information Processing Society of Japan</p>
+                                    <a href="https://www.ipsj.or.jp/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> IPSJ
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>JSAI</h3>
+                                    <p>Japanese Society for Artificial Intelligence</p>
+                                    <a href="https://www.ai-gakkai.or.jp/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> JSAI
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-signal"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>IEICE</h3>
+                                    <p>Institute of Electronics, Information and Communication Engineers</p>
+                                    <a href="https://www.ieice.org/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> IEICE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-			<dl>
-				<dt>Dept. of Electric and Electronics, Faculty of Engineering, Kanagawa Institute of Technology</dt>
-				<dd><a href="http://www.he.kanagawa-it.ac.jp/">http://www.he.kanagawa-it.ac.jp/</a></dd>
+                    <!-- Research Tools -->
+                    <div class="links-category">
+                        <div class="category-header">
+                            <h2><i class="fas fa-tools"></i> Research Tools</h2>
+                        </div>
+                        <div class="links-list">
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>GitHub</h3>
+                                    <p>Code repository and collaboration platform</p>
+                                    <a href="https://github.com/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>Qiita</h3>
+                                    <p>Technical knowledge sharing platform</p>
+                                    <a href="https://qiita.com/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Qiita
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>CiNii Research</h3>
+                                    <p>Academic search engine for Japanese research</p>
+                                    <a href="https://cir.nii.ac.jp/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> CiNii Research
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="link-item">
+                                <div class="link-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="link-content">
+                                    <h3>Google Scholar</h3>
+                                    <p>Academic search engine</p>
+                                    <a href="https://scholar.google.com/" class="link-url" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i> Google Scholar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-				<dt>Kanagawa Institute of Technology</dt>
-				<dd><a href="http://www.kait.jp/">http://www.kait.jp/</a></dd>
-			</dl>
-
-		</section>
-
-
-		<section>
-			<h2>International Conference</h2>
-
-			<dl>
-				<dt>SMC (Systems, Man, & Cybernetics Society)</dt>
-				<dd>HP top: <a href="http://www.ieeesmc.org/">http://www.ieeesmc.org/</a></dd>
-				<dd>Conferences:: <a href="http://www.ieeesmc.org/conferences/">http://www.ieeesmc.org/conferences/</a></dd>
-
-
-				<dt>HCI International Conference (human-computer interaction international conference)</dt>
-				<dd><a href="http://www.hci-international.org/">http://www.hci-international.org/</a></dd>
-
-
-				<dt>IADIS (internatinal association for development of the information society)</dt>
-
-				<dd>HP top: <a href="http://www.iadisportal.org/">http://www.iadisportal.org/</a></dd <dd>MCCSIS: <a href="http://www.mccsis.org/">http://www.mccsis.org/</a></dd>
-				<dd>IS: <a href="http://www.is-conf.org/">http://www.is-conf.org/</a></dd>
-
-			</dl>
-		</section>
-
-
-		<section>
-			<h2>Domestic Conference</h2>
-
-			<dl>
-				<dt>電気学会</dt>
-				<dd>HP top: <a href="http://www.iee.or.jp/">http://www.iee.or.jp/</a></dd>
-
-				<dt>情報処理学会</dt>
-
-				<dd>HP top: <a href="http://www.ipsj.or.jp/">http://www.ipsj.or.jp/</a></dd>
-				<dd>全国大会: <a href="http://www.ipsj.or.jp/">http://www.ipsj.or.jp/10jigyo/taikai/taikaiindex.html</a></dd>
-				<dd>FIT: <a href="http://www.ipsj.or.jp/">http://www.ipsj.or.jp/10jigyo/fit/fitindex.html</a></dd>
-				<dd>情報処理学会電子図書オンデマンドサービス: <a href="http://www.bookpark.ne.jp/ipsj/">http://www.bookpark.ne.jp/ipsj/</a></dd>
-				<dd>情報処理学会 電子図書館: <a href="https://ipsj.ixsq.nii.ac.jp/ej/">https://ipsj.ixsq.nii.ac.jp/ej/</a></dd>
-
-				<dt>人工知能学会</dt>
-
-				<dd>HP top: <a href="http://www.ai-gakkai.or.jp/jsai/">http://www.ai-gakkai.or.jp/jsai/</a></dd>
-				<dd>全国大会: <a href="http://www.ai-gakkai.or.jp/jsai/conf/">http://www.ai-gakkai.or.jp/jsai/conf/</a></dd>
-				<dd>人工知能学会全国大会論文集: <a href="http://www.jstage.jst.go.jp/browse/pjsai/-char/ja">http://www.jstage.jst.go.jp/browse/pjsai/-char/ja</a></dd>
-				<dd>人工知能学会論文誌<a href="http://www.jstage.jst.go.jp/browse/tjsai/-char/ja/">http://www.jstage.jst.go.jp/browse/tjsai/-char/ja/</a></dd>
-			</dl>
-		</section>
-
-		<section>
-			<h2>Digital library</h2>
-
-			<dl>
-				<dt>CiNii:</dt>
-				<dd><a href="http://ci.nii.ac.jp/">http://ci.nii.ac.jp/</a></dd>
-
-				<dt>情報処理学会電子図書オンデマンドサービス</dt>
-				<dd><a href="http://www.bookpark.ne.jp/ipsj/">http://www.bookpark.ne.jp/ipsj/</a></dd>
-
-				<dt>人工知能学会全国大会論文集</dt>
-				<dd><a href="http://www.jstage.jst.go.jp/browse/pjsai/-char/ja">http://www.jstage.jst.go.jp/browse/pjsai/-char/ja</a></dd>
-
-				<dt>人工知能学会論文誌</dt>
-				<dd><a href="http://www.jstage.jst.go.jp/browse/tjsai/-char/ja/">http://www.jstage.jst.go.jp/browse/tjsai/-char/ja/</a></dd>
-				<dt>iadis digital library</dt>
-				<dd>iadis digital library: <a href="http://www.iadisportal.org/digital-library">http://www.iadisportal.org/digital-library/</a></dd>
-
-			</dl>
-		</section>
-
-
-		<section>
-			<h2>Call For Paper information</h2>
-
-			<dl>
-				<dt>IEEE computer society</dt>
-				<dd><a href="http://www.computer.org/portal/web/conferences/calendar">http://www.computer.org/portal/web/conferences/calendar</a></dd>
-
-				<dt>WikiCFP</dt>
-				<dd><a href="http://www.wikicfp.com/cfp/">http://www.wikicfp.com/cfp/</a></dd>
-			</dl>
-		</section>
-
-
-		<section>
-			<h2>このホームページ開発に関して</h2>
-
-			<dl>
-				<dt><a href="http://www.pakutaso.com/" target="new">無料写真素材ぱくたそ</a></dt>
-				<dd>このWebサイトの一部の写真はこのフリー素材を使用しています．</dd>
-
-				<dt><a href="http://sagittarius.dip.jp/~toshi/cgi-bin/catmark/catmark.php" target="new">きゃっとまーくめーる </a></dt>
-				<dd>スパム対策のメールアドレス画像作成はここを利用しました．</dd>
-			</dl>
-		</section>
-	</div>
-
-
-	<!-- foote -->
-	<footer id="footer">
-		<center>
-			<address class="inline"><img src="../img/LVDC.png" class="pict" /></address><br>
-			Copyright &copy; 2013 Hiroshi SUGIMURA, All Rights Reserved.
-		</center>
-	</footer>
-
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/LVDC.png" alt="LVDC Logo" class="footer-img">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2023 Hiroshi SUGIMURA, All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
