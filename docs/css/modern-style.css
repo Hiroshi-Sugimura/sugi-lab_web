@@ -768,26 +768,84 @@ section:nth-child(odd) {
     box-shadow: var(--shadow);
 }
 
-.map-image, .streetview-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
+.map-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
-.map-image:hover, .streetview-image:hover {
-    transform: scale(1.02);
+.map-links .btn {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
 }
 
-/* Active navigation link */
-.nav-link.active {
+.campus-info-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.campus-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.campus-info-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.campus-info-card h3 i {
     color: var(--secondary-color);
-    font-weight: 600;
 }
 
-.nav-link.active::after {
-    width: 100%;
+.campus-info {
+    display: grid;
+    gap: 1.5rem;
 }
+
+.access-item h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.access-item h4 i {
+    color: var(--secondary-color);
+    width: 20px;
+}
+
+.access-item ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.access-item li {
+    position: relative;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.access-item li:before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: -1rem;
+    font-weight: bold;
+}
+
+/* // ...existing code... */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -845,7 +903,7 @@ section:nth-child(odd) {
         gap: 2rem;
     }
 
-    .info-card, .map-card, .streetview-card {
+    .info-card, .map-card, .streetview-card, .campus-info-card {
         padding: 1.5rem;
     }
 
@@ -853,6 +911,18 @@ section:nth-child(odd) {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+    }
+
+    .map-links {
+        flex-direction: column;
+    }
+
+    .map-links .btn {
+        min-width: auto;
+    }
+
+    .campus-info {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -2218,7 +2288,7 @@ section:nth-child(odd) {
 }
 
 .page-hero.profile-hero::before {
-    background: url('../img/smarthouse.png');
+    background: url('../img/C789_keitainotepen500.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.15;
@@ -2247,11 +2317,11 @@ section:nth-child(odd) {
 }
 
 .page-hero.papers-hero {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    background: linear-gradient(135deg, #6224e7 0%, #6224e7 80%);
 }
 
 .page-hero.papers-hero::before {
-    background: url('../img/lgf01a201308280900.jpg');
+    background: url('../img/MS251_ahirucyanshinbunshien500.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.15;
