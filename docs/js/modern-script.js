@@ -26,12 +26,26 @@ window.addEventListener('scroll', () => {
 
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav');
 const navList = document.querySelector('.nav-list');
 
-hamburger.addEventListener('click', () => {
-    navList.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
+if (hamburger && nav && navList) {
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        navList.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // Close menu when clicking on nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            navList.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+}
 
 // Intersection Observer for animations
 const observerOptions = {
