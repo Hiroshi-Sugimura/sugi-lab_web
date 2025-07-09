@@ -258,9 +258,6 @@ section {
     z-index: 5
 }
 
-section:nth-child(2n) {
-    background: var(--light-bg)
-}
 
 section:nth-child(odd) {
     background: var(--bg-color)
@@ -2838,11 +2835,13 @@ section:nth-child(odd) {
 /* 共通ナビゲーションサイドバー */
 @media (min-width: 1025px) {
     .content-nav {
-        position: sticky;
-        top: calc(70px + 1rem);
-        align-self: start;
-        max-height: calc(100vh - 90px);
-        overflow-y: auto;
+	position: sticky;
+	top: calc(70px + 1rem);
+	align-self: start;
+	max-height: calc(100vh - 90px);
+	overflow-y: auto;
+	-webkit-box-shadow: var(--light-bg);
+	box-shadow: var(--light-bg);
     }
 }
 
@@ -2928,4 +2927,6 @@ section:nth-child(odd) {
 .content-nav .nav-menu .nav-link i {
     color: var(--tech-color);
     font-size: 0.9rem;
+}
+#example {
 }
