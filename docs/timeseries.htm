@@ -7,9 +7,9 @@
     <title>Timeseries datamining - IoT Programming Lab. - 杉村研究室</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/modern-style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/modern-style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -72,131 +72,122 @@
                 <!-- Main Content -->
                 <div class="content-main">
                     <!-- 研究概要 -->
-                    <section id="overview" class="content-section">
-                        <div class="content-card">
-                            <h2><i class="fas fa-lightbulb"></i> 研究概要</h2>
-                            <p>センサデータのような時間に従って記録された数値から知識を発見することを目的としています。</p>
-                        </div>
-
-                        <div class="overview-content">
-                            <div class="overview-text">
-                                <p>例えば以下のような予測問題に取り組んでいます：</p>
-                                <ul class="research-list">
-                                    <li><i class="fas fa-chart-line"></i> 株価の値動きからその後の予測</li>
-                                    <li><i class="fas fa-heart"></i> 体温や血液成分量データから患者の状態予測</li>
-                                    <li><i class="fas fa-cloud-sun"></i> 気温や湿度から天候予測</li>
-                                </ul>
-                            </div>
-                            <div class="overview-image">
-                                <img src="img/time_knowledge.jpg" alt="時系列データから知識発見のイメージ" class="feature-image">
-                            </div>
-                        </div>
-                    </section>
+        <section id="overview" class="content-section">
+            <div class="content-card">
+                <h2><i class="fas fa-lightbulb"></i> 研究概要</h2>
+                <p>センサデータのような時間に従って記録された数値から知識を発見することを目的としています。</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+                    <div style="flex: 1 1 300px; min-width: 220px;">
+                        <p>例えば以下のような予測問題に取り組んでいます：</p>
+                        <ul class="research-list">
+                            <li><i class="fas fa-chart-line"></i> 株価の値動きからその後の予測</li>
+                            <li><i class="fas fa-heart"></i> 体温や血液成分量データから患者の状態予測</li>
+                            <li><i class="fas fa-cloud-sun"></i> 気温や湿度から天候予測</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1 1 220px; min-width: 180px; max-width: 400px; text-align: center;">
+                        <img src="img/time_knowledge.jpg" alt="時系列データから知識発見のイメージ" class="feature-image">
+                    </div>
+                </div>
+            </div>
+        </section>
 
                     <!-- 研究事例 -->
-                    <section id="examples" class="content-section">
-                        <div class="content-card">
-                            <h2><i class="fas fa-solar-panel"></i> 研究事例</h2>
-                            <p>太陽光パネルの発電電力予測を例に、具体的な研究内容をご紹介します。</p>
+        <section id="examples" class="content-section">
+            <div class="content-card">
+                <h2><i class="fas fa-solar-panel"></i> 研究事例</h2>
+                <p>太陽光パネルの発電電力予測を例に、具体的な研究内容をご紹介します。</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+                    <div style="flex: 1 1 300px; min-width: 220px; background: var(--light-bg); padding: 2rem; border-radius: 1rem; box-sizing: border-box;">
+                        <h3>太陽光発電予測システム</h3>
+                        <p>日射量、気温、湿度から太陽光パネルの発電電力を予測するためのルール抽出方法について研究しています。</p>
+                        <p>得られたルールは人間が見て分かるようにIF-THEN形式で表現され、実用的な予測システムとして活用できます。</p>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 2rem; min-width: 180px;">
+                        <div class="image-card">
+                            <img src="img/time_st1-1.png" alt="日射量データ例" class="example-image">
+                            <h4>日射量データ</h4>
+                            <p>時系列で記録された日射量の変化パターン</p>
                         </div>
-
-                        <div class="example-content">
-                            <div class="example-description">
-                                <h3>太陽光発電予測システム</h3>
-                                <p>日射量、気温、湿度から太陽光パネルの発電電力を予測するためのルール抽出方法について研究しています。</p>
-                                <p>得られたルールは人間が見て分かるようにIF-THEN形式で表現され、実用的な予測システムとして活用できます。</p>
-                            </div>
-
-                            <div class="example-images">
-                                <div class="image-card">
-                                    <img src="img/time_st1-1.png" alt="日射量データ例" class="example-image">
-                                    <h4>日射量データ</h4>
-                                    <p>時系列で記録された日射量の変化パターン</p>
-                                </div>
-                                <div class="image-card">
-                                    <img src="img/time_st1-2.png" alt="抽出されたルール例" class="example-image">
-                                    <h4>抽出されたルール</h4>
-                                    <p>IF-THEN形式で表現された予測ルール</p>
-                                </div>
-                            </div>
+                        <div class="image-card">
+                            <img src="img/time_st1-2.png" alt="抽出されたルール例" class="example-image">
+                            <h4>抽出されたルール</h4>
+                            <p>IF-THEN形式で表現された予測ルール</p>
                         </div>
-                    </section>
+                    </div>
+                </div>
+            </div>
+        </section>
 
                     <!-- 作成したソフトウェア -->
-                    <section id="software" class="content-section">
-                        <div class="content-card">
-                            <h2><i class="fas fa-laptop-code"></i> 作成したソフトウェア事例</h2>
-                            <p>時系列データ解析のために開発したソフトウェアツールをご紹介します。</p>
+        <section id="software" class="content-section">
+            <div class="content-card">
+                <h2><i class="fas fa-laptop-code"></i> 作成したソフトウェア事例</h2>
+                <p>時系列データ解析のために開発したソフトウェアツールをご紹介します。</p>
+
+                <!-- Time series data Searcher -->
+                <div style="margin-bottom: 2.5rem; padding: 2rem; background: var(--light-bg); border-radius: 1rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+                    <div style="flex: 1 1 300px; min-width: 220px;">
+                        <h3><i class="fas fa-search"></i> Time series data Searcher</h3>
+                        <p>時系列データに対して視覚的・直感的に検索を行うソフトウェアです。</p>
+                        <ul>
+                            <li><i class="fas fa-file-csv"></i> CSV形式の時系列データ入力対応</li>
+                            <li><i class="fas fa-mouse-pointer"></i> GUIによる直感的な操作</li>
+                            <li><i class="fas fa-chart-area"></i> 視覚的なパターン検索</li>
+                            <li><i class="fas fa-cogs"></i> Dynamic Time Warpingによるパターンマッチング</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 2rem; min-width: 180px;">
+                        <div class="screenshot-card">
+                            <img src="img/TimeseriesSearcher_QueryDialog.png" alt="クエリダイアログ" class="software-image">
+                            <h5>クエリダイアログ</h5>
+                            <p>検索したいパターンを視覚的に記述</p>
                         </div>
-
-                        <!-- Time series data Searcher -->
-                        <div class="software-item">
-                            <h3><i class="fas fa-search"></i> Time series data Searcher</h3>
-                            <p>時系列データに対して視覚的・直感的に検索を行うソフトウェアです。</p>
-
-                            <div class="software-features">
-                                <div class="feature-list">
-                                    <ul>
-                                        <li><i class="fas fa-file-csv"></i> CSV形式の時系列データ入力対応</li>
-                                        <li><i class="fas fa-mouse-pointer"></i> GUIによる直感的な操作</li>
-                                        <li><i class="fas fa-chart-area"></i> 視覚的なパターン検索</li>
-                                        <li><i class="fas fa-cogs"></i> Dynamic Time Warpingによるパターンマッチング</li>
-                                    </ul>
-                                </div>
-                                <div class="software-screenshots">
-                                    <div class="screenshot-card">
-                                        <img src="img/TimeseriesSearcher_QueryDialog.png" alt="クエリダイアログ" class="software-image">
-                                        <h5>クエリダイアログ</h5>
-                                        <p>検索したいパターンを視覚的に記述</p>
-                                    </div>
-                                    <div class="screenshot-card">
-                                        <img src="img/TimeseriesSearcher_ResultDialog.png" alt="結果ダイアログ" class="software-image">
-                                        <h5>結果ダイアログ</h5>
-                                        <p>検索結果の表示とCSVエクスポート</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="screenshot-card">
+                            <img src="img/TimeseriesSearcher_ResultDialog.png" alt="結果ダイアログ" class="software-image">
+                            <h5>結果ダイアログ</h5>
+                            <p>検索結果の表示とCSVエクスポート</p>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Time series data Analyzer -->
-                        <div class="software-item">
-                            <h3><i class="fas fa-chart-bar"></i> Time series data Analyzer</h3>
-                            <p>時系列データを検索・解析するための統合ツールです。</p>
-
-                            <div class="software-features">
-                                <div class="feature-list">
-                                    <ul>
-                                        <li><i class="fas fa-search-plus"></i> 独自のクエリ言語による柔軟な検索</li>
-                                        <li><i class="fas fa-brain"></i> Wekaエンジンによる機械学習</li>
-                                        <li><i class="fas fa-coffee"></i> Java実装でプラットフォーム非依存</li>
-                                        <li><i class="fas fa-database"></i> 自動データベース作成機能</li>
-                                    </ul>
-                                </div>
-                                <div class="software-screenshots">
-                                    <div class="screenshot-card">
-                                        <img src="img/TimeseriesAnalyzer_mainwindow.png" alt="メインウィンドウ" class="software-image">
-                                        <h5>メインウィンドウ</h5>
-                                        <p>CSVファイルの読み込みとデータベース作成</p>
-                                    </div>
-                                    <div class="screenshot-card">
-                                        <img src="img/TimeseriesAnalyzer_query_dialog.png" alt="クエリダイアログ" class="software-image">
-                                        <h5>クエリダイアログ</h5>
-                                        <p>複数の検索パターンの組み合わせ指定</p>
-                                    </div>
-                                    <div class="screenshot-card">
-                                        <img src="img/TimeseriesAnalyzer_query_result.png" alt="検索結果" class="software-image">
-                                        <h5>検索結果表示</h5>
-                                        <p>検索結果の視覚的な確認</p>
-                                    </div>
-                                    <div class="screenshot-card">
-                                        <img src="img/TimeseriesAnalyzer_decisionTree.png" alt="決定木" class="software-image">
-                                        <h5>未来予測決定木</h5>
-                                        <p>機械学習による未来予測結果</p>
-                                    </div>
-                                </div>
-                            </div>
+                <!-- Time series data Analyzer -->
+                <div style="padding: 2rem; background: var(--light-bg); border-radius: 1rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+                    <div style="flex: 1 1 300px; min-width: 220px;">
+                        <h3><i class="fas fa-chart-bar"></i> Time series data Analyzer</h3>
+                        <p>時系列データを検索・解析するための統合ツールです。</p>
+                        <ul>
+                            <li><i class="fas fa-search-plus"></i> 独自のクエリ言語による柔軟な検索</li>
+                            <li><i class="fas fa-brain"></i> Wekaエンジンによる機械学習</li>
+                            <li><i class="fas fa-coffee"></i> Java実装でプラットフォーム非依存</li>
+                            <li><i class="fas fa-database"></i> 自動データベース作成機能</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 2rem; min-width: 180px;">
+                        <div class="screenshot-card">
+                            <img src="img/TimeseriesAnalyzer_mainwindow.png" alt="メインウィンドウ" class="software-image">
+                            <h5>メインウィンドウ</h5>
+                            <p>CSVファイルの読み込みとデータベース作成</p>
                         </div>
-                    </section>
+                        <div class="screenshot-card">
+                            <img src="img/TimeseriesAnalyzer_query_dialog.png" alt="クエリダイアログ" class="software-image">
+                            <h5>クエリダイアログ</h5>
+                            <p>複数の検索パターンの組み合わせ指定</p>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="img/TimeseriesAnalyzer_query_result.png" alt="検索結果" class="software-image">
+                            <h5>検索結果表示</h5>
+                            <p>検索結果の視覚的な確認</p>
+                        </div>
+                        <div class="screenshot-card">
+                            <img src="img/TimeseriesAnalyzer_decisionTree.png" alt="決定木" class="software-image">
+                            <h5>未来予測決定木</h5>
+                            <p>機械学習による未来予測結果</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
                 </div>
             </div>
         </div>
@@ -237,7 +228,7 @@
         </div>
     </footer>
 
-    <script src="js/modern-script.js"></script>
+    <script src="./js/modern-script.js"></script>
 </body>
 
 </html>

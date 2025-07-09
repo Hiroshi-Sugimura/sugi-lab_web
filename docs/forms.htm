@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forms - 杉村研究室</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Forms - IoT Programming Lab. - 杉村研究室</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/modern-style.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -32,9 +30,13 @@
                     <li><a href="index_e.html" class="nav-link">English</a></li>
                 </ul>
             </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
-    <main>
         <!-- Page Hero -->
         <section class="page-hero papers-hero">
             <div class="container">
@@ -48,12 +50,13 @@
         <!-- Forms Content -->
         <section class="forms-content">
             <div class="container">
-                <div class="forms-grid">
-                    <!-- Table of Contents -->
-                    <aside class="toc-sidebar">
-                        <div class="toc-card">
-                            <h3><i class="fas fa-list"></i> 目次</h3>
-                            <ul class="toc-list">
+            <div class="content-grid">
+                <!-- ========== 共通目次ナビゲーション ========== -->
+                <!-- Navigation Sidebar -->
+                <div class="content-nav">
+                    <div class="nav-card">
+                        <h3><i class="fas fa-list"></i> 目次</h3>
+                        <ul class="nav-menu">
                                 <li><a href="#emblem" class="toc-link">H科エンブレム</a></li>
                                 <li><a href="#ppt" class="toc-link">発表プレゼンテーション</a></li>
                                 <li><a href="#report" class="toc-link">報告書・論文フォーマット</a></li>
@@ -61,10 +64,11 @@
                                 <li><a href="#menseki" class="toc-link">免責</a></li>
                             </ul>
                         </div>
-                    </aside>
+                    </div>
 
+                <!-- ========== ページ固有メインコンテンツ ========== -->
                     <!-- Main Content -->
-                    <main class="forms-main">
+                    <div class="content-main">
                         <!-- H科エンブレム -->
                         <section id="emblem" class="forms-section">
                             <div class="section-header">
@@ -383,23 +387,46 @@
                                    神奈川工科大学　ホームエレクトロニクス開発学科　今泉優樹</p>
                             </div>
                         </section>
-                    </main>
                 </div>
             </div>
         </section>
-    </main>
 
+    <!-- ========== 共通フッター ========== -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="img/LVDC.png" alt="LVDC Logo" class="footer-img">
+                <div class="footer-section">
+                    <h3>IoT Programming Lab.</h3>
+                    <p>神奈川工科大学 工学部 電気電子情報工学科</p>
+                    <p>杉村研究室</p>
                 </div>
-                <div class="footer-text">
-                    <p>&copy; 2023 Hiroshi SUGIMURA, All Rights Reserved.</p>
+                <div class="footer-section">
+                    <h3>クイックリンク</h3>
+                    <ul>
+                        <li><a href="profile.htm">Profile</a></li>
+                        <li><a href="smarthome.htm">Smart Home</a></li>
+                        <li><a href="papers.htm">Papers</a></li>
+                        <li><a href="access.htm">Access</a></li>
+                    </ul>
                 </div>
+                <div class="footer-section">
+                    <h3>フォローする</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/hiroshi.sugimura.31" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com/Hiroshi-Sugimura" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://qiita.com/Sugimura-Laboratory" target="_blank"><i class="fas fa-code"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hiroshi SUGIMURA, IoT Programming Lab. All Rights Reserved.</p>
+                <p>当Webサイトはリンクフリーです。リンク先: https://www.sugi-lab.net/</p>
             </div>
         </div>
     </footer>
+
+    <script src="js/modern-script.js"></script>
 </body>
+
 </html>
