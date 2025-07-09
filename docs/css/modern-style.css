@@ -42,7 +42,7 @@ html {
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: all .3s ease
+    transition: .3s
 }
 .header .container {
     display: flex;
@@ -71,7 +71,7 @@ html {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
-    transition: all .3s ease;
+    transition: .3s;
     position: relative;
     padding: .5rem 0
 }
@@ -83,7 +83,7 @@ html {
     width: 0;
     height: 2px;
     background: var(--secondary-color);
-    transition: width .3s ease
+    transition: width .3s
 }
 .nav-link:hover::after {
     width: 100%
@@ -101,7 +101,7 @@ html {
     width: 25px;
     height: 3px;
     background: var(--primary-color);
-    transition: all .3s ease
+    transition: .3s
 }
 .hero {
     height: 100vh!important;
@@ -157,7 +157,7 @@ html {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    animation: bounce 2s infinite;
+    animation: 2s infinite bounce;
     cursor: pointer
 }
 .hero-scroll i {
@@ -185,7 +185,6 @@ html {
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    transition: all .3s ease;
     border: 2px solid transparent;
     text-align: center;
     cursor: pointer
@@ -226,15 +225,11 @@ section:nth-child(odd) {
     background: var(--bg-color)
 }
 .section-header {
-    text-align: center;
-    margin-bottom: 4rem;
     position: relative;
     z-index: 10
 }
 .section-header h2 {
-    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
     color: var(--primary-color);
     text-shadow: none;
     background: rgba(255,255,255,.9);
@@ -243,7 +238,6 @@ section:nth-child(odd) {
     display: inline-block
 }
 .section-header p {
-    font-size: 1.2rem;
     color: var(--light-text);
     background: rgba(255,255,255,.8);
     padding: .5rem 1rem;
@@ -286,7 +280,7 @@ section:nth-child(odd) {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
-    transition: transform .3s ease
+    transition: transform .3s
 }
 .stat-item:hover {
     transform: translateY(-5px)
@@ -316,17 +310,14 @@ section:nth-child(odd) {
     border-radius: 15px;
     box-shadow: var(--shadow);
     text-align: center;
-    transition: all .3s ease
+    transition: .3s
 }
 .research-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-hover)
 }
 .research-icon {
-    width: 80px;
-    height: 80px;
     background: var(--tech-gradient);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,11 +365,9 @@ section:nth-child(odd) {
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: all .3s ease
+    box-shadow: var(--shadow)
 }
 .project-card:hover {
-    transform: translateY(-5px);
     box-shadow: var(--shadow-hover)
 }
 .project-image {
@@ -410,7 +399,7 @@ section:nth-child(odd) {
     align-items: center;
     gap: .5rem;
     margin-top: 1rem;
-    transition: all .3s ease
+    transition: .3s
 }
 .project-link:hover {
     transform: translateX(5px)
@@ -427,11 +416,7 @@ section:nth-child(odd) {
     aspect-ratio: 1;
     overflow: hidden;
     border-radius: 15px;
-    cursor: pointer;
-    transition: all .3s ease
-}
-.gallery-item:hover {
-    transform: scale(1.05)
+    cursor: pointer
 }
 .gallery-item img {
     width: 100%;
@@ -448,11 +433,9 @@ section:nth-child(odd) {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: var(--shadow);
-    text-align: center;
-    transition: all .3s ease
+    text-align: center
 }
 .resource-card:hover {
-    transform: translateY(-5px);
     box-shadow: var(--shadow-hover)
 }
 .resource-icon {
@@ -497,7 +480,7 @@ section:nth-child(odd) {
 .footer-section a {
     color: #bdc3c7;
     text-decoration: none;
-    transition: color .3s ease
+    transition: color .3s
 }
 .footer-section a:hover {
     color: #fff
@@ -514,7 +497,7 @@ section:nth-child(odd) {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .3s ease
+    transition: .3s
 }
 .social-links a:hover {
     background: var(--tech-color);
@@ -528,10 +511,6 @@ section:nth-child(odd) {
 }
 .page-hero {
     background: var(--tech-gradient);
-    color: #fff;
-    padding: 8rem 0 4rem;
-    text-align: center;
-    position: relative;
     overflow: hidden
 }
 .page-hero::before {
@@ -541,9 +520,7 @@ section:nth-child(odd) {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../img/C789_keitainotepen500.jpg');
-    background-size: cover;
-    background-position: center;
+    background: url('../img/C789_keitainotepen500.jpg') center/cover;
     opacity: .1;
     z-index: 1
 }
@@ -590,7 +567,7 @@ section:nth-child(odd) {
     border-radius: 15px;
     padding: 2rem;
     box-shadow: var(--shadow);
-    transition: all .3s ease
+    transition: .3s
 }
 .info-card:hover,
 .map-card:hover,
@@ -663,7 +640,7 @@ section:nth-child(odd) {
     border-radius: 15px;
     padding: 2rem;
     box-shadow: var(--shadow);
-    transition: all .3s ease
+    transition: .3s
 }
 .campus-info-card:hover {
     transform: translateY(-5px);
@@ -716,20 +693,8 @@ section:nth-child(odd) {
     background: linear-gradient(135deg,#9b59b6 0,#8e44ad 100%)
 }
 .page-hero.profile-hero::before {
-    background: url('../img/top9.jpg');
-    background-size: cover;
-    background-position: center;
+    background: url('../img/top9.jpg') center/cover;
     opacity: .2
-}
-.profile-content {
-    padding: 4rem 0;
-    background: var(--light-bg)
-}
-.profile-grid {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 3rem;
-    align-items: start
 }
 @media (min-width:1025px) {
     .profile-nav {
@@ -745,7 +710,7 @@ section:nth-child(odd) {
     border-radius: 15px;
     padding: 2rem;
     box-shadow: var(--shadow);
-    transition: all .3s ease
+    transition: .3s
 }
 .nav-card:hover {
     transform: translateY(-2px);
@@ -777,7 +742,7 @@ section:nth-child(odd) {
     color: var(--text-color);
     text-decoration: none;
     border-radius: 8px;
-    transition: all .3s ease;
+    transition: .3s;
     font-weight: 500
 }
 .nav-menu a:hover {
@@ -788,7 +753,7 @@ section:nth-child(odd) {
 .nav-menu a i {
     width: 20px;
     color: var(--tech-color);
-    transition: all .3s ease
+    transition: .3s
 }
 .nav-menu a:hover i {
     color: #fff
@@ -800,7 +765,7 @@ section:nth-child(odd) {
 }
 .content-section,
 .intro-section {
-    animation: fadeInUp .6s ease forwards
+    animation: .6s forwards fadeInUp
 }
 .content-card,
 .intro-card {
@@ -808,7 +773,7 @@ section:nth-child(odd) {
     border-radius: 15px;
     padding: 2.5rem;
     box-shadow: var(--shadow);
-    transition: all .3s ease
+    transition: .3s
 }
 .content-card:hover,
 .intro-card:hover {
@@ -847,7 +812,7 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 12px;
-    transition: all .3s ease
+    transition: .3s
 }
 .research-item:hover {
     background: #fff;
@@ -962,7 +927,7 @@ section:nth-child(odd) {
     background: var(--light-bg);
     padding: 2rem;
     border-radius: 12px;
-    transition: all .3s ease
+    transition: .3s
 }
 .activity-category:hover {
     background: #fff;
@@ -1012,7 +977,7 @@ section:nth-child(odd) {
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
-        transition: all .3s ease;
+        transition: .3s;
         z-index: 1000
     }
     .nav-list {
@@ -1033,7 +998,7 @@ section:nth-child(odd) {
         padding: 15px 20px;
         color: var(--text-color);
         font-weight: 500;
-        transition: all .3s ease
+        transition: .3s
     }
     .nav-link:hover {
         background: var(--primary-color);
@@ -1259,7 +1224,7 @@ section:nth-child(odd) {
         width: 25px;
         height: 3px;
         background: var(--primary-color);
-        transition: all .3s ease;
+        transition: .3s;
         border-radius: 2px
     }
     .hamburger.active span:first-child {
@@ -1272,12 +1237,7 @@ section:nth-child(odd) {
         transform: rotate(-45deg) translate(7px,-6px)
     }
 }
-.hero-title {
-    overflow: visible;
-    border-right: none;
-    white-space: normal;
-    animation: none
-}
+.hero-title,
 .typing-text {
     overflow: visible;
     border-right: none;
@@ -1289,7 +1249,7 @@ section:nth-child(odd) {
         overflow: hidden;
         border-right: 3px solid rgba(255,255,255,.7);
         white-space: nowrap;
-        animation: typing 2.5s steps(16,end),blink-caret .75s step-end infinite
+        animation: 2.5s steps(16,end) typing,.75s step-end infinite blink-caret
     }
 }
 @keyframes typing {
@@ -1312,7 +1272,7 @@ section:nth-child(odd) {
 .gallery-item,
 .project-card,
 .resource-card {
-    transition: all .3s ease
+    transition: .3s
 }
 .project-card:hover,
 .resource-card:hover {
@@ -1323,7 +1283,7 @@ section:nth-child(odd) {
     transform: scale(1.05)
 }
 .btn {
-    transition: all .3s ease;
+    transition: .3s;
     position: relative;
     overflow: hidden
 }
@@ -1354,7 +1314,7 @@ section:nth-child(odd) {
     cursor: pointer;
     display: none;
     z-index: 1000;
-    transition: all .3s ease;
+    transition: .3s;
     box-shadow: var(--shadow)
 }
 .scroll-to-top:hover {
@@ -1365,7 +1325,7 @@ section:nth-child(odd) {
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: all .6s ease
+    transition: .6s
 }
 .fade-in.visible {
     opacity: 1;
@@ -1385,7 +1345,7 @@ section:nth-child(odd) {
     color: #fff;
     text-decoration: none;
     opacity: 0;
-    transition: all .3s ease;
+    transition: .3s;
     z-index: 1000
 }
 .scroll-top.visible {
@@ -1437,7 +1397,7 @@ section:nth-child(odd) {
     padding: .5rem 0;
     display: block;
     border-radius: .5rem;
-    transition: all .3s ease
+    transition: .3s
 }
 .toc-link:hover {
     color: var(--secondary-color);
@@ -1485,7 +1445,7 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 1rem;
-    transition: all .3s ease
+    transition: .3s
 }
 .emblem-item:hover {
     transform: translateY(-5px);
@@ -1531,7 +1491,7 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 1rem;
-    transition: all .3s ease
+    transition: .3s
 }
 .logo-item:hover,
 .qr-item:hover,
@@ -1556,7 +1516,7 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 1rem;
-    transition: all .3s ease
+    transition: .3s
 }
 .ppt-item:hover {
     transform: translateY(-5px);
@@ -1587,7 +1547,7 @@ section:nth-child(odd) {
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
-    transition: all .3s ease
+    transition: .3s
 }
 .report-item:hover {
     transform: translateY(-5px);
@@ -1616,7 +1576,7 @@ section:nth-child(odd) {
     border-radius: 1rem;
     text-align: center;
     max-width: 400px;
-    transition: all .3s ease
+    transition: .3s
 }
 .manual-item:hover {
     transform: translateY(-5px);
@@ -1666,7 +1626,7 @@ section:nth-child(odd) {
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: var(--shadow);
-    transition: all .3s ease
+    transition: .3s
 }
 .links-category:hover {
     transform: translateY(-5px);
@@ -1699,7 +1659,7 @@ section:nth-child(odd) {
     padding: 1.5rem;
     background: var(--light-bg);
     border-radius: 1rem;
-    transition: all .3s ease
+    transition: .3s
 }
 .link-item:hover {
     background: #fff;
@@ -1747,7 +1707,7 @@ section:nth-child(odd) {
     background: rgba(52,152,219,.1);
     border-radius: .5rem;
     font-size: .85rem;
-    transition: all .3s ease
+    transition: .3s
 }
 .link-url:hover {
     background: var(--secondary-color);
@@ -1816,7 +1776,7 @@ section:nth-child(odd) {
     border-radius: 1rem;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: all .3s ease;
+    transition: .3s;
     border: 1px solid var(--border-color)
 }
 .feature-card:hover {
@@ -1908,7 +1868,7 @@ section:nth-child(odd) {
     background: var(--light-bg);
     padding: 2rem;
     border-radius: 1rem;
-    transition: all .3s ease
+    transition: .3s
 }
 .area-card:hover {
     background: #fff;
@@ -2015,7 +1975,7 @@ section:nth-child(odd) {
     padding: 1.5rem;
     border-radius: 1rem;
     text-align: center;
-    transition: all .3s ease
+    transition: .3s
 }
 .image-card:hover {
     transform: translateY(-5px);
@@ -2087,7 +2047,7 @@ section:nth-child(odd) {
     padding: 1rem;
     border-radius: .5rem;
     text-align: center;
-    transition: all .3s ease
+    transition: .3s
 }
 .screenshot-card:hover {
     transform: translateY(-3px);
@@ -2158,7 +2118,7 @@ section:nth-child(odd) {
     color: var(--text-color);
     text-decoration: none;
     border-radius: 8px;
-    transition: all .3s ease;
+    transition: .3s;
     border: 1px solid var(--border-color)
 }
 .papers-nav-link:hover {
@@ -2177,7 +2137,7 @@ section:nth-child(odd) {
     background: #fff;
     color: var(--text-color);
     font-size: .9rem;
-    transition: border-color .3s ease
+    transition: border-color .3s
 }
 .form-select:focus {
     outline: 0;
@@ -2198,7 +2158,7 @@ section:nth-child(odd) {
     text-decoration: none;
     border-radius: 8px;
     border: 1px solid var(--secondary-color);
-    transition: all .3s ease;
+    transition: .3s;
     text-align: center;
     justify-content: center
 }
@@ -2306,7 +2266,7 @@ section:nth-child(odd) {
     color: var(--text-color);
     text-decoration: none;
     border-radius: 8px;
-    transition: all .3s ease;
+    transition: .3s;
     border: 1px solid var(--border-color)
 }
 .privacy-nav-link:hover {
@@ -2459,7 +2419,7 @@ section:nth-child(odd) {
     color: var(--text-color);
     text-decoration: none;
     border-radius: 8px;
-    transition: all .3s ease;
+    transition: .3s;
     border-left: 3px solid transparent
 }
 .content-nav .nav-menu .nav-link:hover {
