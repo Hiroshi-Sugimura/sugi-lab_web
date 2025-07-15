@@ -823,7 +823,7 @@ section:nth-child(odd) {
     flex-shrink: 0;
     width: 60px;
     height: 60px;
-    background: var(--tech-gradient);
+    background: var(--text-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -908,7 +908,8 @@ section:nth-child(odd) {
     font-weight: 700;
     color: var(--tech-color);
     font-size: 1.1rem;
-    min-width: 60px
+    min-width: 60px;
+    padding-left: 1em;
 }
 .timeline-content h4 {
     color: var(--primary-color);
