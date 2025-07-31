@@ -18,6 +18,10 @@
     --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
     --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --tech-gradient: linear-gradient(135deg, #d8eefe 0%, #d0ffe5 100%);
+
+    /* FontAwesome 7.0.0 CSS Variables */
+    --fa-animation-delay: 0s;
+    --fa-rotate-angle: 0deg;
 }
 body {
     font-family: 'Noto Sans JP',sans-serif;
