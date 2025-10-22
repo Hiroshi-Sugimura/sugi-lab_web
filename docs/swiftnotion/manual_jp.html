@@ -1,0 +1,706 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SwiftNotion 使用方法マニュアル(日本語)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+</style></head><body><article id="24139dcd-6248-802c-8d1e-f9cd6382e1ac" class="page sans"><header><h1 class="page-title">SwiftNotion 使用方法マニュアル(日本語)</h1><p class="page-description"></p></header><div class="page-body"><figure id="25339dcd-6248-8018-85f9-ca05a241a933" class="link-to-page"><a href="./manual_en.html">SwiftNotion User Manual (English ver.)</a></figure><h1 id="25339dcd-6248-800c-9944-e728d545a682" class="">📱 SwiftNotionって何？</h1><p id="25339dcd-6248-8037-afe2-fbe64301daa8" class="">SwiftNotionは、iPhone・iPad・Apple WatchからNotionのデータベースに簡単にメモを送信できるアプリです！<br/>テキストメモはもちろん、Webページの共有、ホーム画面のウィジェットからのクイックアクセス、Apple Watchからの手軽な入力、そしてSiri音声操作まで対応しています。</p><p id="25339dcd-6248-8049-9479-ceab343f2b11" class="">このアプリはNotionのDatabaseへ投稿するだけのシンプル機能ですから、Notionのデータを参照しないので、あなたのデータは守られています。安心してお使いください。</p><h2 id="25339dcd-6248-80d6-b110-f2ff55049b33" class="">‼️ 注意</h2><ul id="25339dcd-6248-80f5-a223-dd64e4918cb4" class="bulleted-list"><li style="list-style-type:disc">「タイトル」というテキスト属性をもつデータベースのみ扱います。メモ内容はこのテキスト属性に記録するので、属性を持たないとエラーします。</li></ul><ul id="25339dcd-6248-8064-927f-d97b6d821b33" class="bulleted-list"><li style="list-style-type:disc">「URL」というURL属性があると、Webサイトをシェアする時に便利です。</li></ul><ul id="25339dcd-6248-8054-961c-e128fa6659da" class="bulleted-list"><li style="list-style-type:disc">「作成日」という日時属性（Databaseのデフォルトであるとおもう）があるとメモした日時が記録されて便利です。</li></ul><ul id="25339dcd-6248-802b-8e97-cf279f345f05" class="bulleted-list"><li style="list-style-type:disc">そのほかの属性もあってOKです。このアプリからは参照しませんが、邪魔もしません。</li></ul><h2 id="25339dcd-6248-8016-ae55-e8bc76ed896a" class="">💎 Swift NotionとSwift Notion Lite</h2><table id="25339dcd-6248-80a6-9847-e7913dc19b63" class="simple-table"><tbody><tr id="25339dcd-6248-8091-9e54-e4fe7ac52b0b"><td id=":Q&lt;C" class=""></td><td id="bqob" class="">Swift Notion（有料版）</td><td id="`fUd" class="">Swift Notion Lite（開発中）</td></tr><tr id="25339dcd-6248-801b-b29f-d6fc8816d4ae"><td id=":Q&lt;C" class="">Base App</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">⚪︎（広告付き）</td></tr><tr id="25339dcd-6248-80f3-bdce-e682b6cf26d2"><td id=":Q&lt;C" class="">Share</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">⚪︎（広告付き）</td></tr><tr id="25339dcd-6248-80e0-8e93-dfe7b264b1c0"><td id=":Q&lt;C" class="">Widget</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">⚪︎（広告付き）</td></tr><tr id="25339dcd-6248-806a-9032-f8940efa9e1f"><td id=":Q&lt;C" class="">Siri</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">❌</td></tr><tr id="25339dcd-6248-8013-8c7a-dd01afe26fa2"><td id=":Q&lt;C" class="">Watch App</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">❌</td></tr><tr id="25339dcd-6248-806a-97e8-e164b766d3d6"><td id=":Q&lt;C" class="">Watch Siri</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">❌</td></tr><tr id="25339dcd-6248-80e4-994c-d601feb6afc7"><td id=":Q&lt;C" class="">Watch Complication</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">❌</td></tr></tbody></table><h2 id="25339dcd-6248-8050-ab13-c66600d8d65b" class="">🚀 最初の設定</h2><h3 id="25339dcd-6248-80c6-9e6e-f8b8a5f298af" class="">ステップ1: Notionでの準備</h3><ol type="1" id="25339dcd-6248-80a4-9fef-fae5e30d6011" class="numbered-list" start="1"><li><strong>Notion Integrationを作成</strong><ul id="25339dcd-6248-8091-bc50-c672ad6f6ad6" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.notion.com/">Notion Developers</a>にアクセス</li></ul><ul id="25339dcd-6248-80f2-8adc-cd4583fa3e4e" class="bulleted-list"><li style="list-style-type:disc">「New integration」をクリック</li></ul><ul id="25339dcd-6248-80a7-96a9-fa3048f955d9" class="bulleted-list"><li style="list-style-type:disc">Integration名を入力して作成</li></ul><ul id="25339dcd-6248-804c-b84e-deaeee0452d0" class="bulleted-list"><li style="list-style-type:disc"><strong>Internal Integration Token</strong>をコピーしてメモアプリなどに貼り付けておく（後で使います）</li></ul></li></ol><ol type="1" id="25339dcd-6248-8069-8967-ddde5695eaca" class="numbered-list" start="2"><li><strong>Notionデータベースを準備</strong><ul id="25339dcd-6248-8095-b0df-c6afa76cb2d5" class="bulleted-list"><li style="list-style-type:disc">Notionで新しいデータベースを作成するか、既存のデータベースを使用</li></ul><ul id="25339dcd-6248-80cf-9fb8-fbd4351bb65f" class="bulleted-list"><li style="list-style-type:disc">データベースには以下のプロパティが必要です：<ul id="25339dcd-6248-809b-930e-e2f69630d7c1" class="bulleted-list"><li style="list-style-type:circle"><strong>タイトル</strong> (Title) - メインのテキスト用</li></ul><ul id="25339dcd-6248-80f9-8936-e380caddda0d" class="bulleted-list"><li style="list-style-type:circle"><strong>URL</strong> (URL) - Webページ共有用（オプション）</li></ul></li></ul></li></ol><ol type="1" id="25339dcd-6248-8049-9b9b-d87d020d662a" class="numbered-list" start="3"><li><strong>Integrationをデータベースに招待</strong><ul id="25339dcd-6248-8067-a945-cfa39764a4ca" class="bulleted-list"><li style="list-style-type:disc">データベースの右上「・・・」→「コネクト」</li></ul><ul id="25339dcd-6248-805d-956d-da827a2be0ea" class="bulleted-list"><li style="list-style-type:disc">作成したIntegrationを選択</li></ul></li></ol><ol type="1" id="25339dcd-6248-80d9-8eaa-d99bf3484d51" class="numbered-list" start="4"><li><strong>データベースIDを取得</strong><ul id="25339dcd-6248-800e-bf24-f46c42d37084" class="bulleted-list"><li style="list-style-type:disc">データベースのURLをコピー</li></ul><ul id="25339dcd-6248-8071-a078-dfd640f00f04" class="bulleted-list"><li style="list-style-type:disc">URLの<code>https://www.notion.so/</code> 以降、<code>?</code> より前の32文字がデータベースID</li></ul><ul id="25339dcd-6248-8041-8ae5-cea514075805" class="bulleted-list"><li style="list-style-type:disc">例: <code>abc123def456...</code> みたいな感じ</li></ul><ul id="25339dcd-6248-8093-b601-c0c113d41584" class="bulleted-list"><li style="list-style-type:disc">URL全体をコピーしてメモアプリなどに貼り付け、IDだけ抜き出して確保しておく（後で使います）</li></ul></li></ol><h3 id="25339dcd-6248-80fc-bed0-d0fe599e2ba4" class="">ステップ2: SwiftNotionアプリでの設定</h3><ol type="1" id="25339dcd-6248-8063-8c9e-f26210d11449" class="numbered-list" start="1"><li><strong>アプリを起動</strong><ul id="25339dcd-6248-801b-842c-c3aec318e22a" class="bulleted-list"><li style="list-style-type:disc">画面右上の歯車アイコン ⚙️ をタップして設定画面へ</li></ul></li></ol><ol type="1" id="25339dcd-6248-80ed-b39e-ef6807f1c916" class="numbered-list" start="2"><li><strong>インテグレーションシークレットを設定</strong><ul id="25339dcd-6248-8082-92c8-da2a87197f85" class="bulleted-list"><li style="list-style-type:disc">「インテグレーションシークレット」欄に、ステップ1の1で確保したトークンを入力</li></ul></li></ol><ol type="1" id="25339dcd-6248-8084-a82a-efa8e4a12466" class="numbered-list" start="3"><li><strong>データベースを追加</strong><ul id="25339dcd-6248-807a-a709-f8c8a102cc8e" class="bulleted-list"><li style="list-style-type:disc">「データベース新規追加」セクションで：<ul id="25339dcd-6248-80e7-bf0f-f669a73a1de4" class="bulleted-list"><li style="list-style-type:circle"><strong>名前</strong>: 分かりやすい名前（例：「メモ帳」「アイデア」）</li></ul><ul id="25339dcd-6248-80e4-b562-faaa32bae29c" class="bulleted-list"><li style="list-style-type:circle"><strong>ID</strong>: ステップ1の3で確保したデータベースID</li></ul></li></ul><ul id="25339dcd-6248-803c-9769-eb7da5c352b1" class="bulleted-list"><li style="list-style-type:disc">「追加」ボタンをタップ</li></ul></li></ol><ol type="1" id="25339dcd-6248-800d-812f-f65e3a91976d" class="numbered-list" start="4"><li><strong>Siriショートカットを登録 (Optional)</strong><ul id="25339dcd-6248-80ae-9153-ebec98cbf2ed" class="bulleted-list"><li style="list-style-type:disc">「Siriショートカットを登録」ボタンをタップ</li></ul><ul id="25339dcd-6248-8051-b092-c85628bc8a9e" class="bulleted-list"><li style="list-style-type:disc">Siriが起動したら「Notionでメモ」と言って登録</li></ul></li></ol><ol type="1" id="25339dcd-6248-80b9-ac33-dc64c5dde296" class="numbered-list" start="5"><li><strong>設定完了！</strong><ul id="25339dcd-6248-8043-a569-e62a6aef77a6" class="bulleted-list"><li style="list-style-type:disc">左上の「戻る」で メイン画面に戻る</li></ul></li></ol><h2 id="25339dcd-6248-800e-8da9-ff024f0d96d3" class="">✍️ メモの投稿方法</h2><h3 id="25339dcd-6248-80b3-85d6-e441cea0f6c1" class="">基本的な使い方</h3><ol type="1" id="25339dcd-6248-80de-8032-eebfbaf683c9" class="numbered-list" start="1"><li><strong>アプリを起動</strong></li></ol><ol type="1" id="25339dcd-6248-802d-8296-da8d725ef6bc" class="numbered-list" start="2"><li><strong>送信先を選択</strong><ul id="25339dcd-6248-806c-888b-d18fab03d687" class="bulleted-list"><li style="list-style-type:disc">画面上部のドロップダウンで送信先データベースを選択</li></ul></li></ol><ol type="1" id="25339dcd-6248-8080-81f4-ca6e29d4543f" class="numbered-list" start="3"><li><strong>メモを入力</strong><ul id="25339dcd-6248-808d-acdc-c064dea4e742" class="bulleted-list"><li style="list-style-type:disc">大きなテキストエリアにメモを入力</li></ul></li></ol><ol type="1" id="25339dcd-6248-8053-a05b-e1289c82bd62" class="numbered-list" start="4"><li><strong>送信</strong><ul id="25339dcd-6248-80d3-a515-fdd8bba69f58" class="bulleted-list"><li style="list-style-type:disc">「送信する」ボタンをタップ</li></ul><ul id="25339dcd-6248-804e-93ad-ec8be3563850" class="bulleted-list"><li style="list-style-type:disc">成功すると「送信成功」のメッセージが表示されます</li></ul></li></ol><h3 id="25339dcd-6248-80ef-9825-e7314496c03f" class="">💡 Tips</h3><ul id="25339dcd-6248-8004-a80c-e1e2d997c4c9" class="bulleted-list"><li style="list-style-type:disc">メモは何文字でも入力OK！</li></ul><ul id="25339dcd-6248-80f3-bc62-c895a68f0640" class="bulleted-list"><li style="list-style-type:disc">日本語の予測変換は自動的にオフになっています</li></ul><ul id="25339dcd-6248-80e1-b7cb-cace676ff9a8" class="bulleted-list"><li style="list-style-type:disc">複数のデータベースを登録して、用途別に使い分けできます</li></ul><h2 id="25339dcd-6248-8056-9ade-f9210863408e" class="">🎤 Siri音声操作</h2><p id="25339dcd-6248-8012-a91e-de872b209d58" class="">手が離せない時でも、声だけでメモをNotionに保存！</p><h3 id="25339dcd-6248-8015-914c-d5c536e4a180" class="">Siriの使い方</h3><ol type="1" id="25339dcd-6248-8038-a768-d2a366bde1e0" class="numbered-list" start="1"><li><strong>「Hey, Siri」またはサイドボタンを長押し</strong></li></ol><ol type="1" id="25339dcd-6248-80c6-9de6-c33540088ab9" class="numbered-list" start="2"><li><strong>「Notionでメモ」と言う</strong></li></ol><ol type="1" id="25339dcd-6248-80a1-9ca8-f751d5992500" class="numbered-list" start="3"><li><strong>メモ内容を話す</strong><ul id="25339dcd-6248-80e6-87e6-c57a38671e46" class="bulleted-list"><li style="list-style-type:disc">「明日の会議は午後2時から」</li></ul><ul id="25339dcd-6248-80b0-b06b-e7b94bcc4a21" class="bulleted-list"><li style="list-style-type:disc">「買い物リスト：牛乳、パン、卵」</li></ul><ul id="25339dcd-6248-80e2-9aa3-e3c9d044ff4e" class="bulleted-list"><li style="list-style-type:disc">何でもOK！</li></ul></li></ol><ol type="1" id="25339dcd-6248-8057-b9e4-ff1abc75b628" class="numbered-list" start="4"><li><strong>完了</strong><ul id="25339dcd-6248-80fd-85ca-c333786dee1f" class="bulleted-list"><li style="list-style-type:disc">Siriが「Notionに記録しました！」と返事してくれます</li></ul></li></ol><h3 id="25339dcd-6248-80f6-a578-cb811f261050" class="">⚡ 便利ポイント</h3><ul id="25339dcd-6248-80b7-97c9-d2608f189507" class="bulleted-list"><li style="list-style-type:disc">手が汚れていても、運転中でも、いつでもメモ可能</li></ul><ul id="25339dcd-6248-80c7-bb5c-ef6fa96843ed" class="bulleted-list"><li style="list-style-type:disc">長い文章も短いメモも対応</li></ul><ul id="25339dcd-6248-80d8-ac2f-e7e2a92018c6" class="bulleted-list"><li style="list-style-type:disc">日本語の音声認識もバッチリ</li></ul><ul id="25339dcd-6248-803b-875b-f7c654042cab" class="bulleted-list"><li style="list-style-type:disc">設定したデフォルトデータベースに自動で保存</li></ul><h3 id="25339dcd-6248-806b-a97e-d13cbdd4c5ec" class="">🔧 Siriショートカットのカスタマイズ</h3><ul id="25339dcd-6248-80ae-bb08-fb45523525d0" class="bulleted-list"><li style="list-style-type:disc">設定画面で「Siriショートカットを登録」を押すと、好きなフレーズに変更可能</li></ul><ul id="25339dcd-6248-804a-899f-f91d4962526d" class="bulleted-list"><li style="list-style-type:disc">「メモして」「アイデア記録」など、自分好みのフレーズに設定OK</li></ul><h2 id="25339dcd-6248-8079-b8f4-f6b7077adce5" class="">🌐 Webページの共有</h2><p id="25339dcd-6248-80f0-a004-c0a287c4c459" class="">SafariやChromeで見つけた面白いページをNotionに保存できます！</p><h3 id="25339dcd-6248-80eb-bbc5-f0a0a5ed75ca" class="">使い方</h3><ol type="1" id="25339dcd-6248-804b-8140-faef8f61c665" class="numbered-list" start="1"><li><strong>Safariでページを表示</strong></li></ol><ol type="1" id="25339dcd-6248-80bd-9048-f9b0167b7bdf" class="numbered-list" start="2"><li><strong>共有ボタンをタップ</strong><ul id="25339dcd-6248-80b8-92e0-dd7bd7bdc52b" class="bulleted-list"><li style="list-style-type:disc">画面下の共有ボタン（四角に矢印）をタップ</li></ul></li></ol><ol type="1" id="25339dcd-6248-8007-9fdf-e48098267fd5" class="numbered-list" start="3"><li><strong>SwiftNotionを選択</strong><ul id="25339dcd-6248-80f6-b0b6-ce30489b6caa" class="bulleted-list"><li style="list-style-type:disc">共有メニューから「SwiftNotion」を選択</li></ul></li></ol><ol type="1" id="25339dcd-6248-806b-aecf-e0ae84f32f1f" class="numbered-list" start="4"><li><strong>内容を確認・編集</strong><ul id="25339dcd-6248-80d9-8345-cf2b40f996cf" class="bulleted-list"><li style="list-style-type:disc">タイトルとURLが自動で入力されます</li></ul><ul id="25339dcd-6248-8082-88cf-c99a9c85c8a8" class="bulleted-list"><li style="list-style-type:disc">必要に応じて編集可能</li></ul></li></ol><ol type="1" id="25339dcd-6248-809a-b99c-cf6f3982395d" class="numbered-list" start="5"><li><strong>送信先を選択して送信</strong><ul id="25339dcd-6248-809a-a4c0-dfcec21fd74b" class="bulleted-list"><li style="list-style-type:disc">データベースを選択して「送信」をタップ</li></ul></li></ol><h3 id="25339dcd-6248-805c-9b5e-d4a302247e93" class="">⚡ 便利ポイント</h3><ul id="25339dcd-6248-800c-b7a7-ed78458cc5ea" class="bulleted-list"><li style="list-style-type:disc">ページタイトルとURLが自動で取得されます</li></ul><ul id="25339dcd-6248-8097-851c-d626dcecbc86" class="bulleted-list"><li style="list-style-type:disc">タイトルは編集できるので、自分なりの説明を追加OK</li></ul><ul id="25339dcd-6248-80d7-aeaa-f82980abc96a" class="bulleted-list"><li style="list-style-type:disc">Notion側でURLプロパティがあると、リンクとして保存されます</li></ul><h2 id="25339dcd-6248-8079-9795-f8fe484dbce3" class="">📲 ウィジェット機能</h2><p id="25339dcd-6248-809b-a17c-e228980e2d6b" class="">ホーム画面からワンタップでメモ作成画面にアクセス！</p><h3 id="25339dcd-6248-80e3-b975-cf1c93d704e9" class="">ウィジェットの追加方法</h3><ol type="1" id="25339dcd-6248-8026-b96a-fddf427404a8" class="numbered-list" start="1"><li><strong>ホーム画面を長押し</strong><ul id="25339dcd-6248-8006-ae08-edef794d36ce" class="bulleted-list"><li style="list-style-type:disc">アプリアイコンがプルプル震えるモードに</li></ul></li></ol><ol type="1" id="25339dcd-6248-80c4-9007-e5a21419a711" class="numbered-list" start="2"><li><strong>「Edit」ボタンをタップ</strong><ul id="25339dcd-6248-805d-9f11-c2ed9a38ea4a" class="bulleted-list"><li style="list-style-type:disc">左上に現れる「Edit」ボタンをタップ</li></ul></li></ol><ol type="1" id="25339dcd-6248-802d-be5f-e1a9d38de321" class="numbered-list" start="3"><li><strong>「Add Widget」をタップ</strong><ul id="25339dcd-6248-8008-ac5d-f53c284f12d1" class="bulleted-list"><li style="list-style-type:disc">メニューから「Add Widget」項目をタップ</li></ul></li></ol><ol type="1" id="25339dcd-6248-8059-a3e6-ee935f2b9951" class="numbered-list" start="4"><li><strong>SwiftNotionを検索</strong><ul id="25339dcd-6248-8072-b375-e1dbde8c556a" class="bulleted-list"><li style="list-style-type:disc">検索で「SwiftNotion」を探す</li></ul></li></ol><ol type="1" id="25339dcd-6248-80f6-b19e-eb11291ed19c" class="numbered-list" start="5"><li><strong>サイズを選択</strong><ul id="25339dcd-6248-805a-b45b-c2bba7ad6db9" class="bulleted-list"><li style="list-style-type:disc">Small または Medium サイズを選択</li></ul></li></ol><ol type="1" id="25339dcd-6248-80d9-ba8c-e9ebed186ecf" class="numbered-list" start="6"><li><strong>「ウィジェットを追加」をタップ</strong></li></ol><ol type="1" id="25339dcd-6248-8043-8147-cee080930e5e" class="numbered-list" start="7"><li><strong>完了</strong><ul id="25339dcd-6248-8030-9135-ca27c561c12b" class="bulleted-list"><li style="list-style-type:disc">ホーム画面の「完了」をタップ</li></ul></li></ol><h3 id="25339dcd-6248-808d-a423-dacd5975f482" class="">ウィジェットの使い方</h3><ul id="25339dcd-6248-805d-91e2-f1d8edcc8065" class="bulleted-list"><li style="list-style-type:disc">ウィジェットをタップするだけで、即座にメモ作成画面が開きます</li></ul><ul id="25339dcd-6248-8078-8249-fea85c016aa9" class="bulleted-list"><li style="list-style-type:disc">アプリを探す手間が省けて超便利！</li></ul><h2 id="25339dcd-6248-809d-960e-ecef939cccea" class="">⌚ Apple Watch機能</h2><p id="25339dcd-6248-8016-a8be-ead5a7d12828" class="">手首でサクッとメモ！Apple Watchからも直接Notionにメモを送信できます！</p><h3 id="25339dcd-6248-80e2-a4f4-fd813d6e619b" class="">Apple Watchアプリの使い方</h3><ol type="1" id="25339dcd-6248-8042-8bc8-f8aac44943ce" class="numbered-list" start="1"><li><strong>Apple Watchでアプリを起動</strong><ul id="25339dcd-6248-8048-b9ac-f942afad51cc" class="bulleted-list"><li style="list-style-type:disc">Digital Crownを押してアプリ一覧を表示</li></ul><ul id="25339dcd-6248-8015-9cf9-c3e2299065d9" class="bulleted-list"><li style="list-style-type:disc">SwiftNotionアプリをタップ</li></ul></li></ol><ol type="1" id="25339dcd-6248-8086-886f-d530443b45db" class="numbered-list" start="2"><li><strong>送信先データベースを選択</strong><ul id="25339dcd-6248-8046-9358-c4051d860b06" class="bulleted-list"><li style="list-style-type:disc">画面上部で送信先を選択（iPhoneで設定したデータベースが表示されます）</li></ul></li></ol><ol type="1" id="25339dcd-6248-80ed-9ddf-e02a8a61e4b6" class="numbered-list" start="3"><li><strong>メモを入力</strong><ul id="25339dcd-6248-80e2-9d36-ca37c60c4c3a" class="bulleted-list"><li style="list-style-type:disc">テキスト入力画面でメモを入力</li></ul><ul id="25339dcd-6248-80be-ad63-f4bed418680f" class="bulleted-list"><li style="list-style-type:disc">音声入力、手書き入力、音声→テキスト変換が使えます</li></ul></li></ol><ol type="1" id="25339dcd-6248-8096-8db5-e78803db38b7" class="numbered-list" start="4"><li><strong>送信</strong><ul id="25339dcd-6248-8000-998b-c574b7893ec4" class="bulleted-list"><li style="list-style-type:disc">「送信」ボタンをタップして完了！</li></ul></li></ol><h3 id="25339dcd-6248-80b0-b1a1-d66398909ed2" class="">⚡ Apple Watchの便利ポイント</h3><ul id="25339dcd-6248-80a5-866c-f221dac5693d" class="bulleted-list"><li style="list-style-type:disc"><strong>音声入力</strong>: Hey,Siriでの呼び出しやDigital Crownを押しながら話すだけでメモ入力</li></ul><ul id="25339dcd-6248-8087-9990-c720e9006891" class="bulleted-list"><li style="list-style-type:disc"><strong>手書き入力</strong>: 指で文字を書いて入力（ひらがな・カタカナ・数字対応）</li></ul><ul id="25339dcd-6248-808b-9dae-dc9a8dd2f9f5" class="bulleted-list"><li style="list-style-type:disc"><strong>音声→テキスト変換</strong>: 話した内容を自動でテキストに変換</li></ul><ul id="25339dcd-6248-800b-b6b7-f24ee2959c45" class="bulleted-list"><li style="list-style-type:disc"><strong>iPhoneと同期</strong>: iPhoneで設定したデータベースがすぐに使える</li></ul><ul id="25339dcd-6248-8043-af32-f4d048643873" class="bulleted-list"><li style="list-style-type:disc"><strong>オフライン対応</strong>: 一時的にネットワークが不安定でも後で送信</li></ul><h3 id="25339dcd-6248-80c9-801a-ca76750c6c38" class="">🎯 Apple Watch活用シーン</h3><ul id="25339dcd-6248-80f3-89d0-c3691e38a781" class="bulleted-list"><li style="list-style-type:disc">🏃‍♀️ <strong>ランニング中</strong>: 思いついたアイデアを即メモ</li></ul><ul id="25339dcd-6248-8043-85b4-c5810fd259ed" class="bulleted-list"><li style="list-style-type:disc">🍳 <strong>料理中</strong>: 手が汚れていても音声でレシピメモ</li></ul><ul id="25339dcd-6248-806d-a1a4-f3e3c9143920" class="bulleted-list"><li style="list-style-type:disc">🚗 <strong>運転中</strong>: 安全に音声でTo-Doリスト作成</li></ul><ul id="25339dcd-6248-801f-8e8d-f58df4d63a32" class="bulleted-list"><li style="list-style-type:disc">💤 <strong>寝る前</strong>: 暗い部屋でも気軽にメモ</li></ul><ul id="25339dcd-6248-8026-9bcc-ce58745869b6" class="bulleted-list"><li style="list-style-type:disc">📱 <strong>iPhone不携帯時</strong>: Watchだけでもメモできる</li></ul><h3 id="25339dcd-6248-8060-8068-efd97859b90b" class="">Apple Watch Siri機能</h3><p id="25339dcd-6248-8029-bbbc-ee301065bf58" class="">Apple WatchでもSiri音声操作が使えます！</p><ol type="1" id="25339dcd-6248-8053-8a9f-ed889dcb2fbb" class="numbered-list" start="1"><li><strong>Digital Crownを長押し</strong> または <strong>「Hey, Siri」</strong></li></ol><ol type="1" id="25339dcd-6248-80ec-907e-edecb4c2598b" class="numbered-list" start="2"><li><strong>「Notionでメモ」と言う</strong></li></ol><ol type="1" id="25339dcd-6248-80cd-b6fc-cb94f2b8e28f" class="numbered-list" start="3"><li><strong>メモ内容を話す</strong></li></ol><ol type="1" id="25339dcd-6248-8035-b082-fe9fc92e34bd" class="numbered-list" start="4"><li><strong>完了！</strong></li></ol><h3 id="25339dcd-6248-80f2-9051-e3e1cac37302" class="">Apple Watch ウィジェット（コンプリケーション）対応</h3><p id="25339dcd-6248-8018-80c6-f34bc857d78c" class="">Watch Faceにコンプリケーションを追加して、すぐにアプリにアクセス！</p><ol type="1" id="25339dcd-6248-8050-a3d5-c01ded9f6605" class="numbered-list" start="1"><li><strong>Watch Faceを長押し</strong></li></ol><ol type="1" id="25339dcd-6248-8065-a37f-f9fe944b26d4" class="numbered-list" start="2"><li><strong>「編集」をタップ</strong></li></ol><ol type="1" id="25339dcd-6248-8020-bd71-ec1a5b3144d8" class="numbered-list" start="3"><li><strong>コンプリケーション位置を選択</strong></li></ol><ol type="1" id="25339dcd-6248-80a8-a750-f18d5ffcf2fb" class="numbered-list" start="4"><li><strong>SwiftNotionを選択</strong></li></ol><ol type="1" id="25339dcd-6248-802f-977c-ce8aa2bf439c" class="numbered-list" start="5"><li><strong>完了</strong></li></ol><p id="25339dcd-6248-8022-8882-d0c49dd8018a" class="">これで時計画面からワンタップでアプリ起動できちゃう〜♪</p><h2 id="25339dcd-6248-80ac-8970-c865416691a0" class="">⚙️ 設定画面の詳細</h2><h3 id="25339dcd-6248-802e-b976-d7634f7aa5a3" class="">データベース管理のコツ</h3><h3 id="25339dcd-6248-8015-99b6-c38e763f5dec" class="">デフォルトデータベースの設定</h3><ul id="25339dcd-6248-80c5-a67d-e22bc7057966" class="bulleted-list"><li style="list-style-type:disc">データベース名の横にある⭐マークがデフォルト（よく使うやつ、音声認識での送信先）</li></ul><ul id="25339dcd-6248-80f2-80ab-f32d1e83d2e0" class="bulleted-list"><li style="list-style-type:disc"><strong>右スワイプ</strong> でデフォルト設定</li></ul><ul id="25339dcd-6248-8062-a89c-cebc6950c298" class="bulleted-list"><li style="list-style-type:disc"><strong>左スワイプ</strong> で削除</li></ul><h3 id="25339dcd-6248-806c-b7c9-d1695b851c20" class="">複数データベースの活用例</h3><ul id="25339dcd-6248-80b2-80ac-eb0bb0d57c76" class="bulleted-list"><li style="list-style-type:disc">📝 <strong>メモ帳</strong>: 日常の思いつき</li></ul><ul id="25339dcd-6248-80df-a17e-f3564639bc18" class="bulleted-list"><li style="list-style-type:disc">💡 <strong>アイデア</strong>: 企画・アイデア専用</li></ul><ul id="25339dcd-6248-8055-bfcd-c2e90c67d72a" class="bulleted-list"><li style="list-style-type:disc">🔗 <strong>ブックマーク</strong>: Webページ保存用</li></ul><ul id="25339dcd-6248-807f-a758-e873a2d043da" class="bulleted-list"><li style="list-style-type:disc">📚 <strong>読書メモ</strong>: 本の感想・要約</li></ul><h3 id="25339dcd-6248-803b-90b0-d509224fc8b3" class="">セキュリティについて</h3><ul id="25339dcd-6248-8033-b3e2-c594b096944f" class="bulleted-list"><li style="list-style-type:disc">インテグレーションシークレットは暗号化されて保存されます</li></ul><ul id="25339dcd-6248-8071-a711-ee14797f8f1e" class="bulleted-list"><li style="list-style-type:disc">アプリとExtension間のデータ共有は安全な仕組みを使用</li></ul><h2 id="25339dcd-6248-8004-b746-d6880a5fd8e6" class="">🆘 困ったときは</h2><h3 id="25339dcd-6248-80d2-92b4-da69e7ecbd1f" class="">よくあるトラブル</h3><h3 id="25339dcd-6248-8058-a2b5-d6524c5d7ab1" class="">「トークンが未設定です」エラー</h3><p id="25339dcd-6248-8079-b019-c9e17635f7de" class=""><strong>原因</strong>: Notion APIトークンが正しく設定されていない<br/><strong>解決方法</strong>:</p><ol type="1" id="25339dcd-6248-80fb-bc44-e84f9f1d85bd" class="numbered-list" start="1"><li>設定画面でインテグレーションシークレットを再確認</li></ol><ol type="1" id="25339dcd-6248-8000-876d-dc40bdcf30b1" class="numbered-list" start="2"><li>Notionで新しいIntegrationを作成し直す</li></ol><ol type="1" id="25339dcd-6248-8002-8096-eb436ad5a993" class="numbered-list" start="3"><li>コピペの際に余分なスペースが入っていないか確認</li></ol><h3 id="25339dcd-6248-8003-829a-e2f3cfeff095" class="">送信に失敗する</h3><p id="25339dcd-6248-80ca-b342-d6b9da575b50" class=""><strong>原因</strong>: データベースIDが間違っているか、Integrationが設定されていない<br/><strong>解決方法</strong>:</p><ol type="1" id="25339dcd-6248-80de-935f-c54641cf0950" class="numbered-list" start="1"><li>データベースIDを再確認</li></ol><ol type="1" id="25339dcd-6248-8032-970e-e1a3734b0091" class="numbered-list" start="2"><li>NotionでIntegrationがデータベースに設定されているか確認</li></ol><ol type="1" id="25339dcd-6248-8089-8db1-d11aa85a8a0b" class="numbered-list" start="3"><li>データベースが削除されていないか確認</li></ol><h3 id="25339dcd-6248-8091-ac11-ff38aaf70f9d" class="">Siriが反応しない</h3><p id="25339dcd-6248-80ff-b8ec-e75528376f84" class=""><strong>原因</strong>: Siriショートカットが正しく登録されていない<br/><strong>解決方法</strong>:</p><ol type="1" id="25339dcd-6248-805f-91da-da995bbee90b" class="numbered-list" start="1"><li>設定画面で「Siriショートカットを登録」を再実行</li></ol><ol type="1" id="25339dcd-6248-800d-94d4-ff7dd23f6296" class="numbered-list" start="2"><li>Siriの設定で「Notionでメモ」が登録されているか確認</li></ol><ol type="1" id="25339dcd-6248-8086-b84e-ce44eb590469" class="numbered-list" start="3"><li>iPhoneを再起動してSiriをリセット</li></ol><h3 id="25339dcd-6248-805b-8a9a-e320d59328ab" class="">Share Extensionが表示されない、Widgetが表示されない</h3><p id="25339dcd-6248-8081-a8e0-fff784f229d0" class=""><strong>解決方法</strong>:</p><ol type="1" id="25339dcd-6248-80ff-9bd0-d6690136b204" class="numbered-list" start="1"><li>iPhoneを再起動</li></ol><ol type="1" id="25339dcd-6248-8084-ac31-d7c376e95320" class="numbered-list" start="2"><li>アプリを一度削除して再インストール</li></ol><h3 id="25339dcd-6248-8049-8764-f913004afc02" class="">Apple Watchアプリが起動しない・同期されない</h3><p id="25339dcd-6248-80d5-ba8b-eb1a526603b9" class=""><strong>原因</strong>: Watch OS側でアプリがインストールされていない<br/><strong>解決方法</strong>:</p><ol type="1" id="25339dcd-6248-80f4-9991-c2c6aca20e33" class="numbered-list" start="1"><li>iPhoneのWatchアプリを開く</li></ol><ol type="1" id="25339dcd-6248-805f-847c-debc57b09564" class="numbered-list" start="2"><li>「マイウォッチ」タブで「SwiftNotion」を探す</li></ol><ol type="1" id="25339dcd-6248-8024-826a-c872563cb9b6" class="numbered-list" start="3"><li>アプリがオフになっている場合はオンにする</li></ol><ol type="1" id="25339dcd-6248-80de-ab70-cf57d418fc7e" class="numbered-list" start="4"><li>Apple Watchを再起動（Digital Crown + サイドボタンを同時長押し）</li></ol><ol type="1" id="25339dcd-6248-807d-8187-e1d4bf4686c7" class="numbered-list" start="5"><li>iPhoneとWatch両方を再起動</li></ol><h3 id="25339dcd-6248-809a-a2dd-e3a4b9b37507" class="">Apple Watchで送信に失敗する</h3><p id="25339dcd-6248-8055-9521-c964790596dd" class=""><strong>原因</strong>: iPhoneとWatchの接続が不安定、またはネットワーク問題<br/><strong>解決方法</strong>:</p><ol type="1" id="25339dcd-6248-80f2-89b4-fd78c7fb1945" class="numbered-list" start="1"><li>iPhoneとApple Watchが近くにあることを確認</li></ol><ol type="1" id="25339dcd-6248-8071-85e1-ccd04171b65a" class="numbered-list" start="2"><li>Bluetooth接続をいったんオフ→オンにする</li></ol><ol type="1" id="25339dcd-6248-8059-a7fe-f554be6a4118" class="numbered-list" start="3"><li>Wi-FiまたはLTE接続を確認</li></ol><ol type="1" id="25339dcd-6248-8058-a80b-d373417a3471" class="numbered-list" start="4"><li>後で自動送信されるまで待つ（オフライン対応済み）</li></ol><h3 id="25339dcd-6248-80c6-b15f-dd6e4169cf42" class="">お問い合わせ</h3><p id="25339dcd-6248-805c-95ec-f4c74ba284b4" class="">それでも解決しない場合は、お問合せフォームからお気軽にお問い合わせください！</p><p id="25339dcd-6248-802c-984a-f2ef375e3cc4" class=""><strong><a href="https://www.notion.so/24139dcd6248806e846ef0b838bee7b8?pvs=21">SwiftNotionお問合せ・バグ報告</a></strong></p><h2 id="25339dcd-6248-80e0-ac43-f0e7ebc6dec4" class="">🎉 まとめ</h2><p id="25339dcd-6248-80f2-a8fe-c6cd4662ab05" class="">SwiftNotionを使えば：</p><ul id="25339dcd-6248-80ad-97a5-c12223054eeb" class="bulleted-list"><li style="list-style-type:disc">✅ 思いついたアイデアを瞬時にNotionに保存</li></ul><ul id="25339dcd-6248-8080-93f9-eb7d509c8ee2" class="bulleted-list"><li style="list-style-type:disc">✅ 声だけでメモを記録（Siri対応）</li></ul><ul id="25339dcd-6248-800f-bc93-daea27463879" class="bulleted-list"><li style="list-style-type:disc">✅ 面白いWebページを簡単にコレクション</li></ul><ul id="25339dcd-6248-80d1-aa0e-ca76d363fd53" class="bulleted-list"><li style="list-style-type:disc">✅ ウィジェットで更にスピーディーにアクセス</li></ul><ul id="25339dcd-6248-8041-9669-c637166da55a" class="bulleted-list"><li style="list-style-type:disc">✅ Apple Watchで手首からサクッとメモ</li></ul><ul id="25339dcd-6248-809e-983a-df5902b8ad3e" class="bulleted-list"><li style="list-style-type:disc">✅ 複数のデータベースで情報を整理</li></ul><p id="25339dcd-6248-8079-9922-c8b61e8e079a" class="">あなたのNotionライフがもっと便利になること間違いなし！🚀</p><hr id="25339dcd-6248-8003-9815-e0f5ac29028f"/><p id="25339dcd-6248-806a-b8c0-d7da9b3eab67" class=""><strong>Version</strong>: 1.0.0<br/><strong>最終更新</strong>: 2025年8月10日</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,706 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SwiftNotion User Manual (English ver.)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+</style></head><body><article id="25339dcd-6248-8018-85f9-ca05a241a933" class="page sans"><header><h1 class="page-title">SwiftNotion User Manual (English ver.)</h1><p class="page-description"></p></header><div class="page-body"><p id="25339dcd-6248-80a2-9040-ccb788075a75" class=""><a href="manual_jp.html">SwiftNotion 使用方法マニュアル(日本語)</a> </p><h1 id="25339dcd-6248-803d-b169-fa382d0f3a4b" class="">📱 What is SwiftNotion?</h1><p id="25339dcd-6248-805c-afec-e608db7287fe" class="">SwiftNotion is an app that allows you to easily send notes to your Notion databases from your iPhone, iPad, and Apple Watch!<br/>It supports not only text notes, but also sharing web pages, quick access from home screen widgets, easy input from Apple Watch, and even Siri voice commands.</p><p id="25339dcd-6248-8085-9f0c-ea3bd98dce94" class="">This app has a simple function of only posting to the Notion Database, so it does not refer to your Notion data, and your data is protected. Please use it with confidence.</p><h2 id="25339dcd-6248-809b-adce-c63cc0472ed0" class="">‼️ Important Notes</h2><ul id="25339dcd-6248-8041-bc9a-dd73f1939ad9" class="bulleted-list"><li style="list-style-type:disc">Only databases with a text property named &quot;Title&quot; are supported. The note content is recorded in this text property, so an error will occur if it doesn&#x27;t exist.</li></ul><ul id="25339dcd-6248-8096-bbc6-c51464cd13ed" class="bulleted-list"><li style="list-style-type:disc">Having a URL property named &quot;URL&quot; is convenient when sharing websites.</li></ul><ul id="25339dcd-6248-8087-8641-c9fd09719044" class="bulleted-list"><li style="list-style-type:disc">Having a date property named &quot;Created time&quot; (which I believe is the default for Databases) is convenient for recording the date and time of the note.</li></ul><ul id="25339dcd-6248-8076-9101-ea4add55f2d2" class="bulleted-list"><li style="list-style-type:disc">It&#x27;s okay to have other properties. This app won&#x27;t reference them, but it won&#x27;t interfere with them either.</li></ul><h2 id="25339dcd-6248-80ee-ad03-c0de13d96172" class="">💎 Swift Notion and Swift Notion Lite?</h2><table id="25339dcd-6248-80db-b14c-c438b291090a" class="simple-table"><tbody><tr id="25339dcd-6248-80da-8d4a-f92827b684e3"><td id=":Q&lt;C" class=""></td><td id="bqob" class="">Swift Notion</td><td id="`fUd" class="">Swift Notion Lite（Developing）</td></tr><tr id="25339dcd-6248-80d8-a46a-e0b68b8cbcac"><td id=":Q&lt;C" class="">Base App</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">⚪︎（with Ad）</td></tr><tr id="25339dcd-6248-80ac-a4dc-d832987ef3b3"><td id=":Q&lt;C" class="">Share</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">⚪︎（with Ad）</td></tr><tr id="25339dcd-6248-805c-9359-c36768a25b3b"><td id=":Q&lt;C" class="">Widget</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">⚪︎（with Ad）</td></tr><tr id="25339dcd-6248-806c-9abb-fd35f680e9f8"><td id=":Q&lt;C" class="">Siri</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">❌</td></tr><tr id="25339dcd-6248-8083-8360-c85373e4286e"><td id=":Q&lt;C" class="">Watch App</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">❌</td></tr><tr id="25339dcd-6248-802e-9480-e1602af68d16"><td id=":Q&lt;C" class="">Watch Siri</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">❌</td></tr><tr id="25339dcd-6248-8057-b5c1-c11b1976b2dc"><td id=":Q&lt;C" class="">Watch Complication</td><td id="bqob" class="">⚪︎</td><td id="`fUd" class="">❌</td></tr></tbody></table><h2 id="25339dcd-6248-800d-b14f-ca8f0d60ea5c" class="">🚀 Initial Setup</h2><h3 id="25339dcd-6248-80ad-8072-ed6ac7aed2be" class="">Step 1: Preparation in Notion</h3><ol type="1" id="25339dcd-6248-8036-bb79-c6680036369b" class="numbered-list" start="1"><li><strong>Create a Notion Integration</strong><ul id="25339dcd-6248-800a-b067-f3e7b1b78f66" class="bulleted-list"><li style="list-style-type:disc">Access <a href="https://developers.notion.com/">Notion Developers</a></li></ul><ul id="25339dcd-6248-8024-a7ae-d75e3a44a8b5" class="bulleted-list"><li style="list-style-type:disc">Click on &quot;New integration&quot;</li></ul><ul id="25339dcd-6248-806d-b260-fd99a9c1132f" class="bulleted-list"><li style="list-style-type:disc">Enter an Integration name and create it</li></ul><ul id="25339dcd-6248-8017-9ddf-dc076e360a6d" class="bulleted-list"><li style="list-style-type:disc">Copy the <strong>Internal Integration Token</strong> and paste it into a memo app or similar (you&#x27;ll use it later)</li></ul></li></ol><ol type="1" id="25339dcd-6248-804d-9ca8-fc6f4fba85cb" class="numbered-list" start="2"><li><strong>Prepare a Notion Database</strong><ul id="25339dcd-6248-800d-a75d-db9f8163ff5d" class="bulleted-list"><li style="list-style-type:disc">Create a new database in Notion or use an existing one</li></ul><ul id="25339dcd-6248-80e1-aca2-c1a2fe9e5485" class="bulleted-list"><li style="list-style-type:disc">The database needs the following properties:<ul id="25339dcd-6248-8053-8bc8-e6eb82420eb8" class="bulleted-list"><li style="list-style-type:circle"><strong>Title</strong> (Title) - For the main text</li></ul><ul id="25339dcd-6248-8083-ac00-f19da4bcf69b" class="bulleted-list"><li style="list-style-type:circle"><strong>URL</strong> (URL) - For sharing web pages (optional)</li></ul></li></ul></li></ol><ol type="1" id="25339dcd-6248-8066-be0d-d398806d4ecc" class="numbered-list" start="3"><li><strong>Invite the Integration to the Database</strong><ul id="25339dcd-6248-804f-a724-f127ff1a09aa" class="bulleted-list"><li style="list-style-type:disc">In the top right of the database, click &quot;...&quot; -&gt; &quot;Add connections&quot;</li></ul><ul id="25339dcd-6248-803c-babb-c06d626838c4" class="bulleted-list"><li style="list-style-type:disc">Select the Integration you created</li></ul></li></ol><ol type="1" id="25339dcd-6248-8069-90ba-d6b049710889" class="numbered-list" start="4"><li><strong>Get the Database ID</strong><ul id="25339dcd-6248-80ba-b989-fe7d80b82482" class="bulleted-list"><li style="list-style-type:disc">Copy the database URL</li></ul><ul id="25339dcd-6248-8059-ac98-cd4e1d40f2f7" class="bulleted-list"><li style="list-style-type:disc">The 32 characters after <code>https://www.notion.so/</code> and before the <code>?</code> in the URL is the Database ID</li></ul><ul id="25339dcd-6248-8053-8a93-e2b74cb9f1f2" class="bulleted-list"><li style="list-style-type:disc">Example: <code>abc123def456...</code></li></ul><ul id="25339dcd-6248-80f1-90d3-f0b235e90a30" class="bulleted-list"><li style="list-style-type:disc">Copy the entire URL, paste it into a memo app, and extract just the ID for later use.</li></ul></li></ol><h3 id="25339dcd-6248-80d2-aae1-cfbf7f19f2a1" class="">Step 2: Configuration in the SwiftNotion App</h3><ol type="1" id="25339dcd-6248-80ec-be1c-db03d7cee984" class="numbered-list" start="1"><li><strong>Launch the app</strong><ul id="25339dcd-6248-806f-b166-e85529d9ebcd" class="bulleted-list"><li style="list-style-type:disc">Tap the gear icon ⚙️ in the upper right corner to go to the settings screen</li></ul></li></ol><ol type="1" id="25339dcd-6248-808d-9c12-d76380aea38c" class="numbered-list" start="2"><li><strong>Set the Integration Secret</strong><ul id="25339dcd-6248-80d8-92f8-f9185de19b24" class="bulleted-list"><li style="list-style-type:disc">In the &quot;Integration Secret&quot; field, enter the token you obtained in Step 1-1</li></ul></li></ol><ol type="1" id="25339dcd-6248-8037-a5e4-d0d91d3e9d19" class="numbered-list" start="3"><li><strong>Add a Database</strong><ul id="25339dcd-6248-80f0-89a2-daf808b370ea" class="bulleted-list"><li style="list-style-type:disc">In the &quot;Add New Database&quot; section:<ul id="25339dcd-6248-802f-94b1-d97d5a27da08" class="bulleted-list"><li style="list-style-type:circle"><strong>Name</strong>: An easy-to-understand name (e.g., &quot;Notes,&quot; &quot;Ideas&quot;)</li></ul><ul id="25339dcd-6248-802b-b434-e654479f02cd" class="bulleted-list"><li style="list-style-type:circle"><strong>ID</strong>: The Database ID you obtained in Step 1-4</li></ul></li></ul><ul id="25339dcd-6248-8046-96ed-dd818437a3bb" class="bulleted-list"><li style="list-style-type:disc">Tap the &quot;Add&quot; button</li></ul></li></ol><ol type="1" id="25339dcd-6248-8047-a2c8-f00570508b81" class="numbered-list" start="4"><li><strong>Register Siri Shortcut (Optional)</strong><ul id="25339dcd-6248-80bb-b9a0-f5de336eb214" class="bulleted-list"><li style="list-style-type:disc">Tap the &quot;Register Siri Shortcut&quot; button</li></ul><ul id="25339dcd-6248-8012-a960-e53d8055d691" class="bulleted-list"><li style="list-style-type:disc">When Siri launches, say &quot;Memo with Notion&quot; to register it</li></ul></li></ol><ol type="1" id="25339dcd-6248-8044-b909-e30b6f3c2c98" class="numbered-list" start="5"><li><strong>Setup Complete!</strong><ul id="25339dcd-6248-806b-8d56-d9b9fcf66cda" class="bulleted-list"><li style="list-style-type:disc">Tap &quot;Back&quot; in the upper left to return to the main screen</li></ul></li></ol><h2 id="25339dcd-6248-8074-bf49-f483d6190718" class="">✍️ How to Post a Note</h2><h3 id="25339dcd-6248-8057-997b-ccab5c8fede0" class="">Basic Usage</h3><ol type="1" id="25339dcd-6248-8087-86c9-deb5040ea5f4" class="numbered-list" start="1"><li><strong>Launch the app</strong></li></ol><ol type="1" id="25339dcd-6248-8062-91c9-c8512e80ca17" class="numbered-list" start="2"><li><strong>Select a destination</strong><ul id="25339dcd-6248-80a8-94e1-d3e1da74f89e" class="bulleted-list"><li style="list-style-type:disc">Select the destination database from the dropdown at the top of the screen</li></ul></li></ol><ol type="1" id="25339dcd-6248-8065-aaa3-f6282903f810" class="numbered-list" start="3"><li><strong>Enter your note</strong><ul id="25339dcd-6248-804b-8814-d364be5de32d" class="bulleted-list"><li style="list-style-type:disc">Enter your note in the large text area</li></ul></li></ol><ol type="1" id="25339dcd-6248-80cb-8977-f831c146bdb9" class="numbered-list" start="4"><li><strong>Send</strong><ul id="25339dcd-6248-8009-b5ac-dc36bd566f4e" class="bulleted-list"><li style="list-style-type:disc">Tap the &quot;Send&quot; button</li></ul><ul id="25339dcd-6248-80e4-a561-dcd3ea13e03f" class="bulleted-list"><li style="list-style-type:disc">If successful, a &quot;Sent successfully&quot; message will be displayed</li></ul></li></ol><h3 id="25339dcd-6248-80c2-b162-c92ecb4d308f" class="">💡 Tips</h3><ul id="25339dcd-6248-80e6-964a-c133edf42417" class="bulleted-list"><li style="list-style-type:disc">You can enter as many characters as you like!</li></ul><ul id="25339dcd-6248-80c4-926c-caa4994b9edc" class="bulleted-list"><li style="list-style-type:disc">Japanese predictive text is automatically turned off</li></ul><ul id="25339dcd-6248-808b-a104-d86c7343541b" class="bulleted-list"><li style="list-style-type:disc">You can register multiple databases and use them for different purposes</li></ul><h2 id="25339dcd-6248-802d-b12c-c08b1e0bead5" class="">🎤 Siri Voice Control</h2><p id="25339dcd-6248-803d-b0ca-f9a829865622" class="">Save notes to Notion with just your voice, even when your hands are full!</p><h3 id="25339dcd-6248-80d7-b25c-db8a4233464d" class="">How to use Siri</h3><ol type="1" id="25339dcd-6248-80bc-b7ab-c272a7dad3bf" class="numbered-list" start="1"><li><strong>Say &quot;Hey, Siri&quot; or long-press the side button</strong></li></ol><ol type="1" id="25339dcd-6248-8028-9e06-d42335026966" class="numbered-list" start="2"><li><strong>Say &quot;Memo with Notion&quot;</strong></li></ol><ol type="1" id="25339dcd-6248-80e2-be23-f2b6ee64acc1" class="numbered-list" start="3"><li><strong>Speak your note</strong><ul id="25339dcd-6248-80ca-9083-c507bc46bad6" class="bulleted-list"><li style="list-style-type:disc">&quot;Tomorrow&#x27;s meeting is at 2 PM&quot;</li></ul><ul id="25339dcd-6248-80e3-b2cf-f3e943f8d523" class="bulleted-list"><li style="list-style-type:disc">&quot;Shopping list: milk, bread, eggs&quot;</li></ul><ul id="25339dcd-6248-80fa-b376-f52cc10dd448" class="bulleted-list"><li style="list-style-type:disc">Anything is okay!</li></ul></li></ol><ol type="1" id="25339dcd-6248-80f9-a975-f2672eb6566b" class="numbered-list" start="4"><li><strong>Done</strong><ul id="25339dcd-6248-80d5-a1ea-c291d0a4e22a" class="bulleted-list"><li style="list-style-type:disc">Siri will reply, &quot;I&#x27;ve recorded it in Notion!&quot;</li></ul></li></ol><h3 id="25339dcd-6248-8060-84e7-c2e436d63c59" class="">⚡ Useful Points</h3><ul id="25339dcd-6248-80e4-a37c-da5eb259e4a8" class="bulleted-list"><li style="list-style-type:disc">You can take notes anytime, even with dirty hands or while driving</li></ul><ul id="25339dcd-6248-804f-9e16-d3d7c079f59f" class="bulleted-list"><li style="list-style-type:disc">Supports both long sentences and short memos</li></ul><ul id="25339dcd-6248-803d-830d-e7c36235ff74" class="bulleted-list"><li style="list-style-type:disc">Japanese voice recognition is also perfect</li></ul><ul id="25339dcd-6248-801f-9bbb-f87f12c83e81" class="bulleted-list"><li style="list-style-type:disc">Automatically saves to the default database you&#x27;ve set</li></ul><h3 id="25339dcd-6248-805a-afdc-e89cffc3ec5c" class="">🔧 Customizing Siri Shortcuts</h3><ul id="25339dcd-6248-80a5-9f0b-efa7b50a2433" class="bulleted-list"><li style="list-style-type:disc">In the settings screen, you can press &quot;Register Siri Shortcut&quot; to change it to your favorite phrase</li></ul><ul id="25339dcd-6248-8042-8bbb-d7f9392f7b29" class="bulleted-list"><li style="list-style-type:disc">You can set it to your own preferred phrase, like &quot;Take a note&quot; or &quot;Record idea&quot;</li></ul><h2 id="25339dcd-6248-8097-b755-cea20f3d33f1" class="">🌐 Sharing Web Pages</h2><p id="25339dcd-6248-80cd-8c35-d98a79cd72d9" class="">You can save interesting pages you find in Safari or Chrome to Notion!</p><h3 id="25339dcd-6248-80dd-8ddb-f098f4b955f9" class="">How to use</h3><ol type="1" id="25339dcd-6248-8091-8ce3-c1dc5634e354" class="numbered-list" start="1"><li><strong>Display the page in Safari</strong></li></ol><ol type="1" id="25339dcd-6248-80bc-b9bf-efb61cedbe58" class="numbered-list" start="2"><li><strong>Tap the share button</strong><ul id="25339dcd-6248-801b-859e-c2cae23e324d" class="bulleted-list"><li style="list-style-type:disc">Tap the share button at the bottom of the screen (the square with an arrow)</li></ul></li></ol><ol type="1" id="25339dcd-6248-8011-9e37-c6ae0bb9c8e2" class="numbered-list" start="3"><li><strong>Select SwiftNotion</strong><ul id="25339dcd-6248-80f4-a761-fefc33a9e4ae" class="bulleted-list"><li style="list-style-type:disc">Select &quot;SwiftNotion&quot; from the share menu</li></ul></li></ol><ol type="1" id="25339dcd-6248-80fd-82ef-ce5fecdd591a" class="numbered-list" start="4"><li><strong>Confirm and edit the content</strong><ul id="25339dcd-6248-8025-8cdd-f95d38439a7e" class="bulleted-list"><li style="list-style-type:disc">The title and URL are automatically entered</li></ul><ul id="25339dcd-6248-8081-abfd-f85bd0a9b850" class="bulleted-list"><li style="list-style-type:disc">You can edit them if necessary</li></ul></li></ol><ol type="1" id="25339dcd-6248-806d-95a8-ebb2272c2dba" class="numbered-list" start="5"><li><strong>Select a destination and send</strong><ul id="25339dcd-6248-80e6-a247-c1b3e909b9fe" class="bulleted-list"><li style="list-style-type:disc">Select a database and tap &quot;Send&quot;</li></ul></li></ol><h3 id="25339dcd-6248-80f9-8155-f66ec6dd549a" class="">⚡ Useful Points</h3><ul id="25339dcd-6248-80ce-969d-cbb1c9fd3f8f" class="bulleted-list"><li style="list-style-type:disc">The page title and URL are automatically retrieved</li></ul><ul id="25339dcd-6248-8061-b947-e4ded1fa6c7f" class="bulleted-list"><li style="list-style-type:disc">You can edit the title, so you can add your own description</li></ul><ul id="25339dcd-6248-80c0-8ee8-c15df5327a4a" class="bulleted-list"><li style="list-style-type:disc">If there is a URL property on the Notion side, it will be saved as a link</li></ul><h2 id="25339dcd-6248-8062-adaa-c5365f348b63" class="">📲 Widget Function</h2><p id="25339dcd-6248-802a-a877-e2875208739a" class="">Access the note creation screen with one tap from your home screen!</p><h3 id="25339dcd-6248-8051-85e3-f3eadd1edb70" class="">How to Add a Widget</h3><ol type="1" id="25339dcd-6248-80a3-afd5-d95a3c753c12" class="numbered-list" start="1"><li><strong>Long-press the home screen</strong><ul id="25339dcd-6248-807d-ac7b-e147dc549d6a" class="bulleted-list"><li style="list-style-type:disc">The app icons will start to jiggle</li></ul></li></ol><ol type="1" id="25339dcd-6248-806e-a5f8-f527e2f002f4" class="numbered-list" start="2"><li><strong>Tap the &quot;Edit&quot; button</strong><ul id="25339dcd-6248-8032-a751-c552a2522073" class="bulleted-list"><li style="list-style-type:disc">Tap the &quot;Edit&quot; button that appears in the upper left</li></ul></li></ol><ol type="1" id="25339dcd-6248-805d-9971-cddc58ac5382" class="numbered-list" start="3"><li><strong>Tap &quot;Add Widget&quot;</strong><ul id="25339dcd-6248-805d-98a2-ebb0f8fed6c8" class="bulleted-list"><li style="list-style-type:disc">Tap the &quot;Add Widget&quot; item from the menu</li></ul></li></ol><ol type="1" id="25339dcd-6248-8033-b6fe-fb356e01f049" class="numbered-list" start="4"><li><strong>Search for SwiftNotion</strong><ul id="25339dcd-6248-80b7-9413-fc2dbbb18f99" class="bulleted-list"><li style="list-style-type:disc">Search for &quot;SwiftNotion&quot;</li></ul></li></ol><ol type="1" id="25339dcd-6248-80e2-82e8-fb13b47b34e7" class="numbered-list" start="5"><li><strong>Select a size</strong><ul id="25339dcd-6248-805f-89bc-feb2e3d2cd11" class="bulleted-list"><li style="list-style-type:disc">Select Small or Medium size</li></ul></li></ol><ol type="1" id="25339dcd-6248-8051-9aa4-da9c68c85cc9" class="numbered-list" start="6"><li><strong>Tap &quot;Add Widget&quot;</strong></li></ol><ol type="1" id="25339dcd-6248-8064-a3f7-e975b046780d" class="numbered-list" start="7"><li><strong>Done</strong><ul id="25339dcd-6248-80de-a586-ef008b2645a0" class="bulleted-list"><li style="list-style-type:disc">Tap &quot;Done&quot; on the home screen</li></ul></li></ol><h3 id="25339dcd-6248-8045-9a62-c323ac887ba2" class="">How to use the Widget</h3><ul id="25339dcd-6248-80a1-9ed8-e19c9ee2e553" class="bulleted-list"><li style="list-style-type:disc">Just tap the widget to instantly open the note creation screen</li></ul><ul id="25339dcd-6248-80c1-9511-f1a5150ee4c6" class="bulleted-list"><li style="list-style-type:disc">It&#x27;s super convenient because you don&#x27;t have to search for the app!</li></ul><h2 id="25339dcd-6248-80ee-b8b6-f96bc31812b5" class="">⌚ Apple Watch Function</h2><p id="25339dcd-6248-80a0-9ee9-d2838b286624" class="">Quickly take notes from your wrist! You can send notes directly to Notion from your Apple Watch!</p><h3 id="25339dcd-6248-803a-af61-cfad596c3dc5" class="">How to use the Apple Watch App</h3><ol type="1" id="25339dcd-6248-805f-a5e5-e28dbf8fecfa" class="numbered-list" start="1"><li><strong>Launch the app on your Apple Watch</strong><ul id="25339dcd-6248-80b8-9b78-d1013d7da748" class="bulleted-list"><li style="list-style-type:disc">Press the Digital Crown to display the app list</li></ul><ul id="25339dcd-6248-80b4-bb96-c3f3fb4c3a3b" class="bulleted-list"><li style="list-style-type:disc">Tap the SwiftNotion app</li></ul></li></ol><ol type="1" id="25339dcd-6248-806f-89d6-f9ac553545b6" class="numbered-list" start="2"><li><strong>Select a destination database</strong><ul id="25339dcd-6248-804f-b8c0-c30df247c547" class="bulleted-list"><li style="list-style-type:disc">Select the destination at the top of the screen (the databases you set on your iPhone will be displayed)</li></ul></li></ol><ol type="1" id="25339dcd-6248-80bd-9826-f56a4b498adc" class="numbered-list" start="3"><li><strong>Enter your note</strong><ul id="25339dcd-6248-80a4-bd8e-d2862ed5675c" class="bulleted-list"><li style="list-style-type:disc">Enter your note on the text input screen</li></ul><ul id="25339dcd-6248-8001-bf4e-caaf6eb89538" class="bulleted-list"><li style="list-style-type:disc">You can use voice input, handwriting, and voice-to-text</li></ul></li></ol><ol type="1" id="25339dcd-6248-8026-add1-ff52644c1b57" class="numbered-list" start="4"><li><strong>Send</strong><ul id="25339dcd-6248-80d6-ae61-fabffc018a81" class="bulleted-list"><li style="list-style-type:disc">Tap the &quot;Send&quot; button to finish!</li></ul></li></ol><h3 id="25339dcd-6248-808d-a2ca-e629d0e52c26" class="">⚡ Useful Points of Apple Watch</h3><ul id="25339dcd-6248-80b4-a1ee-ed87c12293a3" class="bulleted-list"><li style="list-style-type:disc"><strong>Voice Input</strong>: Input notes just by calling &quot;Hey, Siri&quot; or speaking while pressing the Digital Crown</li></ul><ul id="25339dcd-6248-80ce-8a96-d5684476c981" class="bulleted-list"><li style="list-style-type:disc"><strong>Handwriting</strong>: Input by writing characters with your finger (supports hiragana, katakana, and numbers)</li></ul><ul id="25339dcd-6248-80ea-bd8a-ca4ccd2571b5" class="bulleted-list"><li style="list-style-type:disc"><strong>Voice-to-Text</strong>: Automatically converts what you say into text</li></ul><ul id="25339dcd-6248-8021-863f-f6ba76d2e8c1" class="bulleted-list"><li style="list-style-type:disc"><strong>Sync with iPhone</strong>: The databases you set on your iPhone are immediately available</li></ul><ul id="25339dcd-6248-80ab-8f2a-cb2b2ecc30c5" class="bulleted-list"><li style="list-style-type:disc"><strong>Offline Support</strong>: Even if the network is temporarily unstable, it will be sent later</li></ul><h3 id="25339dcd-6248-802f-994b-e621d60a7a4e" class="">🎯 Apple Watch Use Cases</h3><ul id="25339dcd-6248-8060-9b6d-e241539f1cb1" class="bulleted-list"><li style="list-style-type:disc">🏃‍♀️ <strong>While running</strong>: Instantly note down ideas that come to mind</li></ul><ul id="25339dcd-6248-800a-ac29-f22395a21271" class="bulleted-list"><li style="list-style-type:disc">🍳 <strong>While cooking</strong>: Take recipe notes by voice even with dirty hands</li></ul><ul id="25339dcd-6248-80e2-931d-e5f42a232db7" class="bulleted-list"><li style="list-style-type:disc">🚗 <strong>While driving</strong>: Safely create a to-do list by voice</li></ul><ul id="25339dcd-6248-8027-b87f-f953e180a28a" class="bulleted-list"><li style="list-style-type:disc">💤 <strong>Before bed</strong>: Easily take notes even in a dark room</li></ul><ul id="25339dcd-6248-8053-993e-f11f17c3d3f2" class="bulleted-list"><li style="list-style-type:disc">📱 <strong>When you don&#x27;t have your iPhone</strong>: You can take notes with just your Watch</li></ul><h3 id="25339dcd-6248-80c6-bd20-dd0f6a9f21de" class="">Apple Watch Siri Function</h3><p id="25339dcd-6248-80ef-96c1-dce8fb1877a7" class="">You can also use Siri voice control on your Apple Watch!</p><ol type="1" id="25339dcd-6248-8065-826f-fd4326f2f4c0" class="numbered-list" start="1"><li><strong>Long-press the Digital Crown</strong> or say <strong>&quot;Hey, Siri&quot;</strong></li></ol><ol type="1" id="25339dcd-6248-8049-8be2-c3261fb6c70d" class="numbered-list" start="2"><li><strong>Say &quot;Memo with Notion&quot;</strong></li></ol><ol type="1" id="25339dcd-6248-8068-a517-ff5742260a49" class="numbered-list" start="3"><li><strong>Speak your note</strong></li></ol><ol type="1" id="25339dcd-6248-80d4-8fab-e745d760b1d1" class="numbered-list" start="4"><li><strong>Done!</strong></li></ol><h3 id="25339dcd-6248-80d0-bcef-d9af37e5456a" class="">Apple Watch Widget (Complication) Support</h3><p id="25339dcd-6248-8097-aed8-c2ff92788803" class="">Add a complication to your Watch Face for quick access to the app!</p><ol type="1" id="25339dcd-6248-8049-a066-f2856ef44200" class="numbered-list" start="1"><li><strong>Long-press the Watch Face</strong></li></ol><ol type="1" id="25339dcd-6248-8018-8226-fd657a9c7505" class="numbered-list" start="2"><li><strong>Tap &quot;Edit&quot;</strong></li></ol><ol type="1" id="25339dcd-6248-8086-b7a8-caa38c3fac30" class="numbered-list" start="3"><li><strong>Select a complication location</strong></li></ol><ol type="1" id="25339dcd-6248-807f-ba44-f75ae97e4f14" class="numbered-list" start="4"><li><strong>Select SwiftNotion</strong></li></ol><ol type="1" id="25339dcd-6248-8003-8274-d254063f7136" class="numbered-list" start="5"><li><strong>Done</strong></li></ol><p id="25339dcd-6248-8040-bca4-da55568d96ea" class="">Now you can launch the app with one tap from the watch screen~♪</p><h2 id="25339dcd-6248-80c6-8537-c19dfd3a58d9" class="">⚙️ Detailed Settings Screen</h2><h3 id="25339dcd-6248-80d6-bbb6-e4a7e0193df6" class="">Database Management Tips</h3><h3 id="25339dcd-6248-8020-ad7b-e3a3b84e3a89" class="">Setting the Default Database</h3><ul id="25339dcd-6248-80ae-8b43-e3c7bb56f649" class="bulleted-list"><li style="list-style-type:disc">The ⭐ mark next to the database name is the default (the one you use often, the destination for voice recognition)</li></ul><ul id="25339dcd-6248-80db-8ecb-d65b735ef07c" class="bulleted-list"><li style="list-style-type:disc"><strong>Swipe right</strong> to set as default</li></ul><ul id="25339dcd-6248-80c7-974a-c9ddf027694a" class="bulleted-list"><li style="list-style-type:disc"><strong>Swipe left</strong> to delete</li></ul><h3 id="25339dcd-6248-80c1-8be6-eb9ebae45c5f" class="">Examples of Using Multiple Databases</h3><ul id="25339dcd-6248-80f2-9982-fc4f5bbd57ce" class="bulleted-list"><li style="list-style-type:disc">📝 <strong>Notepad</strong>: Everyday thoughts</li></ul><ul id="25339dcd-6248-800b-9537-cfea8d11029b" class="bulleted-list"><li style="list-style-type:disc">💡 <strong>Ideas</strong>: Dedicated to projects and ideas</li></ul><ul id="25339dcd-6248-801c-9fc8-e6fd5f70121e" class="bulleted-list"><li style="list-style-type:disc">🔗 <strong>Bookmarks</strong>: For saving web pages</li></ul><ul id="25339dcd-6248-806c-873e-eef72c3afe60" class="bulleted-list"><li style="list-style-type:disc">📚 <strong>Reading Notes</strong>: Book reviews and summaries</li></ul><h3 id="25339dcd-6248-800f-a3f1-d8a4a26d16b7" class="">About Security</h3><ul id="25339dcd-6248-80e0-9a3d-de988ae7bd2f" class="bulleted-list"><li style="list-style-type:disc">The integration secret is stored encrypted</li></ul><ul id="25339dcd-6248-80de-8881-ea3d0d05419d" class="bulleted-list"><li style="list-style-type:disc">Secure mechanisms are used for data sharing between the app and extensions</li></ul><h2 id="25339dcd-6248-8033-bec2-db9b06e3a0b1" class="">🆘 Troubleshooting</h2><h3 id="25339dcd-6248-80d4-a5ee-da4ea533c7d3" class="">Common Problems</h3><h3 id="25339dcd-6248-80e4-9a38-f23052213c0b" class="">&quot;Token not set&quot; error</h3><p id="25339dcd-6248-805a-84e8-cd7becd6fe4a" class=""><strong>Cause</strong>: The Notion API token is not set correctly<br/><strong>Solution</strong>:</p><ol type="1" id="25339dcd-6248-80a1-a96e-ddaeec37e0e9" class="numbered-list" start="1"><li>Re-check the integration secret on the settings screen</li></ol><ol type="1" id="25339dcd-6248-8086-92e2-d84fb8e70aa5" class="numbered-list" start="2"><li>Create a new Integration in Notion again</li></ol><ol type="1" id="25339dcd-6248-80c6-a12e-f2facd41d81d" class="numbered-list" start="3"><li>Check if there are any extra spaces when you copy-pasted</li></ol><h3 id="25339dcd-6248-8081-b934-f9722041e637" class="">Sending fails</h3><p id="25339dcd-6248-80ff-9c3b-ce04c62aa3ac" class=""><strong>Cause</strong>: The Database ID is incorrect, or the Integration is not configured<br/><strong>Solution</strong>:</p><ol type="1" id="25339dcd-6248-80c5-827c-c03863f46e1a" class="numbered-list" start="1"><li>Re-check the Database ID</li></ol><ol type="1" id="25339dcd-6248-808f-98cb-f0a1d2f5edc8" class="numbered-list" start="2"><li>Check if the Integration is configured for the database in Notion</li></ol><ol type="1" id="25339dcd-6248-809e-b38e-d27008c1d0e4" class="numbered-list" start="3"><li>Check if the database has been deleted</li></ol><h3 id="25339dcd-6248-80ff-b2fa-fdbc4ed0dcd4" class="">Siri doesn&#x27;t respond</h3><p id="25339dcd-6248-80ff-aad1-de529d41d569" class=""><strong>Cause</strong>: The Siri shortcut is not registered correctly<br/><strong>Solution</strong>:</p><ol type="1" id="25339dcd-6248-8043-b078-e9e559291cb9" class="numbered-list" start="1"><li>Re-run &quot;Register Siri Shortcut&quot; on the settings screen</li></ol><ol type="1" id="25339dcd-6248-8042-911e-cb10b1edf0fc" class="numbered-list" start="2"><li>Check if &quot;Memo with Notion&quot; is registered in Siri&#x27;s settings</li></ol><ol type="1" id="25339dcd-6248-80b6-94f3-f6a69ca39025" class="numbered-list" start="3"><li>Restart your iPhone to reset Siri</li></ol><h3 id="25339dcd-6248-8091-ba55-d170e97d8d05" class="">Share Extension or Widget doesn&#x27;t appear</h3><p id="25339dcd-6248-80f3-9c09-fd1872c3edee" class=""><strong>Solution</strong>:</p><ol type="1" id="25339dcd-6248-802b-9118-f2d9f7d99e81" class="numbered-list" start="1"><li>Restart your iPhone</li></ol><ol type="1" id="25339dcd-6248-80ab-8f30-cfa7425cb052" class="numbered-list" start="2"><li>Delete and reinstall the app</li></ol><h3 id="25339dcd-6248-8013-a3d4-d18b6dfd37c3" class="">Apple Watch app doesn&#x27;t launch or sync</h3><p id="25339dcd-6248-800e-926a-d89e3282ee03" class=""><strong>Cause</strong>: The app is not installed on the Watch OS side<br/><strong>Solution</strong>:</p><ol type="1" id="25339dcd-6248-80d1-b4e7-dbe57376044e" class="numbered-list" start="1"><li>Open the Watch app on your iPhone</li></ol><ol type="1" id="25339dcd-6248-8029-a13b-f81a3d6e89fb" class="numbered-list" start="2"><li>Find &quot;SwiftNotion&quot; in the &quot;My Watch&quot; tab</li></ol><ol type="1" id="25339dcd-6248-80cd-9093-f2a0a6012df4" class="numbered-list" start="3"><li>If the app is turned off, turn it on</li></ol><ol type="1" id="25339dcd-6248-80cd-857d-f907991f9678" class="numbered-list" start="4"><li>Restart your Apple Watch (long-press the Digital Crown + side button simultaneously)</li></ol><ol type="1" id="25339dcd-6248-8060-b6e4-e4895e26ae41" class="numbered-list" start="5"><li>Restart both your iPhone and Watch</li></ol><h3 id="25339dcd-6248-8081-a8ba-f1e6d86d21e8" class="">Sending fails on Apple Watch</h3><p id="25339dcd-6248-802a-8885-d9ee5b1bcd45" class=""><strong>Cause</strong>: Unstable connection between iPhone and Watch, or a network problem<br/><strong>Solution</strong>:</p><ol type="1" id="25339dcd-6248-8033-8ffa-cb0a543649dd" class="numbered-list" start="1"><li>Make sure your iPhone and Apple Watch are close to each other</li></ol><ol type="1" id="25339dcd-6248-8057-9ef6-d31dc625a67b" class="numbered-list" start="2"><li>Turn Bluetooth off and then on again</li></ol><ol type="1" id="25339dcd-6248-802a-8657-e9dcb7751448" class="numbered-list" start="3"><li>Check your Wi-Fi or LTE connection</li></ol><ol type="1" id="25339dcd-6248-8062-82d1-fa2b506a8324" class="numbered-list" start="4"><li>Wait for it to be sent automatically later (offline support is available)</li></ol><h3 id="25339dcd-6248-80ad-a5b1-c0bbef136198" class="">Contact Us</h3><p id="25339dcd-6248-809d-b1d4-fc90c871031e" class="">If you still can&#x27;t resolve the issue, please feel free to contact us using the inquiry form!</p><p id="25339dcd-6248-8026-ac4b-f549e5b1b8b4" class=""><strong><a href="https://www.notion.so/24139dcd6248806e846ef0b838bee7b8?pvs=21">SwiftNotion Inquiry &amp; Bug Report</a></strong></p><h2 id="25339dcd-6248-8061-8b84-d153da506e2d" class="">🎉 Summary</h2><p id="25339dcd-6248-802a-af84-c449310f1b64" class="">With SwiftNotion, you can:</p><ul id="25339dcd-6248-80a3-a388-f08b1cf30e50" class="bulleted-list"><li style="list-style-type:disc">✅ Instantly save ideas that come to mind to Notion</li></ul><ul id="25339dcd-6248-8098-9d3d-fdb02e2778cf" class="bulleted-list"><li style="list-style-type:disc">✅ Record notes with just your voice (Siri compatible)</li></ul><ul id="25339dcd-6248-8089-ba50-f72b768fc5a1" class="bulleted-list"><li style="list-style-type:disc">✅ Easily collect interesting web pages</li></ul><ul id="25339dcd-6248-8011-9dd2-ca7d7b2aacdb" class="bulleted-list"><li style="list-style-type:disc">✅ Access even faster with widgets</li></ul><ul id="25339dcd-6248-8097-ae3a-f3d778ad3807" class="bulleted-list"><li style="list-style-type:disc">✅ Quickly take notes from your wrist with Apple Watch</li></ul><ul id="25339dcd-6248-8041-85fe-eb6555d5b73c" class="bulleted-list"><li style="list-style-type:disc">✅ Organize information with multiple databases</li></ul><p id="25339dcd-6248-8077-a332-d86334f50510" class="">Your Notion life will definitely become more convenient! 🚀</p><hr id="25339dcd-6248-80fa-95ba-cfcbd06cc590"/><p id="25339dcd-6248-80cd-b7cf-f4218db74781" class=""><strong>Version</strong>: 1.0.0<br/><strong>Last Updated</strong>: August 10, 2025</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
