@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ページが見つかりません | sugi-lab</title>
+<script>
+// 別サイトへ移転したパス → 移転先
+(function () {
+  var p = location.pathname.toLowerCase();
+  if (p === "/ble" || p.indexOf("/ble/") === 0) location.replace("https://ble.sugi-lab.net/");
+})();
+</script>
+</head>
+<body>
+<p>ページが見つかりません。<a href="https://www.sugi-lab.net/">トップページへ</a></p>
+</body>
+</html>
