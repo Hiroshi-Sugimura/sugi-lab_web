@@ -13,7 +13,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<!-- トップの背景写真（最初に大きく表示される）を早めに読み込む -->
 	<link rel="preload" as="image" href="img/IMG_6530.jpg" fetchpriority="high">
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+	<!-- Webフォントは表示を止めないように後から読み込む（読み込むまでは端末のフォントで表示） -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"></noscript>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 	<link rel="stylesheet" href="css/modern-style.css" type="text/css">
 	<link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon">
