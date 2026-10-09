@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* 画像タグの width・height は読み込み中の縦横比の目安（ガタつき防止）としてだけ使い、
+   表示サイズは今までどおり CSS と画像の縦横比で決める。CSS で幅・高さを指定している画像はそちらが優先される */
+/* 対象はトップページで width・height を付けた画像（decoding="async"）だけ。:where() で優先度を 0 にして既存の指定より弱くする。
+   forms.htm などの HTML の width・height で大きさを決めている画像には影響させない */
+:where(img[decoding="async"]) { width: auto; height: auto; }
+
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
@@ -10,7 +16,7 @@
     --tech-color: #9b59b6;
     --success-color: #27ae60;
     --text-color: #2c3e50;
-    --light-text: #7f8c8d;
+    --light-text: #5f6b6d;
     --bg-color: #ffffff;
     --light-bg: #f8f9fa;
     --border-color: #e9ecef;
