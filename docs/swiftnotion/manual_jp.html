@@ -1,12 +1,16 @@
 <html><head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5W5H73XPRP"></script>
+<!-- Google tag (gtag.js)：sugi-lab.net で開いたときだけ計測する（手元での確認は数えない） -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5W5H73XPRP');
+  if (/(^|\.)sugi-lab\.net$/.test(location.hostname)) {
+    var gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-5W5H73XPRP';
+    document.head.appendChild(gtagScript);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-5W5H73XPRP');
+  }
 </script><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SwiftNotion 使用方法マニュアル(日本語)</title><style>
 /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
